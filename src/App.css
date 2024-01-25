@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+  font-family: arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App h1{
+  font-weight: 25px;
+  color: #fff;
+}
+
+.Menu {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu input, button {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  /* border: none; */
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: #222;
+}
+
+#nextQuestion{
+  background: #001e4d;
+  color:#fff;
+  font-weight: 500;
+  width:150px;
+  border:0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor:pointer;
+  /* temporarily hide karun tevtay */
+  /* display:none;  */
+}
+button {
+  background:#fff;
+  color:#222;
+  font-weight: 500;
+  width: 100%;
+  border:ipx solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+button:hover{
+  background:#222 ;
+  color: #fff;
+}
+
+.Quiz {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Menu, .Quiz, .EndScreen h1 {
+  color: white;
+}
+
+.EndScreen {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#startquiz {
+  width:auto;
+}
+#nextQuestion {
+  width: 200px;
+  text-align: center;
+}
+
+#Ques{
+  color:#001e4d;
+}
+
+h3 {
+  color: #ffffff;
+
+}
+
+.navbar {
+  /* topmost passun cha distance adjust karayla */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  /* left most border passun cha distance adjust karayla */
+  max-width: 600px;         
+  margin: 0 auto;
+  /* border-bottom: 1px solid #f2f2f2;   */
+   /*The navbar chya khalchi line */
+}
+.navbar h1 {
+  /* The hey welcome  */
+  color: #f1356d;
+}
+.navbar .links {
+  /* home,blogs and about us  */
+  margin-left:auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+/* right passun home and newblog chi padding */
+  padding: 6px;
+}
+.navbar a:hover {
+  /* anchor tag var hover karun color change hoil */
+  color: #f1356d;
+}
