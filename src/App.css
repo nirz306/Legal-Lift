@@ -1,3 +1,4 @@
+/* import { useState } from "react"; */
 .App {
   text-align: center;
   font-family: arial;
@@ -46,7 +47,7 @@
   /* temporarily hide karun tevtay */
   /* display:none;  */
 }
-button {
+button{
   background:#fff;
   color:#222;
   font-weight: 500;
@@ -60,7 +61,7 @@ button {
   text-align: center;
 }
 
-button:hover{
+button:hover {
   background:#222 ;
   color: #fff;
 }
