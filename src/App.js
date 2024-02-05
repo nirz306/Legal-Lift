@@ -7,9 +7,11 @@ import { useState } from "react";
 import { GameStateContext } from "./helpers/Contexts";
 // import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Blogs from "./helpers/Blogs";
+
 // import Home from "./Home";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import aboutus from "./components/aboutus";
 
 export default function App() {
   return (
@@ -20,6 +22,7 @@ export default function App() {
           <Route path="/" exact component={Home} />
           <Route path="/blogs" component={Blogs} />
           <Route path="/play" component={Quiz} />
+          <Route path="/aboutus" component={aboutus} />
         </Switch>
       </div>
     </Router>
