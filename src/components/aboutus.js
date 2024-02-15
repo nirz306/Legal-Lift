@@ -1,5 +1,5 @@
 import React from "react";
-// import lawimg from "./law.jpg";
+import { ABOUTUS_IMG_LINK } from "../utilites/constants";
 
 const aboutus = () => {
   return (
@@ -13,7 +13,7 @@ const aboutus = () => {
         <div class="container">
           <section class="about">
             <div>
-              {/* <img src={lawimg} alt="about us" height="300" width="300"></img> */}
+              <img src={ABOUTUS_IMG_LINK } height="300" width="300"></img>
             </div>
             <div class="about-content">
               <h2>"Fueling Young Minds with Empowerment"</h2>

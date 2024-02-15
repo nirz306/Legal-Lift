@@ -1,0 +1,42 @@
+.title{
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+ 
+.navbar {
+    /* topmost passun cha distance adjust karayla */
+    max-width: 100%;
+    padding: 0px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+     
+     /*The navbar chya khalchi line */
+    position: sticky;
+    background-color: #CD5F3A;
+    font-size: 15px;
+    z-index: 999;
+  
+  }
+   
+  .navbar .links {
+    /* home,blogs and about us  */
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: black;
+  /* right passun home and newblog chi padding */
+    padding: 6px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .navbar a:hover {
+    /* anchor tag var hover karun color change hoil */
+    color: #0000FF;
+  }
+

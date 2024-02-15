@@ -1,0 +1,1 @@
+export const ABOUTUS_IMG_LINK="https://imgs.search.brave.com/g1z7epifLujaeJ4IWYCPXRPfeb0RRYrcDeCAn6bH5XE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9zdGF0dWUtanVz/dGljZS1zeW1ib2wt/bGVnYWwtbGF3LWNv/bmNlcHQtaW1hZ2Vf/MTU3MTI1LTE3NDA4/LmpwZz9zaXplPTYy/NiZleHQ9anBn"

@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Navbar";
+import Navbar from "./navbar/Navbar";
 import Menu from "./components/Menu";
 import Quiz from "./components/Quiz";
 import EndScreen from "./components/EndScreen";
@@ -7,6 +7,7 @@ import { useState } from "react";
 import { GameStateContext } from "./helpers/Contexts";
 // import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Blogs from "./helpers/Blogs";
+import NotFound from './NotFound';
 
 // import Home from "./Home";
 import React from "react";
@@ -23,6 +24,9 @@ export default function App() {
           <Route path="/blogs" component={Blogs} />
           <Route path="/play" component={Quiz} />
           <Route path="/aboutus" component={aboutus} />
+          <Route path="*">
+              <NotFound/>
+            </Route>
         </Switch>
       </div>
     </Router>
