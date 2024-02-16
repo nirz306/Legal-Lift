@@ -5,15 +5,14 @@ const aboutus = () => {
   return (
     <>
       <div class="heading">
-        <h1>About Us</h1>
         <p>
-          In the book of life,every child deserves a chapter on legal rights
-          ,ensuring a story of fairness and justice.
+          'In the book of life,every child deserves a chapter on legal rights
+          ,ensuring a story of fairness and justice'.
         </p>
         <div class="container">
           <section class="about">
             <div>
-              <img src={ABOUTUS_IMG_LINK } height="300" width="300"></img>
+              <img  className="aboutusimg" src={ABOUTUS_IMG_LINK } height="300" width="300"></img>
             </div>
             <div class="about-content">
               <h2>"Fueling Young Minds with Empowerment"</h2>

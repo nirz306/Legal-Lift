@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { GameStateContext } from "../helpers/Contexts";
 import EndScreen from "./EndScreen";
-
+import { Link } from "react-router-dom";
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
@@ -68,6 +68,7 @@ function Quiz() {
       setScore(score + 1);
     }
     setGameState("finished");
+
   };
   
 return (
@@ -126,9 +127,12 @@ return (
       </div>
 
       {currentQuestion == Questions.length - 1 ? (
-        <button onClick={finishQuiz} id="nextQuestion">
+        <Link to="/finish">
+           <button onClick={finishQuiz} id="nextQuestion">
           Finish Quiz
         </button>
+        </Link>
+       
       ) : (
         <button onClick={nextQuestion} id="nextQuestion">
           Next Question

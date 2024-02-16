@@ -161,6 +161,7 @@ h3 {
   /* height: auto; */
   /* display: block; */
   transition: 0.5s ease;
+  display: cover;
 }
 .about-image:hover img{
   transform: scale(1.2);

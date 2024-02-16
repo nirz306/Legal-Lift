@@ -7,10 +7,12 @@
  
 .navbar {
     /* topmost passun cha distance adjust karayla */
-    max-width: 100%;
-    padding: 0px;
+    width: 100%;
+    padding: 0;
+    margin:0;
     height: 50px;
     display: flex;
+    /* display: block; */
     align-items: center;
      
      /*The navbar chya khalchi line */
@@ -24,13 +26,13 @@
   .navbar .links {
     /* home,blogs and about us  */
     width: 100%;
-    display: inline-block;
+    /* display: inline-block; */
   }
   
   .navbar a {
     margin-left: 16px;
     text-decoration: none;
-    color: black;
+    color: white;
   /* right passun home and newblog chi padding */
     padding: 6px;
     font-family: 'Josefin Sans', sans-serif;

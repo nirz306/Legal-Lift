@@ -5,7 +5,7 @@ import Quiz from "./components/Quiz";
 import EndScreen from "./components/EndScreen";
 import { useState } from "react";
 import { GameStateContext } from "./helpers/Contexts";
-// import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+ 
 import Blogs from "./helpers/Blogs";
 import NotFound from './NotFound';
 
@@ -13,6 +13,8 @@ import NotFound from './NotFound';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import aboutus from "./components/aboutus";
+import squests from "./components/squests";
+import rule from "./components/rule";
 
 export default function App() {
   return (
@@ -24,6 +26,9 @@ export default function App() {
           <Route path="/blogs" component={Blogs} />
           <Route path="/play" component={Quiz} />
           <Route path="/aboutus" component={aboutus} />
+          <Route path="/squests" component={squests} />
+          <Route path="/rule" component={rule} />
+          <Route path="/finish" component={EndScreen} />
           <Route path="*">
               <NotFound/>
             </Route>
