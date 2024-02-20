@@ -1,46 +1,47 @@
 import "./App.css";
 import Navbar from "./navbar/Navbar";
-import Menu from "./components/Menu";
-import Quiz from "./components/Quiz";
-import EndScreen from "./components/EndScreen";
+import Menu from "./components/legal trivia/Menu";
+import Quiz from "./components/legal trivia/Quiz";
+import EndScreen from "./components/legal trivia/EndScreen";
 import { useState } from "react";
 import { GameStateContext } from "./helpers/Contexts";
+import Home from "./components/Home/Home";
  
-import Blogs from "./helpers/Blogs";
+import Kidztube from "./helpers/Kidztube";
 import NotFound from './NotFound';
 
 // import Home from "./Home";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import aboutus from "./components/aboutus";
-import squests from "./components/squests";
-import rule from "./components/rule";
+import squests from "./components/S_quests/squests";
+import rule from "./components/legal trivia/Rules/rule";
+import Login from "./components/Login/Login";
 
 export default function App() {
   return (
     <Router>
-      <div className="App">
+       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/blogs" component={Blogs} />
-          <Route path="/play" component={Quiz} />
+        <Route exact path="/" component={Home} />
+           <Route path="/kidztube" component={Kidztube} />
+           <Route path="/play" component={Quiz} />
           <Route path="/aboutus" component={aboutus} />
-          <Route path="/squests" component={squests} />
+           <Route path="/squests" component={squests} />
           <Route path="/rule" component={rule} />
           <Route path="/finish" component={EndScreen} />
-          <Route path="*">
-              <NotFound/>
-            </Route>
-        </Switch>
-      </div>
-    </Router>
+         <Route path="*">
+            <NotFound/>
+           </Route> 
+         </Switch>
+       </div>
+     </Router>
+   
   );
 }
 
-function Home() {
-  return <h1>Home page</h1>;
-}
+
  
 
 // function App() 

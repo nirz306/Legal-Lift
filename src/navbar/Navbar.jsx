@@ -1,5 +1,5 @@
 //arrow functions
-import Menu from "../components/Menu";
+import Menu from "../components/legal trivia/Menu";
 import { Link } from "react-router-dom";
 import "./navbar.css"
 
@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="links">
             <Link to="/">HOME</Link>
-            <Link to="/blogs">KIDZTUBE</Link>
+            <Link to="/kidztube">KIDZTUBE</Link>
             <Link to="/rule">LEGAL TRIVIA</Link>
             <Link to="/aboutus">ABOUT US</Link>
             <Link to="/squests">SCENARIO QUESTS</Link>

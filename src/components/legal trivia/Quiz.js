@@ -1,9 +1,9 @@
-import "../App.css";
-import { Questions } from "../helpers/Questions";
+import "./quiz.css";
+import { Questions } from "./Questions";
 import { useState } from "react";
 
 import { useContext } from "react";
-import { GameStateContext } from "../helpers/Contexts";
+import { GameStateContext } from "../../helpers/Contexts";
 import EndScreen from "./EndScreen";
 import { Link } from "react-router-dom";
 function Quiz() {
@@ -66,6 +66,7 @@ function Quiz() {
   const finishQuiz = () => {
     if (Questions[currentQuestion].asnwer == optionChosen) {
       setScore(score + 1);
+      console.log(score);
     }
     setGameState("finished");
 

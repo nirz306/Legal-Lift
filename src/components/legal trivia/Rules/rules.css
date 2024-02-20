@@ -1,0 +1,58 @@
+.Rules {
+    text-align: center; /* Center align the content */
+    
+  }
+  
+  .rulelist {
+    margin-top: 50px;
+    max-width: 700px; /* Set maximum width for better readability */
+   
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: #f7f7f7; /* Light background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: extra-bold;
+    font-size: 20px;
+
+  }
+  
+  .rulelist p {
+    margin-bottom: 10px; /* Add space between paragraphs */
+    font-size: 16px; /* Adjust font size */
+    text-align: justify;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;  }
+  
+  .letsPlay {
+    width: auto;
+    margin-top: 20px; /* Add space between rule list and button */
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 18px; /* Adjust font size */
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: box-shadow 0.3s; /* Smooth transition for box shadow */
+
+  /* Box shadow for normal state */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .letsPlay:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+    box-shadow: 0 8px 16px grey;
+  }
+
+  .container{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;  }
+  
