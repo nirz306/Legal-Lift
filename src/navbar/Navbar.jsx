@@ -2,11 +2,11 @@
 import Menu from "../components/legal trivia/Menu";
 import { Link } from "react-router-dom";
 import "./navbar.css"
+import {LOGO} from "../utilites/constants";
 
 const Navbar = () => {
     return(
-        <div className="title">
-            Legal Hub
+         <>
         <div className="navbar">
             <div className="links">
             <Link to="/">HOME</Link>
@@ -16,7 +16,13 @@ const Navbar = () => {
             <Link to="/squests">SCENARIO QUESTS</Link>
             </div>
         </div>
-        </div>
+        <div className="logo">
+                {/* <img src= {LOGO} alt="hi" /> */}
+            </div>
+         </>
+        
+       
+        
        
     );
 }

@@ -1,16 +1,14 @@
-.title{
-  font-family: "Old Standard TT", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
-}
  
 .navbar {
     /* topmost passun cha distance adjust karayla */
     width: 100%;
-    padding: 0;
-    margin:0;
-    height: 50px;
+    padding: 50px;
+    /* margin:0;
+    margin-bottom: 900px; */
+    position: absolute;
+    top: 0px;
+    
+    height: 100px;
     display: flex;
     /* display: block; */
     align-items: center;
@@ -18,7 +16,7 @@
      /*The navbar chya khalchi line */
     position: sticky;
     background-color: #CD5F3A;
-    font-size: 15px;
+    font-size: 20px;
     z-index: 999;
   
   }
@@ -41,4 +39,11 @@
     /* anchor tag var hover karun color change hoil */
     color: #0000FF;
   }
+
+  .logo{
+   size: 120%;
+     
+     
+
+    }
 

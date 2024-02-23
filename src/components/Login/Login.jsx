@@ -1,42 +1,30 @@
-import React,{ useState } from "react";
-// import React from 'react'
+import React from 'react';
 import "./login.css"
-import Home from "../Home/Home";
-import Navbar from "../../navbar/Navbar";
-// import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
-
-//verifies if login details match or not 
-let verfication = true;
-function Login () {
-    const[state , setstate] = useState("");
+function LoginForm() {
   return (
-    <>
-      <div className='text'>
-        <p>Unlock Your Potential </p>
-        with India's 
-        <p></p>Leading Legal Minds
-      </div>
-      <div className="loginform">
-        <form className="loginForm">
-                 
-                <input type="text" className="loginInput" placeholder="Enter your email"/>
-                <input type="password"  className="loginInput" placeholder="Enter your password"/>
-                <button className="loginButton" onClick={() => verfication ? setstate("logedin") : setstate("incorrect")}>Login</button>
-
-                
-            </form>
-      </div>
-        <div>
-
+    <div className="wrapper">
+      <form>
+        <h1>Login</h1>
+        <div className="input-box">
+          <input type="text" placeholder="Username" required />
+          <i className='bx bxs-user'></i>
         </div>
-    </>
-  
-  )
+        <div className="input-box">
+          <input type="password" placeholder="Password" required />
+          <i className='bx bxs-lock-alt' ></i>
+        </div>
+        <div className="remember-forgot">
+          <label><input type="checkbox" />Remember Me</label>
+          <a href="#">Forgot Password</a>
+        </div>
+        <button type="submit" className="btn">Login</button>
+        <div className="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+  );
 }
 
-// console.log{state};
-
-export default Login
+export default LoginForm;
