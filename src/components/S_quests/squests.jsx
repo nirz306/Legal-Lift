@@ -1,19 +1,27 @@
-import React from 'react'
-import ReactPlayer from 'react-player'
-import './squests.css'
-import VIDEO_PATH from '../assets/r_a.mp4'
-import { acc } from '../../utilites/constants'
-import Block from './Block'
+import sex_har  from "./sexual_harr.png"
+import acc from "./road_accc.png"
 
-const squests = () => {
+import Block from './Block'
+import Road_acc from './Road_acc'
+import { BrowserRouter, Link } from 'react-router-dom/cjs/react-router-dom.min';
+
+const Squests = () => {
   return (
-    <>
-    <div className="road_acc">
-    <Block imageUrl={acc} title="Road Accident" />
-      {/* <ReactPlayer url={VIDEO_PATH} controls={true} /> */}
-    </div>
-    </>
+     <div className='components'>
+        <div className="road_acc">
+          <Block imageUrl={acc} title="road_acc" />
+          <Link className="s_link" to="/Road Accident">Road Accident</Link>
+        </div>
+      
+        <div className="sexual_harras">
+          <Block imageUrl={sex_har} title="Sexual harassment" />
+          <Link className="s_link" to="/Sexual harresment">Sexual harassment</Link>
+        </div>
+     </div>
   )
 }
 
-export default squests
+export default Squests
+
+
+ 

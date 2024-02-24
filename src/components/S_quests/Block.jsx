@@ -1,10 +1,11 @@
 import React from 'react'
+import './squests.css'
 
 function Block({ imageUrl, title }) {
     return (
       <div className="block">
-        <img src={imageUrl} alt={title} />
-        <h2>{title}</h2>
+        <img className='image' src={imageUrl} alt={title} />
+        
       </div>
     );
   }

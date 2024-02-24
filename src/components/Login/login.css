@@ -1,19 +1,6 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color:  #f2f2f2 no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .wrapper{
+ 
+.wrapper{
+  margin-top: 150px;
     width: 420px;
     background: transparent;
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -26,12 +13,14 @@
     font-size: 36px;
     text-align: center;
     color: black;
+    font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
   }
   .wrapper .input-box{
     position: relative;
     width: 100%;
     height: 50px;
-    
     margin: 30px 0;
   }
   .input-box input{
@@ -43,11 +32,14 @@
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    color: black;
     padding: 20px 45px 20px 20px;
   }
   .input-box input::placeholder{
     color: #fff;
+    font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
   }
   .input-box i{
     position: absolute;
@@ -64,7 +56,7 @@
     margin: -15px 0 15px;
   }
   .remember-forgot label input{
-    accent-color: #fff;
+    accent-color: black;
     margin-right: 3px;
   
   }
@@ -87,7 +79,10 @@
     cursor: pointer;
     font-size: 16px;
     color: #333;
-    font-weight: 600;
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: normal;
+
   }
   .wrapper .register-link{
     font-size: 14.5px;
@@ -102,4 +97,4 @@
   }
   .register-link p a:hover{
     text-decoration: underline;
-  } */
+  }

@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { GameStateContext } from "../../helpers/Contexts";
 import EndScreen from "./EndScreen";
 import { Link } from "react-router-dom";
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
@@ -24,7 +25,7 @@ function Quiz() {
   };
 
   const nextQuestion = () => {
-    if (Questions[currentQuestion].asnwer == optionChosen) {
+    if (Questions[currentQuestion].asnwer === optionChosen) {
       setScore(score+1);
     }
 
@@ -53,6 +54,7 @@ function Quiz() {
     else{
       console.log(option);
       console.log("wrong answer");
+      console.log("score: ",score)
 
       setAns("wrong");
 
@@ -73,22 +75,21 @@ function Quiz() {
   };
   
 return (
-
   <div className="Quiz">
-  <div>
-    <GameStateContext.Provider
-        value={{
-          gameState,
-          setGameState,
-          score,
-          setScore,
-        }}
-      >
-        {/* console.log(gameState); */}
-        {/* if the condition id true then execute  */}
-        {gameState === "finished" && <EndScreen />} 
-    </GameStateContext.Provider>
-  </div>
+    <div>
+      <GameStateContext.Provider
+          value={{
+            gameState,
+            setGameState,
+            score,
+            setScore,
+          }}
+        >
+        
+          {/* if the condition id true then execute  */}
+          {gameState === "finished" && <EndScreen />} 
+      </GameStateContext.Provider>
+    </div>
 
       <h1 id="Ques">{Questions[currentQuestion].prompt}</h1>
       <div className="questions">

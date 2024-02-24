@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { GameStateContext } from "../../helpers/Contexts";
 import { Questions } from "./Questions";
@@ -13,10 +13,13 @@ const EndScreen = () => {
     setGameState("menu");
   };
 
+  // useEffect(()=>{
+  //   console.log(score);
+  // },[])
+
   return (
     <div className="EndScreen">
       <h1>Quiz Finished</h1>
-      <h3>{userName}</h3>
       
       <h1>
         {score} / {Questions.length}

@@ -1,3 +1,33 @@
-.road_acc{
+.road_acc {
     margin-top: 50px;
+  }
+
+.image{
+    width: 350px;
+}
+.components{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px;
+  /* padding-right: 200px; */
+}
+.s_link{
+  display: block;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 6px;
+  font:bold;
+  font-size: large;
+}
+.s_link:hover{
+  color: #0000FF;
+}
+.sexual_harras{
+  margin-top: 50px;
+}
+
+.road_acc,
+.sexual_harras {
+  padding: 0 60px; /* Add padding to each component */
 }

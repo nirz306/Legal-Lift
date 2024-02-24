@@ -17,6 +17,8 @@ import aboutus from "./components/aboutus";
 import squests from "./components/S_quests/squests";
 import rule from "./components/legal trivia/Rules/rule";
 import Login from "./components/Login/Login";
+ import Road_acc from "./components/S_quests/Road_acc"; 
+import Sexualharras from "./components/S_quests/Sexualharras";
 
 export default function App() {
   return (
@@ -31,8 +33,10 @@ export default function App() {
            <Route path="/squests" component={squests} />
           <Route path="/rule" component={rule} />
           <Route path="/finish" component={EndScreen} />
+          <Route path="/Road Accident" component={Road_acc}/>
+          <Route path="/Sexual harresment" component={Sexualharras}/>
          <Route path="*">
-            <NotFound/>
+            <NotFound/>   
            </Route> 
          </Switch>
          {/* <Login/> */}
