@@ -1,0 +1,134 @@
+.heading {
+    text-align: center;
+    padding: 20px;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: extra-bold;
+    font-size: 25px;
+    
+  }
+
+  .heading p
+  {
+    color: black;
+    margin-bottom: 5px;
+  }
+#head
+{
+    font-size: 32px;
+    font-style: oblique;
+    
+}
+  
+  .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .about_us_image {
+    
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: #FFE382; /* Light background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-right: 30px;
+    margin-left: 20px;
+    
+  }
+  
+  .about-content {
+    max-width: 700px;
+    float: right;
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: #FFAE6D; /* Light background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 20px;
+   
+    margin-left: auto;
+    margin-top: 10px;
+  }
+
+  .whyourweb
+  {
+    
+    float: left;
+    padding: 24px; /* Add some padding for better spacing */
+    background-color: #F1EB90; /* Light background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 20px;
+   
+    margin-right: auto;
+    margin-top: 5px;
+    
+  }
+
+  .values
+  {
+    max-width: 900px;
+    height: 350px;
+    
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: #F6F7C4; /* Light background color */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 20px;
+  }
+
+  .whyourweb h2,.values h2
+  {
+    font-size: 23px;
+    line-height: 22.5px;
+  }
+
+  .whyourweb p
+  {
+    margin-top: 20px;
+    line-height: 25px;
+  }
+  .about-content h2
+  {
+    color: black;
+    
+  }
+  
+
+  .values div
+  {
+    
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+  }
+  .values
+  {
+    margin-top: 30px;
+  }
+
+  .values img
+  {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 60px;
+    
+  }
+
+  #I,#K,#C,#G
+  {
+    font-family: "Roboto Slab", serif;
+    margin: 55px;
+  }
+
+  #I
+  {
+    margin-left: 10px;
+  }
+
+  #G
+  {
+    margin-right: 25px;
+  }
