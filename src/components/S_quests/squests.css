@@ -1,3 +1,11 @@
+
+.container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Align items in a column */
+}
+
+
 .road_acc {
     margin-top: 50px;
   }
@@ -28,6 +36,48 @@
 }
 
 .road_acc,
-.sexual_harras {
+.sexual_harras ,
+.rasicm,
+.consumer_rights
+{
   padding: 0 60px; /* Add padding to each component */
 }
+
+#question{
+  color:#001e4d;
+}
+
+button{
+  background:#fff;
+  color:#222;
+  font-weight: 500;
+  border:ipx solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+button:hover {
+  background:#222 ;
+  color: #fff;
+}
+
+.quiz{
+  margin-top: 50px;
+   padding:10px;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .components::hover */
+ 
