@@ -7,7 +7,7 @@ import { useState } from "react";
 import { GameStateContext } from "./helpers/Contexts";
 import Home from "./components/Home/Home";
  
-import Kidztube from "./helpers/Kidztube";
+import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from './NotFound';
 
 // import Home from "./Home";
@@ -19,6 +19,8 @@ import rule from "./components/legal trivia/Rules/rule";
 import Login from "./components/Login/Login";
  import Road_acc from "./components/S_quests/Road_acc"; 
 import Sexualharras from "./components/S_quests/Sexualharras";
+import Rasicm from "./components/Kidztube/Rasicm";
+import Consumer from "./components/Kidztube/Consumer";
 
 export default function App() {
   return (
@@ -29,17 +31,20 @@ export default function App() {
         <Route exact path="/" component={Home} />
            <Route path="/kidztube" component={Kidztube} />
            <Route path="/play" component={Quiz} />
-          <Route path="/aboutus" component={aboutus} />
+          {/* <Route path="/aboutus" component={aboutus} /> */}
            <Route path="/squests" component={squests} />
           <Route path="/rule" component={rule} />
           <Route path="/finish" component={EndScreen} />
           <Route path="/Road Accident" component={Road_acc}/>
           <Route path="/Sexual harresment" component={Sexualharras}/>
+          <Route path="/login" component={Login} />
+          <Route path="/rasicm" component={Rasicm} />
+          <Route path="/consumer_rights" component= {Consumer} />
+          
          <Route path="*">
             <NotFound/>   
            </Route> 
          </Switch>
-         {/* <Login/> */}
        </div>
        
      </Router>

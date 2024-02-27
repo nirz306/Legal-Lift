@@ -7,34 +7,34 @@
     margin-bottom: 900px; */
     position: absolute;
     top: 0px;
-    
     height: 100px;
     display: flex;
     /* display: block; */
     align-items: center;
-     
-     /*The navbar chya khalchi line */
+    /*The navbar chya khalchi line */
     position: sticky;
-    background-color: #CD5F3A;
+    /* background-color: #CD5F3A; */
     font-size: 20px;
     z-index: 999;
   
   }
-   
-  .navbar .links {
+  
+  .links {
     /* home,blogs and about us  */
     width: 100%;
+    padding-bottom: 0.25rem;
     /* display: inline-block; */
   }
   
   .navbar a {
     margin-left: 16px;
     text-decoration: none;
-    color: white;
+    color:#CD5F3A;
   /* right passun home and newblog chi padding */
     padding: 6px;
     font-family: 'Josefin Sans', sans-serif;
   }
+
   .navbar a:hover {
     /* anchor tag var hover karun color change hoil */
     color: #0000FF;
@@ -42,8 +42,7 @@
 
   .logo{
    size: 120%;
-     
-     
-
     }
+
+ 
 
