@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
 import "./rules.css"
 
 const rule = () => {
+  // const[move,setMove] = React.useState(false);
   return (
-    <div className="Rules">
+    <motion.div className="Rules" animate = {{scale : 1}} initial ={{scale : 0}} transition={{duration : 1}}>
       <div className="rulelist">
         Hey there! Get ready for the quiz fun!
         <div className="container">Before you dive in, make sure to check out these cool instructions.</div>
@@ -23,7 +25,7 @@ const rule = () => {
       <Link to="/play">
         <button className="letsPlay">Let's Play!!</button>
       </Link>
-    </div>
+    </motion.div>
   );
   
 };
