@@ -8,12 +8,13 @@
     margin-top: 50px;
     font-style: bold;
 }
-.lawyer{
+.girl{
     position: absolute;
     height: 550px;
-    margin-left: 50px;
+    margin-left: 80px;
     top: 30; /* Align the image to the top of its containing element */
     left: 0; /* Align the image to the left of its containing element */
+    margin-top: 20px;
   
 }
 .aboutUs{
