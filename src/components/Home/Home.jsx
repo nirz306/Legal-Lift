@@ -1,11 +1,13 @@
 import React from "react";
 import "./home.css";
-
-import girl from "./Girl_sitting_2.png";
+import cyber from "../assets/cyber.jpg"
+import blm from "../assets/blm.jpg";
+import privacy from "../assets/privacy.jpg";
 import AboutUs from "../aboutus"; // Import the AboutUs component
-import sitting_girl from "./Girl_sitting_2.png";
 import girl_social from "./Girl_social2.png";
 import Blogs from "./Blogs";
+
+
 
 const Home = () => {
   return (
@@ -38,10 +40,27 @@ const Home = () => {
         <AboutUs />
       </div>
 
-      <div className="blogs">
-        <Blogs image={girl} title={"Hello world"} />
-      </div>
 
+   
+
+      <h1 className="blog_title">Trending Posts</h1>
+      <div className="blog_page">
+
+          
+
+      <div className="blogs">
+          <Blogs image={cyber} title={"Cyber Law Essentials"} author={"John"}/>
+        </div>
+
+        <div className="blogs">
+          <Blogs image={blm} title={"Black Lives Matter"} author={"John"}/>
+        </div>
+
+        <div className="blogs">
+          <Blogs image={privacy} title={"Privacy Rights"} author={"John"} />
+        </div>
+      </div>
+      
       <h1></h1>
     </>
   );

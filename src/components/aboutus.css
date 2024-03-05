@@ -1,14 +1,15 @@
 .heading {
     text-align: center;
     padding: 20px;
-    margin-top: -70px;
+   
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-style: extra-bold;
     font-size: 25px;
-    margin-top: 700px;
+    /* margin-top: 700px; */
     
   }
+
 
   .heading p
   {

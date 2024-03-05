@@ -1,32 +1,33 @@
-
-.title{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    margin-top: -20px;
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize
 }
 
-/* Method 1: Directly on img element */
-.image img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-  }
-  
-  /* Method 2: Wrapping the img element in a container */
-  .image-container {
-    /* margin-top: 100px; */
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-  }
-  .image-container img {
-    height: 100%; 
-  }
+.image-container img {
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
 
-  .container1 {
-    margin-top: 30px;
-    border: 1px solid #000; /* Add border styles as needed */
-    padding-top: 0px; /* Add padding to give some space around the content */
-    /* Add any other styles you need */
-    margin-bottom: 20px;
-  }
+.container1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-items: center; /* Center items horizontally */
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
 
-  
+.author {
+  font-style: italic; /* Style author name differently */
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}

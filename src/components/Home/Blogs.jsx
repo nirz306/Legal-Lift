@@ -1,7 +1,30 @@
 import React from 'react';
 import "./blogs.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-const Blogs = ({ image, title }) => {
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
+
+
+const Blogs = ({ image, title ,author }) => {
   return (
     <div className='container1'>
       <div className="image-container">
@@ -9,7 +32,7 @@ const Blogs = ({ image, title }) => {
       </div>
       
       <div className="title">{title}</div>
-      read more
+      <div className="author">{author}</div>
     </div>
   );
 };
