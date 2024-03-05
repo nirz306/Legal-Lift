@@ -16,7 +16,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import aboutus from "./components/aboutus";
 import squests from "./components/S_quests/squests";
 import rule from "./components/legal trivia/Rules/rule";
-import Login from "./components/Login/Login";
+import SignupForm from "./components/signup/signup";
+import LoginForm from "./components/login/login";
  import Road_acc from "./components/S_quests/Road_acc"; 
 import Sexualharras from "./components/S_quests/Sexualharras";
 import Rasicm from "./components/Kidztube/Rasicm";
@@ -28,23 +29,22 @@ export default function App() {
        <div className="App">
         <Navbar />
         <Switch>
-        <Route exact path="/" component={Home} />
-           <Route path="/kidztube" component={Kidztube} />
-           <Route path="/play" component={Quiz} />
-          {/* <Route path="/aboutus" component={aboutus} /> */}
-           <Route path="/squests" component={squests} />
-          <Route path="/rule" component={rule} />
-          <Route path="/finish" component={EndScreen} />
-          <Route path="/Road Accident" component={Road_acc}/>
-          <Route path="/Sexual harresment" component={Sexualharras}/>
-          <Route path="/login" component={Login} />
-          <Route path="/rasicm" component={Rasicm} />
-          <Route path="/consumer_rights" component= {Consumer} />
-          
-         <Route path="*">
-            <NotFound/>   
-           </Route> 
-         </Switch>
+  <Route exact path="/" component={Home} />
+  {/* <Route path="/login" component={LoginForm} /> */}
+  <Route path="/kidztube" component={Kidztube} />
+  <Route path="/play" component={Quiz} />
+  {/* ... other routes ... */}
+  <Route path="/finish" component={EndScreen} />
+  <Route path="/Road Accident" component={Road_acc} />
+  <Route path="/Sexual harresment" component={Sexualharras} />
+  <Route path="/rasicm" component={Rasicm} />
+  <Route path="/consumer_rights" component={Consumer} />
+  <Route path="/home" component={Home} />
+  <Route path="*">
+    <NotFound />
+  </Route>
+</Switch>
+
        </div>
        
      </Router>
