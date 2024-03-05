@@ -54,36 +54,4 @@ export default function App() {
 
 
  
-
-// function App() 
-// {
-//   const [gameState, setGameState] = useState("menu");
-//   const [userName, setUserName] = useState("");
-//   const [score, setScore] = useState(0);
-
-//   return (
-//     // <Router>
-//     <div className="App">
-//         <Navbar/>
-//        <GameStateContext.Provider
-//         value={{
-//           gameState,
-//           setGameState,
-//           userName,
-//           setUserName,
-//           score,
-//           setScore,
-//         }}
-//       >
-//         {gameState === "Home" && <Home />}
-//         {gameState === "menu" && <Menu />}
-//         {gameState === "playing" && <Quiz />}
-//         {gameState === "finished" && <EndScreen />}
-//       </GameStateContext.Provider>
-//      </div>
-
-//     //  </Router>
-//   );
-// }
-
-// export default App;
+ 

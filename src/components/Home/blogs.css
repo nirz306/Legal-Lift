@@ -1,0 +1,32 @@
+
+.title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    margin-top: -20px;
+}
+
+/* Method 1: Directly on img element */
+.image img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  /* Method 2: Wrapping the img element in a container */
+  .image-container {
+    /* margin-top: 100px; */
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+  }
+  .image-container img {
+    height: 100%; 
+  }
+
+  .container1 {
+    margin-top: 30px;
+    border: 1px solid #000; /* Add border styles as needed */
+    padding-top: 0px; /* Add padding to give some space around the content */
+    /* Add any other styles you need */
+    margin-bottom: 20px;
+  }
+
+  
