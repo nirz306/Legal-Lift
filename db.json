@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "61d4",
+      "name": "Joey",
+      "email": "example@gmail.com",
+      "mobile": "756",
+      "password": "Hello"
+    },
+    {
+      "id": "b53a",
+      "name": "mrunal",
+      "email": "mrunal@gmail.com",
+      "mobile": "75364",
+      "password": "mru"
+    },
+    {
+      "id": "42fe",
+      "name": "mrunal",
+      "email": "mrunal@gmail.com",
+      "mobile": "75864",
+      "password": "mru"
+    },
+    {
+      "id": "f0e9",
+      "name": "mrunal",
+      "email": "mrunal@gmail.com",
+      "mobile": "74863",
+      "password": "mru"
+    },
+    {
+      "id": "b4af",
+      "name": "mrunal",
+      "email": "mrunal@gmail.com",
+      "mobile": "789465",
+      "password": "mru"
+    },
+    {
+      "id": "19fa",
+      "name": "Neeraj Magdum",
+      "email": "neerajmagdum10@gmail.com",
+      "mobile": "7972065984",
+      "password": "neeraj123"
+    }
+  ]
+}
