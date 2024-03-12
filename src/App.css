@@ -47,24 +47,7 @@
   /* temporarily hide karun tevtay */
   /* display:none;  */
 }
-button{
-  background:#fff;
-  color:#222;
-  font-weight: 500;
-  width: 100%;
-  border:ipx solid #222;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
-}
 
-button:hover {
-  background:#222 ;
-  color: #fff;
-}
 
 .Quiz {
   margin-top: 50px;
@@ -119,11 +102,9 @@ h3 {
   padding:0px;
   box-sizing: border-box;
   font-family: 'Roboto',sans-serif;
-
+  webkit-scrollbar:hidden;
 }
-/* body{
-  background-color: #f2f2f2;
-} */
+ 
 .heading{
   width:90%;
   display: flex;

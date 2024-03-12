@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import { GameStateContext } from "../../helpers/Contexts";
+import { GameStateContext } from "./Contexts";
 import { Questions } from "./Questions";
 
 const EndScreen = () => {

@@ -1,9 +1,9 @@
-import "./quiz.css";
+ import "./Quiz.css"
 import { Questions } from "./Questions";
 import { useState } from "react";
 
 import { useContext } from "react";
-import { GameStateContext } from "../../helpers/Contexts";
+import { GameStateContext } from  "./Contexts";
 import EndScreen from "./EndScreen";
 import { Link } from "react-router-dom";
 

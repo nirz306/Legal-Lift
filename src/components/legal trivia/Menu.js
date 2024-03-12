@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GameStateContext } from "../../helpers/Contexts";
+import { GameStateContext } from  "./Contexts";
 import { useState } from "react";
 import Quiz from "./Quiz";
 import EndScreen from "./EndScreen";

@@ -1,18 +1,19 @@
 .home {
   display: flex;
+  flex-direction: row;
   justify-content: space-between; /* Distribute items along the main axis with space between */
   align-items: center; /* Align items vertically */
 }
 
-.title {
-  font-size: 100px;
-  margin-left: 50px; /* Adjust margin as needed */
+.p title {
+  font-size: 500px;
+  margin-left: 250px; /* Adjust margin as needed */
   margin-top: 50px;
-  /* font-style: bold; */
-  /* 'bold' is not a valid value for font-style, use 'font-weight' instead */
-  /* font-weight: bold; */
 }
 
+.bgimg{
+  margin-left: 420px;
+}
 .girl {
   height: 550px;
   margin-right: 50px; /* Adjust margin as needed */
@@ -48,4 +49,8 @@
   margin-bottom: -40px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.waves{
+  margin-right: 0px;
 }

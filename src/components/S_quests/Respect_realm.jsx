@@ -1,10 +1,11 @@
+// Respect_realm
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import './squests.css';
 import VIDEO_PATH from '../assets/r_a.mp4';
 import Questionaire from './Questionaire';
 
-const Road_acc = () => {
+const Respect_realm = () => {
   const [showQuiz, setShowQuiz] = useState(false);
 
   const myCallback = () => {
@@ -14,7 +15,7 @@ const Road_acc = () => {
 
   return (
     <div className='container'>
-      <div className="road_acc">
+      <div className="Respect_realm">
         <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
       </div>
 
@@ -30,7 +31,7 @@ const Road_acc = () => {
   );
 };
 
-export default Road_acc;
+export default Respect_realm;
 
 
 

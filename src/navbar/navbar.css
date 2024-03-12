@@ -1,43 +1,44 @@
- 
-.navbar {
-    /* topmost passun cha distance adjust karayla */
-    width: 100%;
-    padding: 50px;
-    /* margin:0;
-    margin-bottom: 900px; */
-    position: absolute;
-    top: 0px;
-    height: 100px;
-    display: flex;
-    /* display: block; */
-    align-items: center;
-    /*The navbar chya khalchi line */
-    position: sticky;
-    background-color: #0099ff;
-    font-size: 20px;
-    z-index: 999;
+.waves {
+  position: fixed; /* Fixed positioning to stick to the viewport */
+  top: 0; /* Align to the top */
+  right: 0; /* Stick to the rightmost of the screen */
+}
+
+.title{
+  margin-top: 300px;
+}
+
+
+.navbar-links {
+  position: absolute;
+  margin-top: -170px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   
-  }
+margin-right: -30px;
   
-  .links {
-    /* home,blogs and about us  */
-    width: 100%;
-    padding-bottom: 0.25rem;
-    /* display: inline-block; */
-  }
+}
   
-  .navbar a {
-    margin-left: 16px;
+  .navbar-links a {
+   
     text-decoration: none;
-    color:#CD5F3A;
-  /* right passun home and newblog chi padding */
-    padding: 6px;
-    font-family: 'Josefin Sans', sans-serif;
-  }
+    color:#000080;  
+    font-family: "Kaisei Decol", serif;
+    font-weight: 700;
+    font-size: 30px;
+    font-style: bold;
+    }
 
   .navbar a:hover {
     /* anchor tag var hover karun color change hoil */
-    color: #0000FF;
+    /* color: #0000FF; */
+    text-decoration: none;
   }
 
   .logo{
