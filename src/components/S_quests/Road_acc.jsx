@@ -22,7 +22,7 @@ const Road_acc = () => {
         <Questionaire 
         question="If you were in the child's position, what action would you take?"
         options={["Seek out an adult nearby for help.", "Offer basic first aid assistance if possible", "Utilize a phone to contact emergency services.", "Give priority to your own safety in hazardous situations."]}
-        ans=""
+        ans="b"
         />
       )}
 

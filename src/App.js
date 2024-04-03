@@ -21,6 +21,7 @@ import Road_acc from "./components/S_quests/Road_acc";
 import Sexualharras from "./components/S_quests/Sexualharras";
 import Rasicm from "./components/Kidztube/Rasicm";
 import Consumer from "./components/Kidztube/Consumer";
+import Lostphone from "./components/S_quests/Lostphone/Lostphone";
 
 const responsive = {
   superLargeDesktop: {
@@ -60,6 +61,7 @@ export default function App() {
           <Route path="/login" component={Login} />
           <Route path="/rasicm" component={Rasicm} />
           <Route path="/consumer_rights" component={Consumer} />
+          <Route path="/Lost phone" component={Lostphone} />
 
           <Route path="*">
             <NotFound />
