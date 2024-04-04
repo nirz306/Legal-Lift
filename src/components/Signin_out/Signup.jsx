@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "../Login/login.css";
-// import { Link} from "react-router-dom/cjs/react-router-dom.min";
 import { createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router";
-import { auth } from "./firebase";
+import { auth } from "./firebase"
 import { NavLink } from "react-router-dom";
 
 function Signup() {
@@ -83,6 +82,7 @@ function Signup() {
 
           <b className="errorMsg">{errorMsg}</b>
         </div>
+
         <button
           type="submit"
           onClick={handleSubmission}
