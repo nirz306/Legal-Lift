@@ -6,12 +6,14 @@ import privacy from "../assets/privacy.jpg";
 import AboutUs from "../aboutus"; // Import the AboutUs component
 import girl_social from "./Girl_social2.png";
 import Blogs from "./Blogs";
+import Navbar from "../navbar/Navbar";
 
 
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <div className="home">
         <p className="title">
           Unlock Your Potential<p></p>

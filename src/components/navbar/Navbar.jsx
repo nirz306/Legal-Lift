@@ -1,8 +1,8 @@
 //arrow functions
-import Menu from "../components/legal trivia/Menu";
+import Menu from "../legal trivia/Menu";
 import { Link } from "react-router-dom";
 import "./navbar.css"
-import {LOGO} from "../utilites/constants";
+import {LOGO} from "../../utilites/constants";
 
 const Navbar = () => {
     return(
@@ -12,7 +12,6 @@ const Navbar = () => {
                 <Link to="/">HOME</Link>
                 <Link to="/kidztube">KIDZTUBE</Link>
                 <Link to="/rule">LEGAL TRIVIA</Link>
-                {/* <Link to="/aboutus">ABOUT US</Link> */}
                 <Link to="/squests">SCENARIO QUESTS</Link>
                 {/* <Link classname="login" to="/login">LOGIN</Link> */}
             </div>

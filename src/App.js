@@ -1,27 +1,29 @@
 import "./App.css";
-import Navbar from "./navbar/Navbar";
 import Menu from "./components/legal trivia/Menu";
 import Quiz from "./components/legal trivia/Quiz";
 import EndScreen from "./components/legal trivia/EndScreen";
-import { useState } from "react";
+ 
 import { GameStateContext } from "./helpers/Contexts";
 import Home from "./components/Home/Home";
+import { RouterProvider } from "react-router-dom";
 
 import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from "./NotFound";
 
 // import Home from "./Home";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import aboutus from "./components/aboutus";
-import squests from "./components/S_quests/squests";
-import rule from "./components/legal trivia/Rules/rule";
+ 
+// import squests from "./components/S_quests/squests";
+import Squests from "./components/S_quests/squests";
+import Rule from "./components/legal trivia/Rules/rule";
 import Login from "./components/Login/Login";
 import Road_acc from "./components/S_quests/Road_acc";
 import Sexualharras from "./components/S_quests/Sexualharras";
 import Rasicm from "./components/Kidztube/Rasicm";
 import Consumer from "./components/Kidztube/Consumer";
 import Lostphone from "./components/S_quests/Lostphone/Lostphone";
+import Signup from "./components/Signin_out/Signup";
+import { createBrowserRouter } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -44,32 +46,73 @@ const responsive = {
 };
 
 export default function App() {
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/kidztube",
+      element: <Kidztube />,
+    },
+    {
+      path: "/play",
+      element: <Quiz />,
+    },
+    {
+      path:"/squests",
+      element:<Squests/>
+    },
+    {
+      path: "/rule",
+      element: <Rule />,
+    },
+    {
+      path: "/finish",
+      element: <EndScreen />,
+    },
+    {
+      path: "/Road Accident",
+      element: <Road_acc />,
+    },
+    {
+      path: "/Sexual harresment",
+      element: <Sexualharras />,
+    },
+    {
+      path: "/rasicm",
+      element: <Rasicm />,
+    },
+    {
+      path: "/consumer_rights",
+      element: <Consumer />,
+    },
+    {
+      path: "/Lost phone",
+      element: <Lostphone />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
+
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/kidztube" component={Kidztube} />
-          <Route path="/play" component={Quiz} />
-          {/* <Route path="/aboutus" component={aboutus} /> */}
-          <Route path="/squests" component={squests} />
-          <Route path="/rule" component={rule} />
-          <Route path="/finish" component={EndScreen} />
-          <Route path="/Road Accident" component={Road_acc} />
-          <Route path="/Sexual harresment" component={Sexualharras} />
-          <Route path="/login" component={Login} />
-          <Route path="/rasicm" component={Rasicm} />
-          <Route path="/consumer_rights" component={Consumer} />
-          <Route path="/Lost phone" component={Lostphone} />
+     
+    <div className="App">
+ 
+      <RouterProvider router={appRouter} />
+         
+    </div>
 
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-      </div>
-
-   
-    </Router>
+     
   );
 }
