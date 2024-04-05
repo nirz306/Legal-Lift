@@ -39,6 +39,7 @@ function Signup() {
 
   return (
     <>
+     <NavLink className="logo" to="/">Legal Lift</NavLink> 
       <div className="outer2">
         <div className="wrapper2">
           <form>

@@ -2,16 +2,18 @@
     text-align: center; /* Center align the content */
     
   }
-  
+  .wrapp{
+    padding: 50px;
+  }
   .rulelist {
-    margin-top: 50px;
-    max-width: 700px; /* Set maximum width for better readability */
-   
+    margin-top: -50px;
+    max-width: 600px; /* Set maximum width for better readability */
+    max-height:500px;
     padding: 20px; /* Add some padding for better spacing */
-    background-color: #f7f7f7; /* Light background color */
+    background-color: #FF8F8A; /* Light background color */
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-
+    margin-bottom: 10px;
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-style: extra-bold;
@@ -31,13 +33,13 @@
   
   .letsPlay {
     width: auto;
-    margin-top: 20px; /* Add space between rule list and button */
+    margin-top: 10px; /* Add space between rule list and button */
     padding: 10px 20px; /* Add padding to the button */
     font-size: 18px; /* Adjust font size */
-    background-color: #007bff; /* Blue button color */
-    color: #fff; /* White text color */
+    background-color: #FDFDEF; /* Blue button color */
+    color: black; /* White text color */
     border: none; /* Remove button border */
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 15px; /* Add rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: box-shadow 0.3s; /* Smooth transition for box shadow */
 
@@ -46,8 +48,9 @@
   }
   
   .letsPlay:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+    background-color: #f8f8d5; /* Darker blue color on hover */
     box-shadow: 0 8px 16px grey;
+    color: black; 
   }
 
   .container{

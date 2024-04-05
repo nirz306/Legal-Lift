@@ -1,10 +1,54 @@
 
+.logo{
+  align-items: start;
+  margin-right: 1100px;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Galada", cursive;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.out{
+  display: flex;
+}
+.wrap{
+  margin-top: 40px;
+  margin-left: 90px;
+  margin-right: 50px;
+  background-color: #A1C398;
+  border-radius: 12px;
+  height: 450px;
+  width: 600px;
+}
+
+.content{
+  font-family: "Crimson Text", serif;
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Increase line height for better readability */
+  color: #333; /* Set text color to a dark shade for contrast */
+  margin-bottom: 20px; /* Add some space at the bottom for separation */
+}
+
+.title{
+  font-family: "Galada", cursive;
+  margin-top: 10px;
+  font-size: 50px;
+}
+.team{
+  margin-left: 10px; 
+}
+.cover{
+  height: 368px;
+  width: 500px;
+  margin-top: 100px;
+  /* object-fit: scale-down; */
+}
 .container {
   display: flex;
   align-items: center; /* Center items vertically */
   flex-direction: column; /* Align items in a column */
 }
-
 
 .road_acc {
     margin-top: 50px;

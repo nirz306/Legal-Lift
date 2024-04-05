@@ -34,6 +34,7 @@ function LoginForm() {
 
   return (
     <>
+     <NavLink className="logo" to="/">Legal Lift</NavLink> 
       <div className="outer">
         <div className="wrapper">
           <form>
