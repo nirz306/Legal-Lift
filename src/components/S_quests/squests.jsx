@@ -5,10 +5,27 @@ import acc from "../assets/road_accc.png";
 import respect from "../assets/respect realm.png";
 import "../S_quests/squests.css";
 import { NavLink } from 'react-router-dom'
+import team from "../assets/team.png";
 
 const Squests = () => {
   return (
     <>
+    <NavLink className = "logo" to='/'>Legal Lift</NavLink>
+    <div className="out">
+      <div className="wrap">
+        <p className="title">Scenario Quests</p>
+        <br></br>
+
+        <p className="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, pariatur.
+        </p>
+
+        
+      </div>
+      <div className="team"></div>
+      <img src={team} alt="" className="cover" />
+    </div>
+
       <div className="components">
         <div className="row1">
           <div className="road_acc">
