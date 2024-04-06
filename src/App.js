@@ -10,10 +10,10 @@ import { RouterProvider } from "react-router-dom";
 import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from "./NotFound";
 
-// import Home from "./Home";
-import React from "react";
  
-// import squests from "./components/S_quests/squests";
+import React from "react";
+ import AboutUs from "./components/AboutUs/Aboutus"
+import Blogs from "./components/Blogs/Blogs"
 import Squests from "./components/S_quests/squests";
 import Rule from "./components/legal trivia/Rules/rule";
 import Login from "./components/Login/Login";
@@ -98,6 +98,14 @@ export default function App() {
     {
       path: "/Lost phone",
       element: <Lostphone />,
+    },
+    {
+      path: "/aboutus",
+      element: <AboutUs/>
+    },
+    {
+      path: "/blogs",
+      element: <Blogs/>
     },
     {
       path: "*",

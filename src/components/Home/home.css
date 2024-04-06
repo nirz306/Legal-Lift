@@ -1,51 +1,159 @@
-.home {
+ 
+.top {
   display: flex;
-  justify-content: space-between; /* Distribute items along the main axis with space between */
-  align-items: center; /* Align items vertically */
+  flex-direction: row;
 }
-
-.title {
-  font-size: 100px;
-  margin-left: 50px; /* Adjust margin as needed */
+ 
+.head{
+  display: flex;
+}
+.header{
+  background-color: #FA7070;
+  width:1200px;
+  height: 400px;
   margin-top: 50px;
-  /* font-style: bold; */
-  /* 'bold' is not a valid value for font-style, use 'font-weight' instead */
-  /* font-weight: bold; */
+  border-radius: 15px;
+}
+.three{
+  position: absolute;
+  margin-left: 880px;
 }
 
-.girl {
-  height: 550px;
-  margin-right: 50px; /* Adjust margin as needed */
-  margin-top: 20px;
-}
-
-.aboutUs {
-  margin-top: 20px;
-}
-.wave {
-  width: 100%;
-}
-
-.wave2 {
-  width: 100%;
-  margin-top: -5px;
-}
-.blogs {
+.features{
+  margin-top: 70px;
   display: flex;
-  margin-top: 60px;
-  width: 40%;
-  padding-left: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 40px;
 }
 
-.randomshape {
-  width: 100px;
+.kidztube{
+  background-color: #FEFDED;
+}
+.legaltrivia{
+  background-color: #A1C398;
+}
+.squests{
+  background-color: #C6EBC5;
+}
+.blogs{
+  background-color: #FA7070;
 }
 
-.blog_page {
+
+.legaltrivia,
+.blogs,
+.squests,
+.kidztube
+{
+  border-radius: 15px;
+  margin-left: 50px;
+  height: 200px;
+  width: 400px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+.footer{
+  background-color: #FEFDED;
+  width:1423px;
   display: flex;
 }
-.blog_title {
-  margin-bottom: -40px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+ .imag{
+  width: 200px;
+ }
+.couple{
+  margin-right: 1000px;
+  margin-top: -200px;
 }
+.quote{
+  margin-left: 200px;
+  margin-right: 400px;
+}
+.media{
+  margin-left: 200px;
+}
+.kidztube:hover,
+.legaltrivia:hover,
+.squests:hover,
+.blogs:hover {
+  transform: translateX(-10px) translateY(-10px); /* Move the element to the left and up */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+.cov{
+  width: 150px;
+  margin-left: -200px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.tit{
+  margin-left: 200px;
+  position:absolute;
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Galada", cursive;
+}
+
+.content{
+  position:absolute;
+  width: 220px;
+  margin-left: 170px;
+  margin-top:60px;
+}
+
+ul {
+  display: flex;
+  position: relative;
+  /* top: 50%; */
+  /* left: 50%; */
+  transform: translate(-50%, -50%);
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  /* margin: 0 10px; */
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+ul li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+ 

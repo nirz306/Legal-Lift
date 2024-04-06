@@ -1,69 +1,85 @@
 import React from "react";
 import "./home.css";
-import cyber from "../assets/cyber.jpg"
-import blm from "../assets/blm.jpg";
-import privacy from "../assets/privacy.jpg";
-import AboutUs from "../aboutus"; // Import the AboutUs component
-import girl_social from "./Girl_social2.png";
-import Blogs from "./Blogs";
 import Navbar from "../navbar/Navbar";
-
-
+import { NavLink } from "react-router-dom";
+import couple from "../assets/couple.png";
+import three from "../assets/three.png";
+import kt from "../assets/kt.png";
+import sq from "../assets/sq.png";
+import blogss from "../assets/blogg.png";
+import lt from "../assets/lt.png";
 
 const Home = () => {
   return (
     <>
+      <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
       <Navbar />
-      <div className="home">
-        <p className="title">
-          Unlock Your Potential<p></p>
-          with India's Leading<p></p> Legal Minds
-        </p>
-        <div className="bgimg">
-          <img className="girl" src={girl_social} alt="" />
+      <div className="head">
+        <div className="header">Lorem</div>
+        <div className="three">
+          <img src={three}></img>
         </div>
       </div>
 
-      <div className="wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#0099ff"
-            fill-opacity="1"
-            d="M0,224L80,208C160,192,320,160,480,165.3C640,171,800,213,960,224C1120,235,1280,213,1360,202.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-
-      <div className="wave2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,138.7C480,160,600,224,720,261.3C840,299,960,309,1080,272C1200,235,1320,149,1380,106.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      </div>
-
-      <div className="aboutUs">
-        <AboutUs />
-      </div>
-
-
-   
-
-      <h1 className="blog_title">Trending Posts</h1>
-      <div className="blog_page">
-
-          
-
-      <div className="blogs">
-          <Blogs image={cyber} title={"Cyber Law Essentials"} author={"John"}/>
+      <div className="features">
+        <div className="row1">
+          <NavLink className="link" to="/kidztube">
+            <div className="kidztube">
+              <p className="tit">Kidztube</p>
+              <img className="cov" src={kt}></img>
+              <div className="content">
+                Discover into the fascinating world of law with our engaging
+                visuals designed to make learning fun!
+              </div>
+            </div>
+          </NavLink>
+          <NavLink className="link" to="/rule">
+            <div className="legaltrivia">
+              <p className="tit">Legal Trivia</p>
+              <img className="cov" src={lt}></img>
+              <div className="content">
+                Embark on a legal adventure in our quiz section! Unravel the
+                mysteries of world of legal wisdom!
+              </div>
+            </div>
+          </NavLink>
         </div>
 
-        <div className="blogs">
-          <Blogs image={blm} title={"Black Lives Matter"} author={"John"}/>
-        </div>
-
-        <div className="blogs">
-          <Blogs image={privacy} title={"Privacy Rights"} author={"John"} />
+        <div className="row2">
+          <NavLink className="link" to="/squests">
+            <div className="squests">
+              <p className="tit">Scenario Quests</p>
+              <img className="cov" src={sq}></img>
+              <div className="content">
+                Experience real-life scenarios through engaging visual content,
+                followed by thought-provoking questions
+              </div>
+            </div>
+          </NavLink>
+          <NavLink className="link" to="/blogs">
+            <div className="blogs">
+              <p className="tit">Blogs</p>
+              <img className="cov" src={sq}></img>
+              <div className="content">
+                Dive into our blog for easy-to-understand articles on law! All
+                about justice, rights, and the legal world!
+              </div>
+            </div>
+          </NavLink>
         </div>
       </div>
-      
-      <h1></h1>
+      <div className="footer">
+        <div className="imag">
+          <img className="couple" src={couple} alt="" />
+        </div>
+        <div className="quote">QUOTE</div>
+        <div className="media">
+          Follow us on
+           
+        </div>
+      </div>
     </>
   );
 };

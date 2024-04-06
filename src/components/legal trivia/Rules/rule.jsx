@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./rules.css";
 import { NavLink } from "react-router-dom";
-// import team from ".../assets/team.png";
+import boy from "./boy.png"
 
 const rule = () => {
   // const[move,setMove] = React.useState(false);
@@ -60,7 +60,7 @@ const rule = () => {
           </motion.div>
         </div>
         <div className="boy">
-          <img height="400px" src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&w=800"></img>
+          <img height="400px" src= {boy}></img>
         </div>
       </div>
     </>
