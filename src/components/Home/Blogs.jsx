@@ -33,6 +33,8 @@ const Blogs = ({ image, title ,author }) => {
       
       <div className="title">{title}</div>
       <div className="author">{author}</div>
+
+
     </div>
   );
 };
