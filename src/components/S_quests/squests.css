@@ -22,12 +22,16 @@
   width: 600px;
 }
 
-.content{
+.content1{
+  position: absolute;
   font-family: "Crimson Text", serif;
-  font-size: 16px; /* Adjust the font size as needed */
+  width: 530px;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 26px; /* Adjust the font size as needed */
   line-height: 1.6; /* Increase line height for better readability */
   color: #333; /* Set text color to a dark shade for contrast */
-  margin-bottom: 20px; /* Add some space at the bottom for separation */
+  margin-top: -20px;  
 }
 
 .title{
@@ -75,6 +79,10 @@
   align-items: center;
   justify-content: space-between; 
   padding: 40px;
+  margin-top: 50px;
+  background-color: #FA7070;
+  margin-bottom: 50px;
+  border-radius: 15px;
   /* padding-right: 200px; */
 }
 

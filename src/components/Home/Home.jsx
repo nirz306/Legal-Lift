@@ -17,7 +17,15 @@ const Home = () => {
       </NavLink>
       <Navbar />
       <div className="head">
-        <div className="header">Lorem</div>
+        <div className="header">
+          Discovering the knowledge of Law
+          <div className="desp">
+            Unraveling the secrets of law is like discovering the hidden keys to
+            a fair of society and journey where every revelation empowers us
+            towards greater understanding and equality for all.
+          </div>
+        </div>
+
         <div className="three">
           <img src={three}></img>
         </div>
@@ -75,10 +83,7 @@ const Home = () => {
           <img className="couple" src={couple} alt="" />
         </div>
         <div className="quote">QUOTE</div>
-        <div className="media">
-          Follow us on
-           
-        </div>
+        <div className="media">Follow us on</div>
       </div>
     </>
   );

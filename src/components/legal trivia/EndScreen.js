@@ -1,32 +1,23 @@
-import React, { useEffect } from "react";
-import { useContext } from "react";
-import { GameStateContext } from "../../helpers/Contexts";
+import React from "react";
 import { Questions } from "./Questions";
+import { NavLink } from "react-router-dom";
 
-const EndScreen = () => {
-  const { score, setScore, setGameState, userName } = useContext(
-    GameStateContext
-  );
-
-  const restartQuiz = () => {
-    setScore(0);
-    setGameState("menu");
-  };
-
-  // useEffect(()=>{
-  //   console.log(score);
-  // },[])
-
+const EndScreen = ({ score, totalQuestions }) => {
+  console.log("points", score);
   return (
-    <div className="EndScreen">
-      <h1>Quiz Finished</h1>
-      
-      <h1>
-        {score} / {Questions.length}
-      </h1>
-      {/* <button id="startquiz" onClick={restartQuiz}>Restart Quiz</button> */}
-    </div>
+    <>
+      <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
+      <div className="EndScreen">
+        <h1>Quiz Finished</h1>
+        <h1>
+          {score} / {totalQuestions}
+        </h1>
+      </div>
+    </>
   );
 };
+
 
 export default EndScreen;
