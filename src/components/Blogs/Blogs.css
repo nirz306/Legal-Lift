@@ -20,20 +20,30 @@
   }
   
   .imageContainer {
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     border: #FD9534 6px solid;
     width: 250px;
     height: 250px;
+    transition: transform 0.3s ease;
     
+  }
+
+  .imageContainer:hover {
+    transform: scale(1.1); /* Zoom effect */
   }
   
   .imageContainer img {
     max-width: 100%;
     width: 250px;
     height: 250px;
+    transition: transform 0.3s ease; 
   }
   
+  .imageContainer:hover img {
+    transform: scale(1.1); /* Zoom effect */
+  }
   .quoteContainer {
     margin-top: 30px;
     border-radius: 10px;
@@ -78,3 +88,5 @@
       font-style: normal;
      
   }
+
+  
