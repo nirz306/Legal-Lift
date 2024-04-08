@@ -1,5 +1,5 @@
 import "./App.css";
-import Menu from "./components/legal trivia/Menu";
+ 
 import Quiz from "./components/legal trivia/Quiz";
 import EndScreen from "./components/legal trivia/EndScreen";
  
@@ -24,7 +24,7 @@ import Consumer from "./components/Kidztube/Consumer";
 import Lostphone from "./components/S_quests/Lostphone/Lostphone";
 import Signup from "./components/Signin_out/Signup";
 import { createBrowserRouter } from "react-router-dom";
-
+ 
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.

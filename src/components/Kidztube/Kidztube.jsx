@@ -16,7 +16,7 @@ const Kidztube = () => {
         <div className="wrap">
           <p className="title">Kidztube</p>
           <br></br>
-          <p className="content">
+          <p className="content1">
             Step into a world of wonder at KidzTube! We've handpicked videos
             that spark curiosity and inspire learning. Here, your children can
             explore a world of educational videos that are both fun and
