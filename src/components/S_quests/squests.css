@@ -1,4 +1,6 @@
-
+.button{
+  border: #222;
+}
 .logo{
   align-items: start;
   margin-right: 1100px;
@@ -126,18 +128,26 @@
 .c,
 .d{
   width: 100%;
-  background:#fff;
+  background:#F8F8DC;
   color:#222;
   font-weight: 500;
-  border:ipx solid #222;
+  border: none;
+  width: 500px;
+   
   padding: 10px;
   margin: 10px 0;
   text-align: left;
   cursor: pointer;
   transition: all 0.3s;
   text-align: center;
+
 }
 
+.options{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .submit{
   width:40%;
   background-color: #4CAF50; /* Green background */
@@ -171,7 +181,7 @@
   width: 800px;
   height: 500px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #4ea182df;
   display: flex;
   flex-direction: column;
   justify-content: center;

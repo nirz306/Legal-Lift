@@ -22,13 +22,13 @@ function Quiz() {
       setScore(score + 1);
     }
 
-    document.getElementById("a").style.background = "white";
+    document.getElementById("a").style. background="#ffffd6";
     document.getElementById("a").style.color = "black";
-    document.getElementById("b").style.background = "white";
+    document.getElementById("b").style. background="#ffffd6";
     document.getElementById("b").style.color = "black";
-    document.getElementById("c").style.background = "white";
+    document.getElementById("c").style. background="#ffffd6";
     document.getElementById("c").style.color = "black";
-    document.getElementById("d").style.background = "white";
+    document.getElementById("d").style. background="#ffffd6";
     document.getElementById("d").style.color = "black";
 
     setAns("next");
@@ -101,7 +101,10 @@ function Quiz() {
       </NavLink>
       <div className="Quiz">
         <h1 id="Ques">{Questions[currentQuestion].prompt}</h1>
+
         <div className="questions">
+
+      
           <button
             id="a"
             onClick={() => {
@@ -111,6 +114,7 @@ function Quiz() {
             {Questions[currentQuestion].optionA}
           </button>
 
+          
           <button
             id="b"
             onClick={() => {
@@ -137,6 +141,8 @@ function Quiz() {
           >
             {Questions[currentQuestion].optionD}
           </button>
+        
+
         </div>
 
         {currentQuestion == Questions.length - 1 ? (

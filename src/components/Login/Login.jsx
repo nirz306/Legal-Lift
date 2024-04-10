@@ -15,27 +15,32 @@ function LoginForm() {
   });
 
   const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
-    console.log("submit");
     if (!values.email || !values.pass) {
       setErrorMsg("Fill all the fields");
       return;
     }
     setErrorMsg("");
 
+    setSubmitButtonDisabled(true);
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
+        setSubmitButtonDisabled(false);
         navigate("/");
       })
       .catch((err) => {
+        setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
       });
   };
 
   return (
     <>
-     <NavLink className="logo" to="/">Legal Lift</NavLink> 
+      <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
       <div className="outer">
         <div className="wrapper">
           <form>
@@ -67,7 +72,12 @@ function LoginForm() {
               <b className="errorMsg">{errorMsg}</b>
             </div>
 
-            <button type="" className="btn" onClick={handleSubmission}>
+            <button
+              disabled={submitButtonDisabled}
+              type="submit"
+              className="btn"
+              onClick={handleSubmission}
+            >
               Login
             </button>
 

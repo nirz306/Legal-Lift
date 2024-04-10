@@ -2,19 +2,19 @@
     margin-top: 50px;
     margin-bottom: 50px;
      padding:10px;
-    width: 500px;
+    width: 1100px;
     height: 500px;
-    border-radius: 10px;
-    background-color: #4ea182c2;
+    /* border-radius: 10px; */
+    /* background-color: #4ea182c2; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Add shadow for depth */
   }
 
   button{
-    background:#F8F8DC;
+    background:#ffffd6;
     color:#222;
     font-weight: 500;
     width: 100%;
@@ -46,6 +46,7 @@
     cursor:pointer;
     font-family: "Galada", cursive;
     font-size: 25px;
+    margin-top: 100px;
 
   } 
 
@@ -54,4 +55,22 @@
     font-family: "Galada", cursive;
     font-weight: 500;
     font-size: 27px;
+    margin-top: -70px;
   }
+
+  .questions{
+    margin-top: 70px;
+    display: flex;
+    width: 1000px;
+    height: 150px;
+  }
+
+  #a,
+  #b,
+  #c,
+  #d{
+margin-right: 50px;
+width: 200px;
+height: 200px;
+  }
+
