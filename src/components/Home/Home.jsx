@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import Navbar from "../navbar/Navbar";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import couple from "../assets/couple.png";
 import three from "../assets/three.png";
 import kt from "../assets/kt.png";
@@ -12,9 +12,9 @@ import lt from "../assets/lt.png";
 const Home = () => {
   return (
     <>
-      <NavLink className="logo" to="/">
+      <Link className="logo" to="/">
         Legal Lift
-      </NavLink>
+      </Link>
       <Navbar />
       <div className="head">
         <div className="header">
@@ -33,7 +33,7 @@ const Home = () => {
 
       <div className="features">
         <div className="row1">
-          <NavLink className="link" to="/kidztube">
+          <Link className="link" to="/kidztube">
             <div className="kidztube">
               <p className="tit">Kidztube</p>
               <img className="cov" src={kt}></img>
@@ -42,8 +42,8 @@ const Home = () => {
                 visuals designed to make learning fun!
               </div>
             </div>
-          </NavLink>
-          <NavLink className="link" to="/rule">
+          </Link>
+          <Link className="link" to="/rule">
             <div className="legaltrivia">
               <p className="tit">Legal Trivia</p>
               <img className="cov" src={lt}></img>
@@ -52,11 +52,11 @@ const Home = () => {
                 mysteries of world of legal wisdom!
               </div>
             </div>
-          </NavLink>
+          </Link>
         </div>
 
         <div className="row2">
-          <NavLink className="link" to="/squests">
+          <Link className="link" to="/squests">
             <div className="squests">
               <p className="tit">Scenario Quests</p>
               <img className="cov" src={sq}></img>
@@ -65,8 +65,8 @@ const Home = () => {
                 followed by thought-provoking questions
               </div>
             </div>
-          </NavLink>
-          <NavLink className="link" to="/blogs">
+          </Link>
+          <Link className="link" to="/blogs">
             <div className="blogs">
               <p className="tit">Blogs</p>
               <img className="cov" src={sq}></img>
@@ -75,7 +75,7 @@ const Home = () => {
                 about justice, rights, and the legal world!
               </div>
             </div>
-          </NavLink>
+          </Link>
         </div>
       </div>
       <div className="footer">

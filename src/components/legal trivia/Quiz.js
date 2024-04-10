@@ -2,7 +2,6 @@ import "./quiz.css";
 import { Questions } from "./Questions";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import EndScreen from "./EndScreen";
 import { Link } from "react-router-dom";
 
 function Quiz() {
@@ -79,15 +78,28 @@ function Quiz() {
 
   console.log("final score", score); //here the score value showing correctly
 
-  return (
+    if(gameState === "finished")
+    {
+      return(
+        <>
+         <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
+      <div className="EndScreen">
+      <h1>Quiz Finished</h1>
+      <h1>
+        {score} / {Questions.length}
+      </h1>
+    </div>
+    </>) 
+    }
+
+  else return (
     <>
       <NavLink className="logo" to="/">
         Legal Lift
       </NavLink>
       <div className="Quiz">
-        
-          {gameState === "finished" && <EndScreen score={score} totalQuestions={Questions.length} />}
-
         <h1 id="Ques">{Questions[currentQuestion].prompt}</h1>
         <div className="questions">
           <button
@@ -128,7 +140,7 @@ function Quiz() {
         </div>
 
         {currentQuestion == Questions.length - 1 ? (
-          <Link to="/finish">
+          <Link>
             <button onClick={finishQuiz} id="nextQuestion">
               Finish Quiz
             </button>

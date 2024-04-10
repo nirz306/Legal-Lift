@@ -23,7 +23,7 @@ const Blogs = () => {
         <div className="imageWithQuote">
           <div className="imageContainer">
           <a className="link" href="http://surl.li/sjblo" target="_blank" rel="noopener noreferrer">  
-            <img src={racism} alt="Racism" />
+            <img className='blogg' src={racism} alt="Racism" />
             </a>
           </div>
          
@@ -35,7 +35,7 @@ const Blogs = () => {
         <div className="imageWithQuote">
           <div className="imageContainer">
           <a className="link" href="https://www.kredx.com/blog/consumers-know-your-rights/" target="_blank" rel="noopener noreferrer"> 
-            <img src={customer_rights} alt="Customer Rights" />
+            <img className='blogg' src={customer_rights} alt="Customer Rights" />
             </a>
           </div>
           <div className="quoteContainer">

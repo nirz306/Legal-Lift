@@ -1,9 +1,6 @@
 import "./App.css";
  
 import Quiz from "./components/legal trivia/Quiz";
-import EndScreen from "./components/legal trivia/EndScreen";
- 
-import { GameStateContext } from "./helpers/Contexts";
 import Home from "./components/Home/Home";
 import { RouterProvider } from "react-router-dom";
 
@@ -74,10 +71,6 @@ export default function App() {
     {
       path: "/rule",
       element: <Rule />,
-    },
-    {
-      path: "/finish",
-      element: <EndScreen />,
     },
     {
       path: "/Road Accident",
