@@ -34,55 +34,14 @@
   text-decoration: #222;
 }
 
-#nextQuestion{
-  background: #001e4d;
-  color:#fff;
-  font-weight: 500;
-  width:150px;
-  border:0;
-  padding: 10px;
-  margin: 20px auto 0;
-  border-radius: 4px;
-  cursor:pointer;
-  /* temporarily hide karun tevtay */
-  /* display:none;  */
-}
-button{
-  background:#fff;
-  color:#222;
-  font-weight: 500;
-  width: 100%;
-  border:ipx solid #222;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
-}
 
-button:hover {
-  background:#222 ;
-  color: #fff;
-}
 
-.Quiz {
-  margin-top: 50px;
-   padding:10px;
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
 
-.Menu, .Quiz, .EndScreen h1 {
-  color: white;
-}
+
+
+
+
+ 
 
 .EndScreen {
   margin-top: 50px;
@@ -104,9 +63,7 @@ button:hover {
   text-align: center;
 }
 
-#Ques{
-  color:#001e4d;
-}
+
 
 h3 {
   color: #ffffff;
@@ -118,12 +75,10 @@ h3 {
   margin:0px;
   padding:0px;
   box-sizing: border-box;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Crimson Text", serif;
 
 }
-/* body{
-  background-color: #f2f2f2;
-} */
+ 
 .heading{
   width:90%;
   display: flex;

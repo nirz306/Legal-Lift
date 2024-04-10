@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar />
       <div className="head">
         <div className="header">
-          Discovering the knowledge of Law
+          <p className="tit">Discovering the knowledge of Law</p>
           <div className="desp">
             Unraveling the secrets of law is like discovering the hidden keys to
             a fair of society and journey where every revelation empowers us

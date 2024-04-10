@@ -1,4 +1,4 @@
- 
+
 .top {
   display: flex;
   flex-direction: row;
@@ -7,6 +7,12 @@
 .head{
   display: flex;
 }
+.tit{
+  margin-left: 300px;
+  margin-top: 550px;
+    font-size: 75px;
+}
+
 .header{
   background-color: #FA7070;
   width:1200px;
@@ -14,16 +20,18 @@
   margin-top: 50px;
   margin-left: -10px;
   border-radius: 15px;
-  font-size: 45px;
+
   font-family: "Galada", cursive;
 }
+
+
+
 .desp{
   font-size: 30px;
-  font-family: "Galada", cursive;
   width: 600px;
 position:absolute;
 margin-left: 150px;
-margin-top: 40px;
+margin-top: 100px;
 }
 
 .three{

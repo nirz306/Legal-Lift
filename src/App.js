@@ -9,7 +9,6 @@ import NotFound from "./NotFound";
 
  
 import React from "react";
- import AboutUs from "./components/AboutUs/Aboutus"
 import Blogs from "./components/Blogs/Blogs"
 import Squests from "./components/S_quests/squests";
 import Rule from "./components/legal trivia/Rules/rule";
@@ -91,10 +90,6 @@ export default function App() {
     {
       path: "/Lost phone",
       element: <Lostphone />,
-    },
-    {
-      path: "/aboutus",
-      element: <AboutUs/>
     },
     {
       path: "/blogs",

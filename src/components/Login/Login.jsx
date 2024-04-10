@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router";
 import { auth } from "../Signin_out/firebase";
-import girl from "../assets/login.png";
+// import girl from "../assets/login.png";
+import gif from "../assets/login2gif.gif";
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ function LoginForm() {
             </button>
 
             <div className="register-link">
-              <p className="footer">
+              <p className="foot">
                 {" "}
                 Don't have an account?{" "}
                 <span>
@@ -82,7 +83,7 @@ function LoginForm() {
           </form>
         </div>
         <div className="girl">
-          <img height="500px" src={girl}></img>
+          <img className="gif" height="500px" src={gif}></img>
         </div>
       </div>
     </>
