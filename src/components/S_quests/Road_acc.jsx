@@ -3,6 +3,8 @@ import ReactPlayer from 'react-player';
 import './squests.css';
 import VIDEO_PATH from '../assets/r_a.mp4';
 import Questionaire from './Questionaire';
+import { NavLink } from 'react-router-dom';
+
 
 const Road_acc = () => {
   const [showQuiz, setShowQuiz] = useState(false);
@@ -13,6 +15,10 @@ const Road_acc = () => {
   };
 
   return (
+    <>
+  <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
     <div className='container'>
       <div className="road_acc">
         <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
@@ -27,6 +33,7 @@ const Road_acc = () => {
       )}
 
     </div>
+    </>
   );
 };
 

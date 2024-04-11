@@ -1,5 +1,4 @@
 import "./App.css";
- 
 import Quiz from "./components/legal trivia/Quiz";
 import Home from "./components/Home/Home";
 import { RouterProvider } from "react-router-dom";

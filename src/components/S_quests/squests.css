@@ -96,7 +96,7 @@
  .s_link{
   display: block;
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Crimson Text", serif;
   padding: 6px;
   font:bold;
   font-size: large;
@@ -120,22 +120,23 @@
  
 
 #question{
-  color:#001e4d;
+  color:black;
+  font-family: "Crimson Text", serif;
 }
 
 .a,
 .b,
 .c,
 .d{
-  width: 100%;
+  margin-right: 50px;
+  margin-left: 50px;
+  width: 200px;
+  height: 200px;
   background:#F8F8DC;
   color:#222;
   font-weight: 500;
   border: none;
-  width: 500px;
-   
   padding: 10px;
-  margin: 10px 0;
   text-align: left;
   cursor: pointer;
   transition: all 0.3s;
@@ -145,20 +146,20 @@
 
 .options{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 .submit{
-  width:40%;
-  background-color: #4CAF50; /* Green background */
+  /* width:40%; */
+  background: #FA7070;
   border: none; /* Remove borders */
-  color: white; /* White text */
+  color: black; /* White text */
   padding: 15px 32px;  
   text-align: center; /* Center text */
   text-decoration: none; /* Remove underline */
   display: inline-block; /* Make it inline */
   font-size: 16px; /* Font size */
-  margin: -px 2px; /* Margin */
+  margin: 50px 2px; /* Margin */
   cursor: pointer; /* Add a pointer cursor on hover */
   border-radius: 4px; /* Add rounded corners */
 }
@@ -176,17 +177,16 @@
 }
 
 .quiz{
+ 
   margin-top: 50px;
    padding:5px;
-  width: 800px;
+  width: 1100px;
   height: 500px;
   border-radius: 10px;
-  background-color: #4ea182df;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .option{

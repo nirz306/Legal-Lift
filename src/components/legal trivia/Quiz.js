@@ -3,6 +3,7 @@ import { Questions } from "./Questions";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import reward from "../assets/reward.png";
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -52,9 +53,7 @@ function Quiz() {
       if (option == "optionD")
         document.getElementById("d").style.backgroundColor = "green";
     } else {
-      console.log(option);
-      console.log("wrong answer");
-      console.log("score: ", score);
+   
 
       setAns("wrong");
 
@@ -76,8 +75,9 @@ function Quiz() {
     setGameState("finished");
   };
 
-  console.log("final score", score); //here the score value showing correctly
+ 
 
+  //shows the final score
     if(gameState === "finished")
     {
       return(
@@ -86,10 +86,11 @@ function Quiz() {
         Legal Lift
       </NavLink>
       <div className="EndScreen">
-      <h1>Quiz Finished</h1>
-      <h1>
-        {score} / {Questions.length}
-      </h1>
+      <h1>Result</h1>
+      <img src={reward}  alt="reward" />
+      <h2>
+        You have scored {score} out of {Questions.length} !!
+      </h2>
     </div>
     </>) 
     }

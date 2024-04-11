@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Questionaire from '../Questionaire';
 import "./lostphone.css";
+import { NavLink } from 'react-router-dom';
 
 const Lostphone = () => {
   const correctOrder = ["op2","op1","op3"];
@@ -36,6 +37,9 @@ const Lostphone = () => {
 
   return (
     <>
+     <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
       <div className="quiz">
       <div className="ques"><h1>"Please select the actions you would take if your phone were lost."</h1></div>
       <div className='option'>
