@@ -9,7 +9,7 @@ const rule = () => {
   // const[move,setMove] = React.useState(false);
   return (
     <>
-      <NavLink className="logo" to="/">
+      <NavLink className="logo1" to="/">
         Legal Lift
       </NavLink>
       <div className="out">

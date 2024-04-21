@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./login.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import { auth } from "../Signin_out/firebase";
 // import girl from "../assets/login.png";
 import gif from "../assets/login2gif.gif";

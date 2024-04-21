@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Questionaire from '../Questionaire';
+import ReactPlayer from 'react-player';
 import "./lostphone.css";
 import { NavLink } from 'react-router-dom';
+import VIDEO_PATH from './p_p.mp4';
 
 const Lostphone = () => {
   const correctOrder = ["op2","op1","op3"];
@@ -40,6 +42,7 @@ const Lostphone = () => {
      <NavLink className="logo" to="/">
         Legal Lift
       </NavLink>
+      <div className="video"><ReactPlayer url={VIDEO_PATH} controls={true} /></div>
       <div className="quiz">
       <div className="ques"><h1>"Please select the actions you would take if your phone were lost."</h1></div>
       <div className='option'>

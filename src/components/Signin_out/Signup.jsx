@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../Login/login.css";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router";
+ 
 import { auth } from "./firebase";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // import girl from "../assets/login.png";
 import gif from "../assets/logingif.gif";
 

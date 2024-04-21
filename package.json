@@ -13,7 +13,8 @@
     "react-figma-embed": "^1.0.1",
     "react-multi-carousel": "^2.8.5",
     "react-player": "^2.15.1",
-    "react-router-dom": "^6.22.3",
+    "react-router": "^6.15.0",
+    "react-router-dom": "^6.15.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"

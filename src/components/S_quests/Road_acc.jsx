@@ -20,7 +20,7 @@ const Road_acc = () => {
         Legal Lift
       </NavLink>
     <div className='container'>
-      <div className="road_acc">
+      <div className="player">
         <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
       </div>
 

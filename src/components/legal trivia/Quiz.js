@@ -82,7 +82,7 @@ function Quiz() {
     {
       return(
         <>
-         <NavLink className="logo" to="/">
+         <NavLink className="logo1" to="/">
         Legal Lift
       </NavLink>
       <div className="EndScreen">
@@ -97,7 +97,7 @@ function Quiz() {
 
   else return (
     <>
-      <NavLink className="logo" to="/">
+      <NavLink className="logo1" to="/">
         Legal Lift
       </NavLink>
       <div className="Quiz">
