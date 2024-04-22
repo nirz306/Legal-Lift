@@ -1,14 +1,13 @@
 import "./App.css";
- 
 import Quiz from "./components/legal trivia/Quiz";
 import Home from "./components/Home/Home";
-import { RouterProvider } from "react-router-dom";
-
+import { BrowserRouter, RouterProvider } from "react-router-dom";
+import { useLocation,Route,Routes } from 'react-router-dom';
 import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from "./NotFound";
 
  
-import React from "react";
+import React, { useEffect } from "react";
 import Blogs from "./components/Blogs/Blogs"
 import Squests from "./components/S_quests/squests";
 import Rule from "./components/legal trivia/Rules/rule";
@@ -20,28 +19,20 @@ import Consumer from "./components/Kidztube/Consumer";
 import Lostphone from "./components/S_quests/Lostphone/Lostphone";
 import Signup from "./components/Signin_out/Signup";
 import { createBrowserRouter } from "react-router-dom";
+import Respect_realm from "./components/S_quests/Respect_realm";
+import Detention from "./components/Kidztube/Detention";
  
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-
+ 
+ 
 export default function App() {
+
+
+  // const {pathname} = useLocation();
+
+  // useEffect(()=>{
+  //   window.scrollTo(0,0);
+  // },[pathname])
+
   const appRouter = createBrowserRouter([
     {
       path: "/",
@@ -96,6 +87,14 @@ export default function App() {
       element: <Blogs/>
     },
     {
+      path: "/respect_realm",
+      element: <Respect_realm/>
+    },
+    {
+      path: "/detention",
+      element: <Detention/>
+    },
+    {
       path: "*",
       element: <NotFound />,
     },
@@ -106,6 +105,14 @@ export default function App() {
     <div className="App">
  
       <RouterProvider router={appRouter} />
+       
+       {/* <BrowserRouter>
+       <Routes>
+        <Route path ="/kidztube" element = {<Kidztube/>}/>
+      </Routes>
+      </BrowserRouter> */}
+     
+      
          
     </div>
 

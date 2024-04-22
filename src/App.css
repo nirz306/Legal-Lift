@@ -10,7 +10,6 @@
 
 .App h1{
   font-weight: 25px;
-  color: #fff;
 }
 
 .Menu {
@@ -43,17 +42,6 @@
 
  
 
-.EndScreen {
-  margin-top: 50px;
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
-  background-color: lightseagreen;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 #startquiz {
   width:auto;

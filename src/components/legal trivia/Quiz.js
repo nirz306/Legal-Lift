@@ -3,6 +3,7 @@ import { Questions } from "./Questions";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import reward from "../assets/reward.png";
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -22,13 +23,13 @@ function Quiz() {
       setScore(score + 1);
     }
 
-    document.getElementById("a").style.background = "white";
+    document.getElementById("a").style. background="#ffffd6";
     document.getElementById("a").style.color = "black";
-    document.getElementById("b").style.background = "white";
+    document.getElementById("b").style. background="#ffffd6";
     document.getElementById("b").style.color = "black";
-    document.getElementById("c").style.background = "white";
+    document.getElementById("c").style. background="#ffffd6";
     document.getElementById("c").style.color = "black";
-    document.getElementById("d").style.background = "white";
+    document.getElementById("d").style. background="#ffffd6";
     document.getElementById("d").style.color = "black";
 
     setAns("next");
@@ -52,9 +53,7 @@ function Quiz() {
       if (option == "optionD")
         document.getElementById("d").style.backgroundColor = "green";
     } else {
-      console.log(option);
-      console.log("wrong answer");
-      console.log("score: ", score);
+   
 
       setAns("wrong");
 
@@ -76,32 +75,37 @@ function Quiz() {
     setGameState("finished");
   };
 
-  console.log("final score", score); //here the score value showing correctly
+ 
 
+  //shows the final score
     if(gameState === "finished")
     {
       return(
         <>
-         <NavLink className="logo" to="/">
+         <NavLink className="logo1" to="/">
         Legal Lift
       </NavLink>
       <div className="EndScreen">
-      <h1>Quiz Finished</h1>
-      <h1>
-        {score} / {Questions.length}
-      </h1>
+      <h1>Result</h1>
+      <img src={reward}  alt="reward" />
+      <h2>
+        You have scored {score} out of {Questions.length} !!
+      </h2>
     </div>
     </>) 
     }
 
   else return (
     <>
-      <NavLink className="logo" to="/">
+      <NavLink className="logo1" to="/">
         Legal Lift
       </NavLink>
       <div className="Quiz">
         <h1 id="Ques">{Questions[currentQuestion].prompt}</h1>
+
         <div className="questions">
+
+      
           <button
             id="a"
             onClick={() => {
@@ -111,6 +115,7 @@ function Quiz() {
             {Questions[currentQuestion].optionA}
           </button>
 
+          
           <button
             id="b"
             onClick={() => {
@@ -137,6 +142,8 @@ function Quiz() {
           >
             {Questions[currentQuestion].optionD}
           </button>
+        
+
         </div>
 
         {currentQuestion == Questions.length - 1 ? (

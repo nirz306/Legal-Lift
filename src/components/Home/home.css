@@ -186,4 +186,14 @@ ul li a:before {
   z-index: 2;
 }
 
- 
+.logo{
+  /* position:fixed; */
+  align-items: start;
+  margin-right: 1100px;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Galada", cursive;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

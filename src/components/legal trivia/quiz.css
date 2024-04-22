@@ -1,24 +1,21 @@
- .Quiz {
+  /* .Quiz {
     margin-top: 50px;
     margin-bottom: 50px;
      padding:10px;
-    width: 500px;
+    width: 1100px;
     height: 500px;
-    border-radius: 10px;
-    background-color: #4ea182c2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
   }
 
   button{
-    background:#F8F8DC;
+    background:#ffffd6;
     color:#222;
     font-weight: 500;
     width: 100%;
-    /* border:ipx solid #222; */
+  
     border: none;
     padding: 10px;
     margin: 10px 0;
@@ -44,8 +41,9 @@
     margin: 20px auto 0;
     border-radius: 4px;
     cursor:pointer;
-    font-family: "Galada", cursive;
+    font-family: "Crimson Text", serif;
     font-size: 25px;
+    margin-top: 100px;
 
   } 
 
@@ -54,4 +52,186 @@
     font-family: "Galada", cursive;
     font-weight: 500;
     font-size: 27px;
+    margin-top: -70px;
   }
+
+  .questions{
+    margin-top: 70px;
+    display: flex;
+    width: 1000px;
+    height: 150px;
+  }
+
+  #a,
+  #b,
+  #c,
+  #d{
+margin-right: 50px;
+width: 200px;
+height: 200px;
+  }
+
+
+  .EndScreen {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #F8F8DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .EndScreen h1{
+    font-size: 60px;
+    font-family: "Galada", cursive;
+    font-weight: 500;
+  }
+
+  
+  .EndScreen h2{
+    font-size: 40px;
+    font-family: "Galada", cursive;
+    font-weight: 500;
+  }
+
+  .EndScreen img{
+    width: 270px;
+  } 
+
+  */
+
+  .Quiz {
+    margin-top: 130px;
+    margin-bottom: 20px;
+    padding: 20px; /* Increase padding for better spacing */
+    width: 90%; /* Initial width as a percentage of the viewport */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    #nextQuestion {
+    margin-top: 20px;
+    background: #AAC29C;
+    color:black;
+    font-weight: 500;
+    width:200px;
+    border:0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor:pointer;
+    border: none;
+    font-family: "Crimson Text", serif;
+    font-size: 25px;
+    
+    }
+
+    
+    button{
+      background:#ffffd6;
+      border: none;
+    }
+
+
+    #Ques {
+    font-size: 40px;
+    }
+    
+    .questions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; /* Evenly distribute space between buttons */
+    }
+    
+    #a,
+    #b,
+    #c,
+    #d {
+    margin: 0 25px 0px 25px; /* Maintain margin between options */
+    width: 200px;
+    height: 200px;
+    }
+    
+    
+    .EndScreen {
+    margin-top: 120px;
+    margin-bottom: 20px;
+    padding: 20px; /* Increase padding for better spacing */
+    width: 90%; /* Initial width as a percentage of the viewport */
+    max-width: 500px; /* Maximum width to maintain readability */
+    border-radius: 10px;
+    background-color: #F8F8DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .EndScreen h1 {
+    font-size: 40px; /* Decrease font size */
+    }
+    
+    .EndScreen h2 {
+    font-size: 30px; /* Decrease font size */
+    }
+    
+    .EndScreen img {
+    width: 200px; /* Decrease image width */
+    }
+    
+    /* Media query for screens below 987px and up to 700px */
+    @media (max-width: 987px) {
+    #a,
+    #b,
+    #c,
+    #d {
+    width: 150px; /* Decrease the width */
+    height: 150px; /* Decrease the height */
+    }
+    }
+    
+    
+    @media (max-width: 768px) {
+    .Quiz {
+    margin-top:200px;
+    }
+    
+    @media (max-width: 700px) {
+    .Quiz {
+    margin-top:100px; /* Further decrease width for even smaller screens */
+    }
+    
+    #Ques {
+    font-size: 18px; /* Decrease font size for smaller screens */
+    }
+    
+    .questions {
+    flex-direction: column; /* Change to vertical layout */
+    align-items: center; /* Center buttons vertically */
+    }
+    
+    .EndScreen {
+    margin-top: 100px;
+    }
+    
+    #Ques {
+      font-size: 40px;
+      }
+
+    #a,
+    #b,
+    #c,
+    #d {
+    margin: 10px;
+    width: 350px; /* Decrease the width */
+    height: 80px;
+    }
+    }
+    }

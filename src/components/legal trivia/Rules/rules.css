@@ -1,61 +1,73 @@
-.Rules {
-    text-align: center; /* Center align the content */
-    
-  }
-  .wrapp{
-    padding: 50px;
-  }
-  .rulelist {
-    margin-top: -50px;
-    max-width: 600px; /* Set maximum width for better readability */
-    max-height:500px;
-    padding: 20px; /* Add some padding for better spacing */
-    background-color: #FF8F8A; /* Light background color */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    margin-bottom: 10px;
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-style: extra-bold;
-    font-size: 20px;
+.logo1 {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 50px;
+  font-family: "Galada", cursive;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+.letsPlay{
+  width:200px;
+  margin-top: 30px;
+  border: none;
+  background-color: #A1C398;
+}
+
+.letsPlay:hover{
+  background-color: #82987c;
+}
+
+
+.out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set height to full viewport height */
+}
+
+.wrapp {
+  padding: 50px;
+}
+
+.boy {
+  display: block; /* Ensure the image is displayed as a block element */
+}
+
+.boy img {
+  height: 400px;
+}
+
+.rulelist{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #FF8F8A;  
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  font-family: "Crimson Text", serif;
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+  .boy {
+    display: none; /* Hide the image on screens smaller than 769px */
   }
   
-  .rulelist p {
-    margin-bottom: 10px; /* Add space between paragraphs */
-    font-size: 16px; /* Adjust font size */
-    text-align: justify;
-
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 20px;  }
-  
-  .letsPlay {
-    width: auto;
-    margin-top: 10px; /* Add space between rule list and button */
-    padding: 10px 20px; /* Add padding to the button */
-    font-size: 18px; /* Adjust font size */
-    background-color: #FDFDEF; /* Blue button color */
-    color: black; /* White text color */
-    border: none; /* Remove button border */
-    border-radius: 15px; /* Add rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: box-shadow 0.3s; /* Smooth transition for box shadow */
-
-  /* Box shadow for normal state */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .letsPlay:hover {
-    background-color: #f8f8d5; /* Darker blue color on hover */
-    box-shadow: 0 8px 16px grey;
-    color: black; 
+  .out {
+    flex-direction: column; /* Stack items vertically on smaller screens */
   }
 
-  .container{
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 20px;  }
-  
+  .rulelist{
+    margin-top: 70px;
+  }
+}
+
+
+ 
+

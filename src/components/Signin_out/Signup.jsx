@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "../Login/login.css";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router";
+ 
 import { auth } from "./firebase";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // import girl from "../assets/login.png";
 import gif from "../assets/logingif.gif";
-
 
 function Signup() {
   const navigate = useNavigate();
@@ -17,17 +16,19 @@ function Signup() {
   });
 
   const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
-    console.log("clcikced");
     if (!values.name || !values.email || !values.pass) {
       setErrorMsg("Fill all the fields");
       return;
     }
     setErrorMsg("");
 
+    setSubmitButtonDisabled(true);
     createUserWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
+        setSubmitButtonDisabled(false);
         const user = res.user;
         await updateProfile(user, {
           displayName: values.name,
@@ -35,61 +36,71 @@ function Signup() {
         navigate("/");
       })
       .catch((err) => {
+        setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
       });
   };
 
   return (
     <>
-     <NavLink className="logo" to="/">Legal Lift</NavLink> 
+      <NavLink className="logo" to="/">
+        Legal Lift
+      </NavLink>
       <div className="outer2">
         <div className="wrapper2">
           <form>
             <h1>Sign Up</h1>
 
             <div className="inputs">
-            <div className="input-box">
-              <input
-                type="text"
-                placeholder="Enter Name"
-                onChange={(event) =>
-                  setValues((prev) => ({ ...prev, name: event.target.value }))
-                }
-                required
-              />
-              <i className="bx bxs-user"></i>
-            </div>
+              <div className="input-box">
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  onChange={(event) =>
+                    setValues((prev) => ({ ...prev, name: event.target.value }))
+                  }
+                  required
+                />
+                <i className="bx bxs-user"></i>
+              </div>
 
-            <div className="input-box">
-              <input
-                type="text"
-                placeholder="Enter email address"
-                onChange={(event) =>
-                  setValues((prev) => ({ ...prev, email: event.target.value }))
-                }
-                required
-              />
-              <i className="bx bxs-user"></i>
-            </div>
+              <div className="input-box">
+                <input
+                  type="text"
+                  placeholder="Enter email address"
+                  onChange={(event) =>
+                    setValues((prev) => ({
+                      ...prev,
+                      email: event.target.value,
+                    }))
+                  }
+                  required
+                />
+                <i className="bx bxs-user"></i>
+              </div>
 
-            <div className="input-box">
-              <input
-                type="password"
-                placeholder="Enter Password"
-                onChange={(event) =>
-                  setValues((prev) => ({ ...prev, pass: event.target.value }))
-                }
-                required
-              />
-              <i className="bx bxs-lock-alt"></i>
+              <div className="input-box">
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  onChange={(event) =>
+                    setValues((prev) => ({ ...prev, pass: event.target.value }))
+                  }
+                  required
+                />
+                <i className="bx bxs-lock-alt"></i>
               </div>
               <b className="errorMsg">{errorMsg}</b>
-              <button type="submit" onClick={handleSubmission} className="btn">
-              SignUp
-            </button>
+              <button
+                type="submit"
+                onClick={handleSubmission}
+                disabled={submitButtonDisabled}
+                className="btn"
+              >
+                SignUp
+              </button>
             </div>
 
-            
             <div className="register-link">
               <p className="foot">
                 Already have an account?{" "}
