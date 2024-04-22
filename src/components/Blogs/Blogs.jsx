@@ -9,7 +9,7 @@ import "./Blogs.css"
 const Blogs = () => {
   return (
    <>
-    <NavLink className="logo" to="/">Legal Lift</NavLink> 
+    <NavLink className="logo1" to="/">Legal Lift</NavLink> 
    
    
     <div>

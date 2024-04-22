@@ -8,8 +8,11 @@ import kt from "../assets/kt.png";
 import sq from "../assets/sq.png";
 import blogss from "../assets/blogg.png";
 import lt from "../assets/lt.png";
+import {motion} from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const Home = () => {
+  const [move,setMove] = React.useState(false);
   return (
     <>
       <Link className="logo" to="/">
@@ -44,7 +47,7 @@ const Home = () => {
             </div>
           </Link>
           <Link className="link" to="/rule">
-            <div className="legaltrivia">
+            <div  className="legaltrivia">
               <p className="tit">Legal Trivia</p>
               <img className="cov" src={lt}></img>
               <div className="content">
@@ -67,7 +70,7 @@ const Home = () => {
             </div>
           </Link>
           <Link className="link" to="/blogs">
-            <div className="blogs">
+            <div  className="blogs">
               <p className="tit">Blogs</p>
               <img className="cov" src={sq}></img>
               <div className="content">
