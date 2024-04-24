@@ -21,6 +21,10 @@ import Signup from "./components/Signin_out/Signup";
 import { createBrowserRouter } from "react-router-dom";
 import Respect_realm from "./components/S_quests/Respect_realm";
 import Detention from "./components/Kidztube/Detention";
+import Online_shop from "./components/Kidztube/Online_shop";
+import Online_safety from "./components/Kidztube/Online_safety";
+import Bribe from "./components/S_quests/Bribe";
+import Tenants from "./components/S_quests/Tenants";
  
  
  
@@ -93,6 +97,22 @@ export default function App() {
     {
       path: "/detention",
       element: <Detention/>
+    },
+    {
+      path: "/online_shop",
+      element: <Online_shop/>
+    },
+    {
+      path: "/online_safety",
+      element: <Online_safety/>
+    },
+    {
+      path: "/bribe",
+      element: <Bribe/>
+    },
+    {
+      path: "/tenant",
+      element: <Tenants/>
     },
     {
       path: "*",

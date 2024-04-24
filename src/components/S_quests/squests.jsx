@@ -6,6 +6,8 @@ import respect from "../assets/respect realm.png";
 import "../S_quests/squests.css";
 import { NavLink } from 'react-router-dom'
 import team from "../assets/team.png";
+import bribe from "../assets/bribe.png";
+import tenant from "../assets/tenant.png";
 
 const Squests = () => {
   return (
@@ -53,15 +55,15 @@ const Squests = () => {
             </NavLink>
           </div>
 
-          <div className="sexual_harras">
-            <NavLink className="s_link" to="/Sexual harresment">
-              <Block imageUrl={sex_har} title="Sexual harassment" />
+          <div className="bribe">
+            <NavLink className="s_link" to="/bribe">
+              <Block imageUrl={bribe} title="bribe" />
             </NavLink>
           </div>
 
-          <div className="sexual_harras">
-            <NavLink className="s_link" to="/Sexual harresment">
-              <Block imageUrl={sex_har} title="Sexual harassment" />
+          <div className="tenant">
+            <NavLink className="s_link" to="/tenant">
+              <Block imageUrl={tenant} title="Sexual harassment" />
             </NavLink>
           </div>
         </div>

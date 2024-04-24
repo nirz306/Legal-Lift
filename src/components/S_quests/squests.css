@@ -1,21 +1,4 @@
-/* screen size<=768 */
-/* fakt peach component change kelay */
-@media (max-width: 768px) { 
-  .row1,.row2 { flex-direction: column; 
-   } 
- } 
- @media (max-width: 1308px) { 
-  .components { width: 1000px; 
-   } 
-   
- } 
- @media (min-width: 768px) { 
-  .row1,.row2 {
-  flex-direction: row; 
-   } 
- }
-
-.button{
+ .button{
   border: #222;
 }
 
@@ -120,6 +103,10 @@
 .consumer_rights,
 .stranger_safety,
 .detention,
+.online_safety,
+.online_shop,
+.tenant,
+.bribe,
 .respect_realm{
   margin-top: 50px;
   margin-right: 60px;
@@ -209,4 +196,16 @@
  
 .player{
   margin-top: 50px;
+}
+
+.outermost{
+  width:fit-content
+}
+ 
+@media screen and (max-width: 1330px) {
+  .outmost {
+    padding: 0 20px;  
+    width:fit-content;
+  }
+ 
 }
