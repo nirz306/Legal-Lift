@@ -15,6 +15,7 @@ import { delay, motion } from "framer-motion";
 const Kidztube = () => {
   return (
     <>
+     <div id="top"></div>
       <NavLink className="logo" to="/">
         Legal Lift
       </NavLink>

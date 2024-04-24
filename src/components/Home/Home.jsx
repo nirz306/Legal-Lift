@@ -1,7 +1,7 @@
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 import "./home.css";
 import Navbar from "../navbar/Navbar";
-import { Link } from "react-router-dom";
 import couple from "../assets/couple.png";
 import three from "../assets/three.png";
 import kt from "../assets/kt.png";
@@ -36,7 +36,7 @@ const Home = () => {
 
       <div className="features">
         <div className="row1">
-          <Link className="link" to="/kidztube">
+          <Link className="link" smooth to="/kidztube#top">
             <div className="kidztube">
               <p className="tit">Kidztube</p>
               <img className="cov" src={kt}></img>
@@ -59,7 +59,7 @@ const Home = () => {
         </div>
 
         <div className="row2">
-          <Link className="link" to="/squests">
+        <Link className="link" smooth to="/squests#top">
             <div className="squests">
               <p className="tit">Scenario Quests</p>
               <img className="cov" src={sq}></img>
@@ -87,7 +87,6 @@ const Home = () => {
         </div>
         <div className="quote">"Education is the foundation, and law is the framework; together, they build a society where justice and progress thrive."
         </div>
-       
       </div>
     </>
   );

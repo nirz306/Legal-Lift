@@ -14,6 +14,7 @@ import { delay, motion } from "framer-motion";
 const Squests = () => {
   return (
     <>
+    <div id="top"></div>
       <NavLink className="logo" to="/">
         Legal Lift
       </NavLink>
