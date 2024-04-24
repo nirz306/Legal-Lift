@@ -6,6 +6,8 @@ import respect from "../assets/respect realm.png";
 import "../S_quests/squests.css";
 import { NavLink } from 'react-router-dom'
 import team from "../assets/team.png";
+import bribe from "../assets/bribe.png";
+import tenant from "../assets/tenant.png";
 import {delay, motion} from "framer-motion";
 
 const Squests = () => {
@@ -54,12 +56,18 @@ const Squests = () => {
             </NavLink>
           </motion.div>
 
+          <div className="bribe">
+            <NavLink className="s_link" to="/bribe">
+              <Block imageUrl={bribe} title="bribe" />
           <motion.div className="sexual_harras" initial = {{opacity : 0}} animate = {{opacity : 1}} transition={{delay : 0.5, duration : 1}}>
             <NavLink className="s_link" to="/Sexual harresment">
               <Block imageUrl={sex_har} title="Sexual harassment" />
             </NavLink>
           </motion.div>
 
+          <div className="tenant">
+            <NavLink className="s_link" to="/tenant">
+              <Block imageUrl={tenant} title="Sexual harassment" />
           <div className="sexual_harras" initial = {{x : 250}} animate = {{x : 10}} transition = {{delay : 0.5, duration : 1}}>
             <NavLink className="s_link" to="/Sexual harresment">
               <Block imageUrl={sex_har} title="Sexual harassment" />
