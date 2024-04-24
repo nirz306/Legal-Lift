@@ -85,8 +85,9 @@ const Home = () => {
         <div className="imag">
           <img className="couple" src={couple} alt="" />
         </div>
-        <div className="quote">QUOTE</div>
-        <div className="media">Follow us on</div>
+        <div className="quote">"Education is the foundation, and law is the framework; together, they build a society where justice and progress thrive."
+        </div>
+       
       </div>
     </>
   );
