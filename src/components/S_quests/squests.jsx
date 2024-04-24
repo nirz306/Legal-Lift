@@ -31,46 +31,40 @@ const Squests = () => {
 
       <div className="components">
         <div className="row1">
-          <motion.div className="road_acc" initial = {{x : -250}} animate = {{x : -10}} transition = {{delay : 0.5, duration : 1}}>
+          <div className="road_acc">
             <NavLink className="s_link" to="/Road Accident">
               <Block imageUrl={acc} title="road_acc" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div className="sexual_harras" initial = {{opacity : 0}} animate = {{opacity : 1}} transition={{delay : 0.5, duration : 1}}>
+          <div className="sexual_harras">
             <NavLink className="s_link" to="/Sexual harresment">
               <Block imageUrl={sex_har} title="Sexual harassment" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div className="lost_phone" initial = {{x : 250}} animate = {{x : 10}} transition = {{delay : 0.5, duration : 1}}>
+          <div className="lost_phone">
             <NavLink className="s_link" to="/Lost phone">
               <Block imageUrl={phone} title="Sexual harassment" />
             </NavLink>
-          </motion.div>
+          </div>
         </div>
         <div className="row2">
-          <motion.div className="respect_realm" initial = {{x : -250}} animate = {{x : -10}} transition = {{delay : 0.5, duration : 1}}>
+          <div className="respect_realm">
             <NavLink className="s_link" to="/respect_realm">
               <Block imageUrl={respect} title="Respect Realm" />
             </NavLink>
-          </motion.div>
+          </div>
 
           <div className="bribe">
             <NavLink className="s_link" to="/bribe">
               <Block imageUrl={bribe} title="bribe" />
-          <motion.div className="sexual_harras" initial = {{opacity : 0}} animate = {{opacity : 1}} transition={{delay : 0.5, duration : 1}}>
-            <NavLink className="s_link" to="/Sexual harresment">
-              <Block imageUrl={sex_har} title="Sexual harassment" />
             </NavLink>
-          </motion.div>
+          </div>
 
           <div className="tenant">
             <NavLink className="s_link" to="/tenant">
               <Block imageUrl={tenant} title="Sexual harassment" />
-          <div className="sexual_harras" initial = {{x : 250}} animate = {{x : 10}} transition = {{delay : 0.5, duration : 1}}>
-            <NavLink className="s_link" to="/Sexual harresment">
-              <Block imageUrl={sex_har} title="Sexual harassment" />
             </NavLink>
           </div>
         </div>

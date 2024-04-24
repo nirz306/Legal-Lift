@@ -19,7 +19,7 @@ const Kidztube = () => {
         <div className="outermost">
       <div className="out">
         <div className="wrap">
-          <p className="title" >Kidztube</p>
+          <p className="title">Kidztube</p>
           <br></br>
           <div className="content1">
             <p>
@@ -32,56 +32,48 @@ const Kidztube = () => {
           </div>
         </div>
         <div className="team"></div>
-        <img  className="cover" src={team} alt="" />
+        <img className="cover" src={team} alt="" />
       </div>
       <div className="components">
         <div className="row1">
-          <motion.div className="rasicm" initial = {{x : -250}} animate = {{x : -10}} transition = {{delay : 0.5, duration : 1}}>
+          <div className="rasicm">
             <NavLink className="link" to="/rasicm">
               <Block imageUrl={rasicm} title="rasicm" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div className="consumer_rights" initial = {{opacity : 0}} animate = {{opacity : 1}} transition={{delay : 0.5, duration : 1}}>
-            <NavLink className="link" to="/consumer_rights">
-              <Block imageUrl={c_rights} title="consumer_right" />
-            </NavLink>
-          </motion.div>
-
-          <motion.div className="stranger_safety" initial = {{x : 250}} animate = {{x : 10}} transition = {{delay : 0.5, duration : 1}}>
-            <NavLink className="link" to="/stranger_safety">
-              <Block imageUrl={stranger} title="stranger_safety" />
-            </NavLink>
-          </motion.div>
-        </div>
-        <div className="row2">
-          <motion.div className="detention" initial = {{x : -250}} animate = {{x : -10}} transition = {{delay : 0.5, duration : 1}}>
-            <NavLink className="link" to="/detention">
-              <Block imageUrl={detention} title="detention" />
-            </NavLink>
-          </motion.div>
-
-          <div className="online_safety">
-            <NavLink className="link" to="/online_safety">
-              <Block imageUrl={o_safety} title="consumer_right" />
-          <motion.div className="consumer_rights" initial = {{opacity : 0}} animate = {{opacity : 1}} transition={{delay : 0.5, duration : 1}}>
-            <NavLink className="link" to="/consumer_rights">
-              <Block imageUrl={c_rights} title="consumer_right" />
-            </NavLink>
-          </motion.div>
-
-          <div className="online_shop">
-            <NavLink className="link" to="/online_shop">
-              <Block imageUrl={o_shop} title="consumer_right" />
-          <motion.div className="consumer_rights" initial = {{x : 250}} animate = {{x : 10}} transition = {{delay : 0.5, duration : 1}}>
+          <div className="consumer_rights">
             <NavLink className="link" to="/consumer_rights">
               <Block imageUrl={c_rights} title="consumer_right" />
             </NavLink>
           </div>
+
+          <div className="stranger_safety">
+            <NavLink className="link" to="/stranger_safety">
+              <Block imageUrl={stranger} title="stranger_safety" />
+            </NavLink>
+          </div>
+        </div>
+        <div className="row2">
+          <div className="detention">
+            <NavLink className="link" to="/detention">
+              <Block imageUrl={detention} title="detention" />
+            </NavLink>
+          </div>
+
+          <div className="online_safety">
+            <NavLink className="link" to="/online_safety">
+              <Block imageUrl={o_safety} title="consumer_right" />
+            </NavLink>
+          </div>
+
+          <div className="online_shop">
+            <NavLink className="link" to="/online_shop">
+              <Block imageUrl={o_shop} title="consumer_right" />
+            </NavLink>
+          </div>
         </div>
       </div>
-          </motion.div>
-        </div>
       </div>
     </>
   );
