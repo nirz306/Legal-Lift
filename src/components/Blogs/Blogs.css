@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: none;
   }
   
   .row {
@@ -92,15 +93,22 @@
   }
 
   @media screen and (max-width: 768px) {
-    .imageWithQuote {
-      width: calc(50% - 40px); /* Display two items per row with some spacing */
+    .row {
+      flex-direction: column;
+      align-items: center;
     }
+    .imageWithQuote {
+      width: 100%; /* Full width on smaller screens */
+      max-width: 300px; /* Maximum width for images */
+    }
+
+
   }
 
   .logo1 {
-    align-items: start;
-  margin-right: 1100px;
-  margin-top: 30px;
+    display: block;
+    
+  margin: 30px auto;
   font-size: 50px;
   font-family: "Galada", cursive;
   color: black;
@@ -108,10 +116,32 @@
   cursor: pointer;
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 585px) {
     .logo1 {
-      font-size: 10px; 
+      font-size: 5px; 
+      margin: 10px auto;
     }
+  }
+
+  @media screen and (max-width : 585px)
+  {
+    .row
+    {
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    #title
+    {
+      font-size: 30px;
+      text-align: center;
+    }
+    #subtitle
+    {
+      font-size: 18px;
+      text-align: center;
+    }
+
   }
   
 

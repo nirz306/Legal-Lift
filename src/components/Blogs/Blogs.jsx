@@ -5,6 +5,7 @@ import customer_rights from "../assets/customer.avif";
 import sexual_harass from "../assets/POSH Act.jpg";
 import stranger from "../assets/stranger_danger.jpg";
 import "./Blogs.css"
+import BlogPost from './BlogPost';
 
 const Blogs = () => {
   return (
@@ -20,50 +21,40 @@ const Blogs = () => {
       
     <div className="components">
       <div className="row">
-        <div className="imageWithQuote">
-          <div className="imageContainer">
-          <a className="link" href="http://surl.li/sjblo" target="_blank" rel="noopener noreferrer">  
-            <img className='blogg' src={racism} alt="Racism" />
-            </a>
-          </div>
-         
-          <div className="quoteContainer">
-            <h3>Indian Country Stands in Solidarity with Black Lives Matter</h3>
-          </div>
-        </div>
+        <BlogPost
 
-        <div className="imageWithQuote">
-          <div className="imageContainer">
-          <a className="link" href="https://www.kredx.com/blog/consumers-know-your-rights/" target="_blank" rel="noopener noreferrer"> 
-            <img className='blogg' src={customer_rights} alt="Customer Rights" />
-            </a>
-          </div>
-          <div className="quoteContainer">
-            <h3>Consumers, Know Your Rights , KredX Blog</h3>
-          </div>
-        </div>
+        imageSrc={racism}
+        link= "http://surl.li/sjblo"
+        altText="Racism"
+        quote= "Indian Country Stands in Solidarity with Black Lives Matter"
 
-        <div className="imageWithQuote">
-          <div className="imageContainer">
-          <a className="link" href="https://www.thehindu.com/news/national/explained-the-indian-law-on-sexual-harassment-in-the-workplace/article66854968.ece" target="_blank" rel="noopener noreferrer"> 
-            <img src={sexual_harass} alt="Sexual Harassment" />
-            </a>
-          </div>
-          <div className="quoteContainer">
-            <h3>The POSH Act : Indian law for sexual harassment in the workplace</h3>
-          </div>
-        </div>
+        />
 
-        <div className="imageWithQuote">
-          <div className="imageContainer">
-          <a className="link" href="http://surl.li/sjbom" target="_blank" rel="noopener noreferrer"> 
-            <img src={stranger} alt="Stranger Safety" />
-            </a>
-          </div>
-          <div className="quoteContainer">
-            <h3>Stranger Danger and Personal Safety</h3>
-          </div>
-        </div>
+       <BlogPost
+
+      imageSrc={customer_rights}
+      link="https://www.kredx.com/blog/consumers-know-your-rights/"
+      altText= "Customer Rights"
+      quote= "Consumers, Know Your Rights , KredX Blog"
+
+
+      />
+
+
+         <BlogPost 
+          imageSrc={sexual_harass}
+          link="https://www.thehindu.com/news/national/explained-the-indian-law-on-sexual-harassment-in-the-workplace/article66854968.ece"
+          altText="Sexual Harassment"
+          quote="The POSH Act : Indian law for sexual harassment in the workplace"
+        />
+
+        <BlogPost 
+          imageSrc={stranger}
+          link="http://surl.li/sjbom"
+          altText="Stranger Safety"
+          quote="Stranger Danger and Personal Safety"
+        />
+        
       </div>
     </div>
   </>

@@ -23,16 +23,20 @@ const Home = () => {
         <div className="header">
           <p className="tit">Discovering the knowledge of Law</p>
           <div className="desp">
+          
             Unraveling the secrets of law is like discovering the hidden keys to
             a fair of society and journey where every revelation empowers us
             towards greater understanding and equality for all.
           </div>
+          
         </div>
 
         <div className="three">
           <img src={three}></img>
         </div>
       </div>
+
+      
 
       <div className="features">
         <div className="row1">
@@ -88,6 +92,7 @@ const Home = () => {
         <div className="quote">"Education is the foundation, and law is the framework; together, they build a society where justice and progress thrive."
         </div>
       </div>
+      
     </>
   );
 };
