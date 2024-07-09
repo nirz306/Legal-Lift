@@ -1,7 +1,7 @@
 import React from "react";
 import Block from "../S_quests/Block";
 import rasicm from "../assets/shades of struggle.png";
-import "../S_quests/squests.css";
+// import "../S_quests/squests.css";
 import c_rights from "../assets/c_rights.png";
 import o_safety from "../assets/online_safety.png";
 // import c_freedom from "../assets/"
