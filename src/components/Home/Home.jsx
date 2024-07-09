@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { HashLink as Link } from 'react-router-hash-link';
 import "./home.css";
 import Navbar from "../navbar/Navbar";
@@ -12,6 +13,23 @@ import {motion} from "framer-motion";
 import { fadeIn } from "../../variants";
 
 const Home = () => {
+  useEffect(() => {
+
+    const script1 = document.createElement("script");
+    script1.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
+    script1.async = true;
+    document.body.appendChild(script1);
+
+    const script2 = document.createElement("script");
+    script2.src = "https://mediafiles.botpress.cloud/2c13d088-c7f8-48a0-8612-8e07d9dfff42/webchat/config.js";
+    script2.defer = true;
+    document.body.appendChild(script2);
+
+    return () => {
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
+    };
+  }, []);
   const [move,setMove] = React.useState(false);
   return (
     <>
@@ -84,14 +102,21 @@ const Home = () => {
             </div>
           </Link>
         </div>
+       
+        
       </div>
       <div className="footer">
+      <div className="chatbot">
+      
+       </div>
         <div className="imag">
           <img className="couple" src={couple} alt="" />
         </div>
         <div className="quote">"Education is the foundation, and law is the framework; together, they build a society where justice and progress thrive."
         </div>
       </div>
+
+
       
     </>
   );

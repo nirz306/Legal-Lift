@@ -155,6 +155,7 @@ function Quiz() {
         ) : (
           <button onClick={nextQuestion} id="nextQuestion">
             Next Question
+            <div className="bg-red-500 p-10">This is a red div with padding.</div>
           </button>
         )}
       </div>

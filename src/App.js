@@ -5,6 +5,7 @@ import { BrowserRouter, RouterProvider } from "react-router-dom";
 import { useLocation,Route,Routes } from 'react-router-dom';
 import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from "./NotFound";
+import "./tailwind.css"
 
  
 import React, { useEffect } from "react";
