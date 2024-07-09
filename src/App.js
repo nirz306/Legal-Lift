@@ -1,11 +1,11 @@
 import "./App.css";
-import Quiz from "./components/legal trivia/Quiz";
+// import Quiz from "./components/legal trivia/Quiz";
 import Home from "./components/Home/Home";
 import { BrowserRouter, RouterProvider } from "react-router-dom";
 import { useLocation,Route,Routes } from 'react-router-dom';
 import Kidztube from "./components/Kidztube/Kidztube";
 import NotFound from "./NotFound";
-import "./tailwind.css"
+import "./tailwind.css";
 
  
 import React, { useEffect } from "react";
@@ -26,6 +26,7 @@ import Online_shop from "./components/Kidztube/Online_shop";
 import Online_safety from "./components/Kidztube/Online_safety";
 import Bribe from "./components/S_quests/Bribe";
 import Tenants from "./components/S_quests/Tenants";
+import Quiz2 from "./components/legal trivia/Quiz2";
  
  
  
@@ -57,7 +58,7 @@ export default function App() {
     },
     {
       path: "/play",
-      element: <Quiz />,
+      element: <Quiz2/>,
     },
     {
       path:"/squests",
