@@ -4,7 +4,7 @@ import Ans_des from './Ans_des';
 
 
 //options is an array having options
-const Questionaire = ({question , options , ans} ) => {
+const Questionaire = ({question , options , ans ,desp} ) => {
   const [user_ans, setUserAns] = useState(""); // Initialize user_ans state
   const [optionChosen, setOptionChosen] = useState("");
 
@@ -54,7 +54,7 @@ const Questionaire = ({question , options , ans} ) => {
         <Ans_des
           ans={ans}
           user_ans={user_ans}
-          description="This is the description"
+          description={desp}
         />
       )}
     </>
