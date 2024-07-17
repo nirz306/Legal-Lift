@@ -4,7 +4,6 @@ import sex_har from "../assets/sexual_harr.png";
 import acc from "../assets/road_accc.png";
 import phone from "../assets/phone pursuit.png";
 import respect from "../assets/respect realm.png";
-import "../S_quests/squests.css";
 import { NavLink } from "react-router-dom";
 import team from "../assets/team.png";
 import bribe from "../assets/bribe.png";
@@ -14,16 +13,16 @@ import { delay, motion } from "framer-motion";
 const Squests = () => {
   return (
     <>
-    <div id="top"></div>
-      <NavLink className="logo" to="/">
+    <div id=""></div>
+      <NavLink className="text-[50px] " to="/">
         Legal Lift
       </NavLink>
-      <div className="out">
-        <div className="wrap">
+      <div className="flex mr-[100px]">
+        <div className="bg-[#A1C398] ml-[100px] mr-[50px] rounded-lg p-4">
           <p className="title">Scenario Quests</p>
           <br></br>
 
-          <p className="content2">
+          <p className="text-[30px]">
             "Welcome to our captivating legal scenario quest! Dive into
             real-life case studies and discover the intricacies of law in an
             engaging and interactive way. Our platform offers students a

@@ -21,7 +21,7 @@ const Kidztube = () => {
       </NavLink>
       <div className="outermost">
         <div className="out">
-          <div className="wrap">
+          <div className="wrap ">
             <p className="title">Kidztube</p>
             <br></br>
             <div className="content1">
