@@ -61,7 +61,7 @@ const Home = () => {
       <div className="features flex flex-col items-center mt-[20px] justify-between p-[40px]">
         <div className="row1 flex md:flex-row items-center flex-col">
           <Link className="link" smooth to="/kidztube#top">
-            <Cards color="#FEFDED" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Kidztube" image={kt} />
+            <Cards color="#FEFDED" desp="Dive into real-life stories with exciting videos and fun questions that make you think and learn." title="Kidztube" image={kt} />
           </Link>
 
           <Link className="link" to="/rule">
@@ -84,7 +84,7 @@ const Home = () => {
         <div className="imag relative mt-[-165px]">
           <img className="couple relative  max-[1000px]:hidden" src={couple} alt="" />
         </div>
-        <div className="quote text-[40px] w-full mb-[100px] text-center mr-4 ml-4">
+        <div className="quote text-[40px] w-full mb-[100px] text-center mr-4 ml-4 ">
           "Education is the foundation, and law is the framework, together they build a society where justice and progress thrive."
         </div>
       </div>
