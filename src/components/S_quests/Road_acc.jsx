@@ -29,7 +29,7 @@ const Road_acc = () => {
         question="If you were in the child's position, what action would you take?"
         options={["Seek out an adult nearby for help.", "Offer basic first aid assistance if possible", "Utilize a phone to contact emergency services.", "Give priority to your own safety in hazardous situations."]}
         ans="b"
-        desp="hello"
+        desp="The correct action, if a child is in a situation where immediate help is needed and they possess the knowledge to do so, is to offer basic first aid assistance. Providing basic first aid can help stabilize the situation until professional help arrives. This response assumes the child has some basic first aid training and is able to safely provide assistance without putting themselves in danger."
         
         />
       )}
