@@ -7,10 +7,13 @@ import kt from "../assets/kt.png";
 import sq from "../assets/sq.png";
 import blogss from "../assets/blogg.png";
 import lt from "../assets/lt.png";
-import { motion } from "framer-motion";
+import { useAnimation,motion, color } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { fadeIn } from "../../variants";
 import Logo from "../../helpers/Logo";
 import Cards from "./Cards";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 
 const Home = () => {
   useEffect(() => {
@@ -31,7 +34,39 @@ const Home = () => {
     };
   }, []);
 
+  const [ref1, inView1] = useInView({ triggerOnce: false });
+    const [ref2, inView2] = useInView({ triggerOnce: false });
+    const controls1 = useAnimation();
+    const controls2 = useAnimation();
+
+    useEffect(() => {
+        if (inView1) {
+            controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+        } else {
+            controls1.start({ opacity: 0, y: 70 });
+        }
+    }, [controls1, inView1]);
+
+    useEffect(() => {
+        if (inView2) {
+            controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+        } else {
+            controls2.start({ opacity: 0, y: 70 });
+        }
+    }, [controls2, inView2]);
+
   const [move, setMove] = useState(false);
+
+  const [title] = useTypewriter(
+    {
+        words : ['Law','Education','Legal awareness'],
+        loop : {},
+        typeSpeed : 120,
+        deleteSpeed : 80,
+
+
+    }
+  );
 
   return (
     <>
@@ -49,8 +84,10 @@ const Home = () => {
           </div>
           <div className="flex flex-col mr-10 max-[1000px]:w-[600px] max-[1000px]:mx-auto p-10">
             <p className="text-[30px] font-bold text-center min-[1000px]:text-[25px] min-[1332px]:text-[45px] min-[1203px]:text-[35px] mx-auto max-[488px]:text-[20px]">
-              Discovering the knowledge of Law
+              Discover the world of {title}<Cursor/>
             </p>
+           
+            
             <p className="text-[20px] mx-auto min-[1000px]:text-[25px] min-[1000px]:w-[350px] min-[1203px]:text-[30px] min-[1203px]:w-[600px]">
               Unraveling the secrets of law is like discovering the hidden keys to a fair society, a journey where every revelation empowers us towards greater understanding and equality for all.
             </p>
@@ -59,7 +96,9 @@ const Home = () => {
       </div>
 
       <div className="features flex flex-col items-center mt-[20px] justify-between p-[40px]">
-        <div className="row1 flex md:flex-row items-center flex-col">
+        <motion.div className="row1 flex md:flex-row items-center flex-col" ref={ref1}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls1}>
           <Link className="link" smooth to="/kidztube#top">
             <Cards color="#FEFDED" desp="Dive into real-life stories with exciting videos and fun questions that make you think and learn." title="Kidztube" image={kt} />
           </Link>
@@ -67,9 +106,11 @@ const Home = () => {
           <Link className="link" to="/rule">
             <Cards color="#A1C398" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Legal Trivia" image={lt} />
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="row2 flex md:flex-row items-center flex-col">
+        <motion.div className="row2 flex md:flex-row items-center flex-col" ref={ref2}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls2}>
           <Link className="link" smooth to="/squests#top">
             <Cards color="#C6EBC5" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Scenario Quests" image={sq} />
           </Link>
@@ -77,7 +118,7 @@ const Home = () => {
           <Link className="link" to="/blogs">
             <Cards color="#FA7070" desp="Dive into our blog for easy-to-understand articles on law! All about justice, rights, and the legal world!" title="Blogs" image={blogss} />
           </Link>
-        </div>
+        </motion.div>
       </div>
       <div className="footer bg-[#FEFDED] w-full flex">
         <div className="chatbot"></div>
