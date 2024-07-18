@@ -33,12 +33,7 @@ import Quiz2 from "./components/legal trivia/Quiz2";
 export default function App() {
 
 
-  // const {pathname} = useLocation();
-
-  // useEffect(()=>{
-  //   window.scrollTo(0,0);
-  // },[pathname])
-
+  
   const appRouter = createBrowserRouter([
     {
       path: "/",
@@ -128,11 +123,7 @@ export default function App() {
  
       <RouterProvider router={appRouter} />
        
-       {/* <BrowserRouter>
-       <Routes>
-        <Route path ="/kidztube" element = {<Kidztube/>}/>
-      </Routes>
-      </BrowserRouter> */}
+     
      
       
          

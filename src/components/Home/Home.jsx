@@ -112,7 +112,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={controls2}>
           <Link className="link" smooth to="/squests#top">
-            <Cards color="#C6EBC5" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Scenario Quests" image={sq} />
+            <Cards color="#A1C398" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Scenario Quests" image={sq} />
           </Link>
 
           <Link className="link" to="/blogs">

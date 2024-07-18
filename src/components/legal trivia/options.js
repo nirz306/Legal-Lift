@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import Ans_desp from './Ans_desp';
 
-const Option = ({ ans, a, b, c, d, onAnswer }) => {
+const Option = ({ ans, a, b, c, d, description, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [submit, setSubmit] = useState(false);
 
   useEffect(() => {
-    let timeout;
-    if (selectedOption !== null) {
-      timeout = setTimeout(() => {
-        setSelectedOption(null);
-        setIsCorrect(null);
-      }, 800); // Adjust the delay as needed (1000ms = 1s)
-    }
-    return () => clearTimeout(timeout);
-  }, [selectedOption]);
+    // Reset states when the component mounts or when the question changes
+    setSubmit(false);
+    setSelectedOption(null);
+    setIsCorrect(null);
+  }, [a, b, c, d, description]);
 
   const handleClick = (option) => {
-    const correctness = option === ans;
     setSelectedOption(option);
-    setIsCorrect(correctness);
-    onAnswer(correctness);
+    setSubmit(true);
+    setIsCorrect(option === ans);
   };
 
   const getButtonStyle = (option) => {
@@ -29,13 +26,45 @@ const Option = ({ ans, a, b, c, d, onAnswer }) => {
     return 'hover:bg-[#B0B0B0] hover:text-white bg-[#FEFDED]';
   };
 
+  const handleNextques = () => {
+    onAnswer(isCorrect);
+  };
+
   return (
-    <div className='flex justify sm:flex-row flex-col'>
-      <button className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ${getButtonStyle('A')}`} onClick={() => handleClick('A')}>{a}</button>
-      <button className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ${getButtonStyle('B')}`} onClick={() => handleClick('B')}>{b}</button>
-      <button className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ${getButtonStyle('C')}`} onClick={() => handleClick('C')}>{c}</button>
-      <button className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ${getButtonStyle('D')}`} onClick={() => handleClick('D')}>{d}</button>
-    </div>
+    <>
+      <div className='flex justify sm:flex-row flex-col'>
+        <button
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('A')}`}
+          onClick={() => handleClick('A')}
+        >
+          {a}
+        </button>
+        <button
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('B')}`}
+          onClick={() => handleClick('B')}
+        >
+          {b}
+        </button>
+        <button
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('C')}`}
+          onClick={() => handleClick('C')}
+        >
+          {c}
+        </button>
+        <button
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('D')}`}
+          onClick={() => handleClick('D')}
+        >
+          {d}
+        </button>
+      </div>
+      {submit && (
+        <Ans_desp desp={description} />
+      )}
+      {submit && (
+        <button onClick={handleNextques} className='border mt-[100px]'>Next Question</button>
+      )}
+    </>
   );
 };
 

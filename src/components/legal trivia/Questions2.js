@@ -5,7 +5,8 @@ const Questions = [
       "B": "20",
       "C": "25",
       "D": "18",
-      "ans": "D"
+      "ans": "D",
+      "desp":"The legal age to vote in India is 18 years. This was established by the 61st Amendment of the Constitution of India in 1988, which lowered the voting age from 21 to 18 years."
     },
     {
       "ques": "Who is known as father of Constitution?",
@@ -13,7 +14,8 @@ const Questions = [
       "B": "Jawaharlal Nehru",
       "C": "Dr Bhimrao Ambedkar",
       "D": "Sardar Vallabhbhai Patel",
-      "ans": "C"
+      "ans": "C",
+      "desp":"hello"
     },
     {
       "ques": "Which of the following is a fundamental right guaranteed by the Indian Constitution?",
@@ -21,7 +23,8 @@ const Questions = [
       "B": "Right to Entertainment",
       "C": "Right to Luxury",
       "D": "Right to Silence",
-      "ans": "A"
+      "ans": "A",
+      "desp":"hello"
     },
     {
       "ques": "Which branch of government is responsible for making laws?",
