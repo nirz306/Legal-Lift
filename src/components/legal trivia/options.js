@@ -14,9 +14,10 @@ const Option = ({ ans, a, b, c, d, description, onAnswer }) => {
   }, [a, b, c, d, description]);
 
   const handleClick = (option) => {
+    const correctness = option === ans;
     setSelectedOption(option);
-    setSubmit(true);
-    setIsCorrect(option === ans);
+    setIsCorrect(correctness);
+    onAnswer(correctness,option);
   };
 
   const getButtonStyle = (option) => {
