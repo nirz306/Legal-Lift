@@ -11,34 +11,36 @@ import { NavLink } from "react-router-dom";
 import team from "../assets/team.png";
 import o_shop from "../assets/online_shopping.png";
 import { delay, motion } from "framer-motion";
+import Logo from "../../helpers/Logo";
 
 const Kidztube = () => {
   return (
     <>
      <div id="top"></div>
-      <NavLink className="logo" to="/">
-        Legal Lift
-      </NavLink>
-      <div className="outermost">
-        <div className="out">
+      <Logo/>
+      <div className="">
+        <div className="flex mx-auto  w-full min-h-screen">
+        <div className="bg-[#A1C398] lg:w-[700px]  lg:h-[500px] mx-auto rounded-lg p-4 mt-4 md:w-[500px] md:h-[500px] flex">
           <div className="wrap ">
-            <p className="title">Kidztube</p>
+            <p className=" mx-auto text-center">Kidztube</p>
             <br></br>
-            <div className="content1">
-              <p>
-                Step into a world of wonder at KidzTube! We've handpicked
-                videos that spark curiosity and inspire learning. Here, your
-                children can explore a world of educational videos that are
-                both fun and informative. Dive into a treasure trove of videos
-                designed to ignite young minds and foster a love for knowledge.
-              </p>
+            <div className="text-[30px] md:text-[20px] ml-5 mr-5">
+              
+            <p>Step into a world of wonder at KidzTube! </p>
+            <p>We've handpicked videos that spark curiosity and inspire learning. </p>
+            <p>Here, your children can explore a world of educational videos that are
+            both fun and informative.</p>
+            <p> Dive into a treasure trove of videos
+                designed to ignite young minds and foster a love for knowledge.</p>
+             
             </div>
           </div>
-          <div className="team"></div>
-          <img className="cover" src={team} alt="" />
         </div>
-        <div className="components">
-          <div className="row1">
+          <img className="w-max h-[300px] justify-center align-center my-auto mx-auto" src={team} alt="" />
+        </div>
+      
+        <div className="mx-auto mb-8 flex flex-col">
+          <div className="flex  p-3 mx-auto">
             <motion.div
               className="rasicm"
               initial={{ x: -250 }}
@@ -72,7 +74,7 @@ const Kidztube = () => {
               </NavLink>
             </motion.div>
           </div>
-          <div className="row2">
+          <div className="flex p-3 mt-8 mx-auto">
             <motion.div
               className="detention"
               initial={{ x: -250 }}

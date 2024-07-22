@@ -9,34 +9,32 @@ import team from "../assets/team.png";
 import bribe from "../assets/bribe.png";
 import tenant from "../assets/tenant.png";
 import { delay, motion } from "framer-motion";
+import Logo from "../../helpers/Logo";
 
 const Squests = () => {
   return (
     <>
-    <div id=""></div>
-      <NavLink className="text-[50px] " to="/">
-        Legal Lift
-      </NavLink>
-      <div className="flex mr-[100px]">
-        <div className="bg-[#A1C398] ml-[100px] mr-[50px] rounded-lg p-4">
-          <p className="title">Scenario Quests</p>
+      <Logo/>
+
+      <div className="flex mx-auto  w-full min-h-screen">
+        <div className="bg-[#A1C398] lg:w-[700px]  lg:h-[500px] mx-auto rounded-lg p-4 mt-4 md:w-[500px] md:h-[500px]  ">
+          <p className="text-center">Scenario Quests</p>
           <br></br>
 
-          <p className="text-[30px]">
-            "Welcome to our captivating legal scenario quest! Dive into
+          <p className="text-[30px] md:text-[20px]">
+            Welcome to our captivating legal scenario quest! Dive into 
             real-life case studies and discover the intricacies of law in an
             engaging and interactive way. Our platform offers students a
             hands-on approach to learning, where they can explore, analyze, and
             solve legal challenges firsthand. Get ready to unlock the secrets
-            of the legal world and embark on an exciting journey of discovery!"
+            of the legal world and embark on an exciting journey of discovery!
           </p>
         </div>
-        <div className="team"></div>
-        <img src={team} alt="" className="cover" />
+        <img src={team} alt="" className=" w-max h-[300px] justify-center align-center my-auto mx-auto" />
       </div>
 
-      <div className="components">
-        <div className="row1">
+      <div className="mx-auto mb-8 flex flex-col">
+        <div className="flex  p-3 mx-auto">
           <motion.div
             className="road_acc"
             initial={{ x: -250 }}
@@ -70,7 +68,7 @@ const Squests = () => {
             </NavLink>
           </motion.div>
         </div>
-        <div className="row2">
+        <div className="flex p-3 mt-8 mx-auto">
           <motion.div
             className="respect_realm"
             initial={{ x: -250 }}

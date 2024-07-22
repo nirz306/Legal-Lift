@@ -3,6 +3,7 @@ import data from "./Questions2";
 import Option from './options';
 import { NavLink } from 'react-router-dom';
 import reward from "../assets/reward.png";
+import Logo from '../../helpers/Logo';
 
 const Quiz2 = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -23,24 +24,30 @@ const Quiz2 = () => {
   };
 
   return (
-    <div className='flex items-center justify-center min-h-screen'>
+    <>
+   
+    <Logo/>  
       {/* result page */}
+    <div className='flex items-center justify-center min-h-screen'>
       {result ? (
-        <div className='mb-10'>
-          <NavLink className="logo1" to="/">
-            Legal Lift
-          </NavLink>
-          <div className="EndScreen">
-            <h1>Result</h1>
-            <img src={reward} alt="reward" />
-            <h2>
+        <>
+        <div className='flex flex-col p-0'>
+
+        <div className='flex flex-col'>
+          
+            <div className='text-center text-[60px]'>Congratulations</div>
+            <img className="w-[100px]"src={reward} alt="reward" />
+            <h2 className='text-center mt-6 font-bold'>
               You have scored {score} out of {data.length} !!
             </h2>
-          </div>
+          
         </div>
+
+        </div>
+        </>
       ) : (
-        <div className='questions flex flex-col items-center ml-3'>
-          <div className="text-black text-[30px] md:text-[50px] font-bold ">{data[currentQuestionIndex].ques}</div>
+        <div className='questions flex flex-col items-center '>
+          <div className="text-black text-[30px] md:text-[50px] font-bold ml-7 mr-7">{data[currentQuestionIndex].ques}</div>
           <Option
             ans={data[currentQuestionIndex].ans}
             a={data[currentQuestionIndex].A}
@@ -53,6 +60,7 @@ const Quiz2 = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

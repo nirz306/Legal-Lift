@@ -11,48 +11,49 @@ const Option = ({ ans, a, b, c, d, description, onAnswer }) => {
     setSubmit(false);
     setSelectedOption(null);
     setIsCorrect(null);
-  }, [a, b, c, d, description]);
+  }, [a, b, c, d, description]); // sagle options che content reset karta and description pan reset karta 
 
   const handleClick = (option) => {
     setSelectedOption(option);
     setSubmit(true);
-    setIsCorrect(option === ans);
+    setIsCorrect(option === ans);//is correct la set karnar true/false depending upon user ans 
   };
 
   const getButtonStyle = (option) => {
     if (selectedOption === option) {
-      return isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white';
+      return isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'; //button color update karayla 
     }
-    return 'hover:bg-[#B0B0B0] hover:text-white bg-[#FEFDED]';
+    return 'hover:bg-[#B0B0B0] hover:text-white bg-[#FEFDED] hover:border-black';
   };
 
   const handleNextques = () => {
-    onAnswer(isCorrect);
+    onAnswer(isCorrect); //he parat return karta to quiz2 true/false to help in writing the score 
   };
 
   return (
     <>
       <div className='flex justify sm:flex-row flex-col'>
+      <button
+  className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 rounded-lg border-2 border-[#f7f08eb7] ${getButtonStyle('A')}`}
+  onClick={() => handleClick('A')}
+>
+  {a}
+</button>
+
         <button
-          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('A')}`}
-          onClick={() => handleClick('A')}
-        >
-          {a}
-        </button>
-        <button
-          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('B')}`}
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 rounded-lg border-2 border-[#f7f08eb7] ${getButtonStyle('B')}`}
           onClick={() => handleClick('B')}
         >
           {b}
         </button>
         <button
-          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('C')}`}
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 rounded-lg border-2 border-[#f7f08eb7] ${getButtonStyle('C')}`}
           onClick={() => handleClick('C')}
         >
           {c}
         </button>
         <button
-          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 ${getButtonStyle('D')}`}
+          className={`lg:w-[200px] md:h-[100px] md:w-[150px] sm:w-[110px] w-[250px] h-[70px] ml-3 rounded-lg border-2 border-[#f7f08eb7] ${getButtonStyle('D')}`}
           onClick={() => handleClick('D')}
         >
           {d}
@@ -62,7 +63,7 @@ const Option = ({ ans, a, b, c, d, description, onAnswer }) => {
         <Ans_desp desp={description} />
       )}
       {submit && (
-        <button onClick={handleNextques} className='border mt-[100px]'>Next Question</button>
+        <button onClick={handleNextques} className='border mt-[100px] bg-[#A1C398] rounded-lg p-4 hover:bg-[#728b6c]'>Next Question</button>
       )}
     </>
   );
