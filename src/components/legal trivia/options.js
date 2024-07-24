@@ -14,9 +14,10 @@ const Option = ({ ans, a, b, c, d, description, onAnswer }) => {
   }, [a, b, c, d, description]); // sagle options che content reset karta and description pan reset karta 
 
   const handleClick = (option) => {
+    const correctness = option === ans;
     setSelectedOption(option);
     setSubmit(true);
-    setIsCorrect(option === ans);//is correct la set karnar true/false depending upon user ans 
+    setIsCorrect(option === ans);
   };
 
   const getButtonStyle = (option) => {
