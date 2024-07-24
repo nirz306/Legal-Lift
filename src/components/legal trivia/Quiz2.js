@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import Option from './options';
 import reward from "../assets/reward.png";
+import { NavLink,useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Quiz = () => {
   const [errorMsg, setErrorMsg] = useState("");
@@ -70,42 +72,62 @@ const Quiz = () => {
   }
 
   return (
-    <>
-   
-    <Logo/>  
-      {/* result page */}
     <div className='flex items-center justify-center min-h-screen'>
-      {/* result page */}
-      {result ? (
+      {errorMsg ? (
         <div className='mb-10'>
           <NavLink className="logo1" to="/">
             Legal Lift
           </NavLink>
           <div className="EndScreen">
-            <h1>Result</h1>
-            <img src={reward} alt="reward" />
-            <h2>
-              You have scored {score} out of {data.length} !!
-            </h2>
+            <h1 className="mb-[20px] font-bold text-[0.875rem] text-[#c02802]">Error</h1>
+            <p className="mb-[20px] font-bold text-[0.875rem] text-[#c02802]">{errorMsg}</p>
+            <button
+              className="w-full h-[45px] bg-[#A1C398] border-none outline-none rounded-[40px] cursor-pointer text-[16px] text-[#333] font-[Crimson Text] font-bold mt-[-2px]"
+            onClick={() => navigate("/")}>Go Home</button>
           </div>
         </div>
-        </>
       ) : (
-        <div className='questions flex flex-col items-center ml-3'>
-          <div className="text-black text-[30px] md:text-[50px] font-bold ">{data[currentQuestionIndex].ques}</div>
-          <Option
-            ans={data[currentQuestionIndex].ans}
-            a={data[currentQuestionIndex].A}
-            b={data[currentQuestionIndex].B}
-            c={data[currentQuestionIndex].C}
-            d={data[currentQuestionIndex].D}
-            description={data[currentQuestionIndex].desp}
-            onAnswer={handleNextQuestion}
-          />
-        </div>
+        <>
+          {result ? (
+            <div className='mb-10'>
+              <NavLink className="logo1" to="/">
+                Legal Lift
+              </NavLink>
+              <div className="EndScreen">
+                <h1>Result</h1>
+                <img src={reward} alt="reward" />
+                <h2>
+                  You have scored {score} out of {questions.length} !!
+                </h2>
+              </div>
+              <button
+                type="button"
+                onClick={sendResult}
+                  >Done</button>
+            </div>
+          ) : (
+            <div className='questions flex flex-col items-center'>
+              <div className="text-black text-[30px] md:text-[50px] font-bold">
+                {questions[currentQuestionIndex].ques}
+              </div>
+              <Option
+                ans={questions[currentQuestionIndex].ans}
+                a={questions[currentQuestionIndex].A}
+                b={questions[currentQuestionIndex].B}
+                c={questions[currentQuestionIndex].C}
+                d={questions[currentQuestionIndex].D}
+                onAnswer={handleAnswer}
+              />
+              {isCorrect !== null && (
+                <p className={`text-3xl font-bold ${isCorrect ? 'text-green-500' : 'text-red-500'}`}>
+                  {isCorrect ? "Correct!" : "Incorrect!"}
+                </p>
+              )}
+            </div>
+          )}
+        </>
       )}
     </div>
-    </>
   );
 };
 

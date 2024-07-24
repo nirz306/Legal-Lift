@@ -78,10 +78,10 @@ const Home = () => {
       </div>
 
       <div className="flex items-center min-h-screen relative">
-        <div className="bg-[#FA7070] w-[300px] sm:w-[500px] md:w-full ml-[100px] mr-[100px] h-[450px] mx-auto rounded-[15px] flex mb-11 items-center justify-between">
-          <div className="mt-[-80px]">
-            <img className="w-auto h-[500px] max-[1000px]:hidden" src={three} alt="Image" />
-          </div>
+        <div className="bg-[#FA7070] w-full  ml-[100px] mr-[100px] h-[450px] mx-auto rounded-[15px] flex mb-11 items-center justify-between">
+           
+             <img className="w-auto h-[500px]" src={three} alt="  " />
+          
           <div className="flex flex-col mr-10 max-[1000px]:w-[600px] max-[1000px]:mx-auto p-10">
             <p className="text-[30px] font-bold text-center min-[1000px]:text-[25px] min-[1332px]:text-[45px] min-[1203px]:text-[35px] mx-auto max-[488px]:text-[20px]">
               Discover the world of {title}<Cursor/>
