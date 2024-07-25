@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-// import "./login.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 // import { useNavigate } from "react-router";
 import { auth } from "../Signin_out/firebase";
 // import girl from "../assets/login.png";
 import gif from "../assets/login2gif.gif";
+import Logo from "../../helpers/Logo";
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -38,12 +38,10 @@ function LoginForm() {
 
   return (
     <>
-<NavLink className="absolute top-8 left-[10%] text-5xl font-[Galada] text-black no-underline cursor-pointer z-20" to="/">
-Legal Lift
-      </NavLink>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="relative flex justify-center flex-wrap bg-red-300 mt-[210px] mb-[70px] gap-5 rounded-lg w-[80%] h-auto  text-center">
-      <div className="mt-12 mb-12 mr-12 ml-12 w-[420px] bg-[#eec9c9] text-white rounded-[12px] p-8 transition-shadow duration-300 ease-in-out">
+ <Logo/>
+      <div className="flex items-center justify-center  min-h-screen ]">
+      <div className="relative flex justify-center flex-wrap bg-red-300 mb-8  gap-5 rounded-lg w-[80%] h-[50px]  text-center min-h-screen">
+      <div className="mt-12 pb-10 mr-12 h-max  ml-12 w-[420px] bg-[#eec9c9] text-white rounded-[12px] p-8 transition-shadow duration-300 ease-in-out">
       <form>
             <h1 className="text-[51px] text-center text-black font-[Galada] font-normal opacity-100">Login</h1>
             <div className="relative w-full h-[50px] my-[30px]">
