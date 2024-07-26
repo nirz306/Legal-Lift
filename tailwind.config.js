@@ -16,7 +16,10 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'sm': '800px',
+        'sm': '600px',
+      },
+      padding: {
+        'custom-sm': '20px', // Custom padding value
       },
     },
   },
