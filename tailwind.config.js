@@ -15,6 +15,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        galada: ['"Galada"', 'cursive'],
+      },
       screens:{
         'sm': '600px',
       },

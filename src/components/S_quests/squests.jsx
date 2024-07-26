@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect, useState } from "react";
 import Block from "./Block";
 import sex_har from "../assets/sexual_harr.png";
 import acc from "../assets/road_accc.png";
@@ -9,8 +9,32 @@ import team from "../assets/team.png";
 import bribe from "../assets/bribe.png";
 import tenant from "../assets/tenant.png";
 import { delay, motion } from "framer-motion";
+import { useAnimation, color } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Squests = () => {
+  const [ref1, inView1] = useInView({ triggerOnce: false });
+    const [ref2, inView2] = useInView({ triggerOnce: false });
+    const controls1 = useAnimation();
+    const controls2 = useAnimation();
+
+    useEffect(() => {
+        if (inView1) {
+            controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+        } else {
+            controls1.start({ opacity: 0, y: 70 });
+        }
+    }, [controls1, inView1]);
+
+    useEffect(() => {
+        if (inView2) {
+            controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+        } else {
+            controls2.start({ opacity: 0, y: 70 });
+        }
+    }, [controls2, inView2]);
+
+  const [move, setMove] = useState(false);
   return (
     <>
     <div id=""></div>
@@ -18,11 +42,11 @@ const Squests = () => {
         Legal Lift
       </NavLink>
       <div className="flex mr-[100px]">
-        <div className="bg-[#A1C398] ml-[100px] mr-[50px] rounded-lg p-4">
-          <p className="title">Scenario Quests</p>
+        <div className="bg-[#A1C398] ml-[100px] mr-[50px]  mt-[25px] rounded-lg p-4">
+          <p className="font-galada mt-[10px] text-[50px] text-center">Scenario Quests</p>
           <br></br>
 
-          <p className="text-[30px]">
+          <p className="text-[30px] mt-[-15px] text-justify font-sansita">
             "Welcome to our captivating legal scenario quest! Dive into
             real-life case studies and discover the intricacies of law in an
             engaging and interactive way. Our platform offers students a
@@ -36,74 +60,49 @@ const Squests = () => {
       </div>
 
       <div className="components">
-        <div className="row1">
-          <motion.div
-            className="road_acc"
-            initial={{ x: -250 }}
-            animate={{ x: -10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+        <motion.div className="row1" ref={ref1}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls1}>
+          <div className="road_acc">
+           
             <NavLink className="s_link" to="/Road Accident">
               <Block imageUrl={acc} title="road_acc" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="sexual_harras"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+          <div className="sexual_harras">
             <NavLink className="s_link" to="/Sexual harresment">
               <Block imageUrl={sex_har} title="Sexual harassment" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="lost_phone"
-            initial={{ x: 250 }}
-            animate={{ x: 10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+          <div className="lost_phone">
             <NavLink className="s_link" to="/Lost phone">
               <Block imageUrl={phone} title="Lost phone" />
             </NavLink>
-          </motion.div>
-        </div>
-        <div className="row2">
-          <motion.div
-            className="respect_realm"
-            initial={{ x: -250 }}
-            animate={{ x: -10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+          </div>
+        </motion.div>
+        <motion.div className="row2" ref={ref2}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={controls2}>
+          <div className="respect_realm">
             <NavLink className="s_link" to="/respect_realm">
               <Block imageUrl={respect} title="Respect Realm" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bribe"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+          <div  className="bribe">
             <NavLink className="s_link" to="/bribe">
               <Block imageUrl={bribe} title="Bribe" />
             </NavLink>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="tenant"
-            initial={{ x: 250 }}
-            animate={{ x: 10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
+          <div  className="tenant">
             <NavLink className="s_link" to="/tenant">
               <Block imageUrl={tenant} title="Tenant" />
             </NavLink>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </>
   );
