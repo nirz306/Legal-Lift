@@ -7,7 +7,7 @@ import c_rights from "../assets/c_rights.png";
 import o_safety from "../assets/online_safety.png";
 // import c_freedom from "../assets/"
 import stranger from "../assets/strager safety.png";
-import detention from "../assets/unauthorised detension.png";
+import detention from "../assets/unauthorised detension.jpeg";
 import { NavLink } from "react-router-dom";
 import team from "../assets/team.png";
 import o_shop from "../assets/online_shopping.png";
