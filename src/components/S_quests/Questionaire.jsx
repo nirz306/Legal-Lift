@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './squests.css';
+ 
 import Ans_des from './Ans_des';
 
 

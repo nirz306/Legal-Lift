@@ -24,7 +24,7 @@ export const Questions = [
       asnwer: "optionA",
     },
     {
-    prompt: "Which branch of government is responsible for making laws?",
+    prompt: "Which branch of government is responsible for making laws?", 
     optionA: "Executive",
     optionB: "Judicial",
     optionC: "Legislative",

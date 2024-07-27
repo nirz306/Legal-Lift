@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import './squests.css';
 import VIDEO_PATH from '../assets/r_a.mp4';
 import Questionaire from './Questionaire';
 import { NavLink } from 'react-router-dom';

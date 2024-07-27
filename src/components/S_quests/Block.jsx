@@ -1,5 +1,4 @@
 import React from 'react'
-import './squests.css'
 
 function Block({ imageUrl, title }) {
     return (

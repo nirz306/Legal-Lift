@@ -99,7 +99,7 @@ const Home = () => {
         <motion.div className="row1 flex md:flex-row items-center flex-col" ref={ref1}
                     initial={{ opacity: 0, y: 50 }}
                     animate={controls1}>
-          <Link className="link" smooth to="/kidztube#top">
+          <Link className="link"   to="/kidztube#top">
             <Cards color="#FEFDED" desp="Dive into real-life stories with exciting videos and fun questions that make you think and learn." title="Kidztube" image={kt} />
           </Link>
 
@@ -111,7 +111,7 @@ const Home = () => {
         <motion.div className="row2 flex md:flex-row items-center flex-col" ref={ref2}
                     initial={{ opacity: 0, y: 50 }}
                     animate={controls2}>
-          <Link className="link" smooth to="/squests#top">
+          <Link className="link" to="/squests#top">
             <Cards color="#A1C398" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Scenario Quests" image={sq} />
           </Link>
 
