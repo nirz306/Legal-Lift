@@ -15,8 +15,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        galada: ['"Galada"', 'cursive'],
+      },
       screens:{
-        'sm': '800px',
+        'sm': '600px',
+      },
+      padding: {
+        'custom-sm': '20px', // Custom padding value
       },
     },
   },

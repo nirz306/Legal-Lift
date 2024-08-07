@@ -22,6 +22,7 @@ import Signup from "./components/Signin_out/Signup";
 import { createBrowserRouter } from "react-router-dom";
 import Respect_realm from "./components/S_quests/Respect_realm";
 import Detention from "./components/Kidztube/Detention";
+import Stranger_safety from "./components/Kidztube/Stranger_safety";
 import Online_shop from "./components/Kidztube/Online_shop";
 import Online_safety from "./components/Kidztube/Online_safety";
 import Bribe from "./components/S_quests/Bribe";
@@ -74,6 +75,10 @@ export default function App() {
     {
       path: "/rasicm",
       element: <Rasicm />,
+    },
+    {
+      path: "/stranger_safety",
+      element: <Stranger_safety/>,
     },
     {
       path: "/consumer_rights",
