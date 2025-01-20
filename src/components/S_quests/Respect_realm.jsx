@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import VIDEO_PATH from '../assets/r_r.mp4'
 import ReactPlayer from 'react-player';
-import Questionaire from './Questionaire';
+import Questionaire from '../../reusables/Questionaire';
 import { NavLink } from 'react-router-dom';
 const Respect_realm = () => {
   const [showQuiz, setShowQuiz] = useState(false);

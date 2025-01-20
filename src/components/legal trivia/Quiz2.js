@@ -29,19 +29,46 @@ const Quiz = () => {
     const fetchQuizData = async () => {
       try {
         console.log("Fetching the quiz questions");
-        const response = await axios.get("http://localhost:4000/api/Questions");
+        const token = localStorage.getItem("token"); // Retrieve the JWT from localStorage
+      console.log("token during creating new task: ", token);
+      if (!token) {
+        console.error("No token found, redirecting to login.");
+      navigate("/login"); // Redirect to the login page if no token is found
+      //later need to add a timeout here 
+      return;
+      }
+
+        const response = await axios.get("http://localhost:3000/api/Questions", {
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}` // Send the JWT token in the Authorization header
+          },
+          withCredentials: true 
+        });
+        
         console.log("Questions fetched: ", response.data);
         setQuestions(response.data);
         setLoading(false);
       } catch (error) {
-        console.log("Error fetching the data: ", error);
-        setErrorMsg("Failed to load questions.");
+        console.error("Error fetching the data: ", error);
+  
+        if (error.response && error.response.status === 401) {
+          // If the error is 401 Unauthorized
+          setErrorMsg("Please log in to access the quiz.");
+          setTimeout(() => {
+            navigate("/login"); // Redirect to the login page
+          }, 2000); // Optional delay to show the message before redirecting
+        } else {
+          setErrorMsg("Failed to load questions.");
+        }
+  
         setLoading(false);
       }
     };
-
+  
     fetchQuizData();
-  }, []);
+  }, [navigate]);
+  
   const handleAnswer = (isCorrect, option) => {
     setIsCorrect(isCorrect);
     if (isCorrect) {
@@ -56,7 +83,7 @@ const Quiz = () => {
 
   const sendResult = () => {
     axios
-      .post("http://localhost:4000/api/answers", { ans: userAnswers })
+      .post("http://localhost:3000/api/answers", { ans: userAnswers })
       .then((response) => {
         console.log("Answers data saved sucessfully", response.data);
         navigate("/");
@@ -134,15 +161,6 @@ const Quiz = () => {
                   d={questions[currentQuestionIndex].D}
                   onAnswer={handleAnswer}
                 />
-                {/* {isCorrect !== null && (
-                  <p
-                    className={`text-3xl font-bold ${
-                      isCorrect ? "text-green-500" : "text-red-500"
-                    }`}
-                  >
-                    {isCorrect ? "Correct!" : "Incorrect!"}
-                  </p>
-                )} */}
               </div>
             )}
           </>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Questionaire from '../Questionaire';
+// import Questionaire from '../../reusables/Questionaire';
 import ReactPlayer from 'react-player';
 import "./lostphone.css";
 import { NavLink } from 'react-router-dom';

@@ -10,22 +10,25 @@ const rule = () => {
     <>
       <Logo />
 
-      <div className="flex flex-col md:flex-row mt-5 h-max">
+      <div className="flex flex-col md:flex-row ml-[20px] md:ml-[100px] mr-[20px] md:mr-[100px]">
 
-        <div className="flex flex-col items-center mx-auto">
+        <div className="p-[20px] md:p-[50px] flex flex-col justify-center items-center md:items-start md:justify-start" >
+          
           <motion.div
             className="w-full md:w-auto"
             animate={{ scale: 1 }}
             initial={{ scale: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="bg-[#FF8F8A] p-6 sm:p-8 md:p-[50px] rounded-lg text-center sm:mx-4 md:mx-0">
-              Hey there! Get ready for the quiz fun!
-              <p>
-                Before you dive in, make sure to check out these cool
-                instructions.
-              </p>
-              <div className="mt-4 space-y-2">
+             
+              <div className="bg-[#FF8F8A] p-[20px] md:p-[50px] rounded-lg text-center md:text-left">
+                Hey there! Get ready for the quiz fun!
+                <p>
+                  Before you dive in, make sure to check out these cool
+                  instructions.
+                </p>
+                &nbsp;&nbsp;&nbsp;
+                <div classname = "mt-4 space-y-2">
                 <p> There are 8 awesome questions waiting for you.</p>
                 <p>Each question presents 4 options. Choose the correct one.</p>
                 <p>
@@ -48,22 +51,23 @@ const rule = () => {
                   Wishing you tons of luck and fun with the trivia! You've got
                   this! 🚀
                 </p>
+                </div>
               </div>
-            </div>
 
-            <div className="letsplaybtton flex items-center justify-center mx-auto mt-4">
-              <Link to="/play">
-                <button className="bg-[#A1C398] rounded-md p-4 hover:bg-[#63785d] hover:text-white">
-                  Let's Play!!
-                </button>
-              </Link>
-            </div>
+              <div className="flex items-center justify-center mt-4 mx-auto">
+                <Link to="/play">
+                  <button className="bg-[#A1C398] rounded-md p-4 justify-center">
+                    Let's Play!!
+                  </button>
+                </Link>
+              </div>
 
           </motion.div>
         </div>
 
-        <div className="boyimage mx-auto hidden md:block my-auto">
-          <img src={boy} alt="Boy illustration" className=""></img>
+
+        <div className="my-auto flex justify-center md:justify-end">
+          <img height="400px" src={boy} alt="Boy illustration" className="w-[200px] md:w-[400px]"></img>
         </div>
       </div>
     </>

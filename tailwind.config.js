@@ -1,12 +1,6 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: ["./src/components/Home/Home.jsx","./src/components/legal trivia/Quiz2.js"],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
+ 
 
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,9 +9,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens:{
-        'sm': '800px',
+      fontFamily: {
+        galada: ['"Galada"', 'cursive'],
       },
+      screens:{
+        'sm': '600px',
+      },
+      padding: {
+        'custom-sm': '20px', // Custom padding value
+      },
+      colors:{
+        'legal-green':'#A1C398',
+        'legal-pastel-red':'#FA7070',
+        'legal-yellow':'#F8F8DC'
+
+      }
     },
   },
   plugins: [],

@@ -3,11 +3,11 @@ import React from 'react';
  export default function Ans_des({ ans,user_ans, description }) {
  
   return (
-    <div>
+    <div className='w-[700px]'>
       {ans === user_ans ? (
-        <h2>Your Answer is correct</h2>
+        <div className='mx-auto w-max text-3xl'>Your Answer is correct</div>
       ) : (
-        <h1>Your Answer is wrong</h1>
+        <div className='mx-auto w-max text-3xl'>Your Answer is wrong!</div>
       )}
       
       <p>{description}</p>

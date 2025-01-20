@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Block from "./Block";
 import sex_har from "../assets/sexual_harr.png";
 import acc from "../assets/road_accc.png";
@@ -8,100 +8,83 @@ import { NavLink } from "react-router-dom";
 import team from "../assets/team.png";
 import bribe from "../assets/bribe.png";
 import tenant from "../assets/tenant.png";
-import { delay, motion } from "framer-motion";
-import Logo from "../../helpers/Logo";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const AnimatedBlock = ({ image, title, path, delay }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 0.6, delay }}
+      className="flex justify-center"
+    >
+      <NavLink className="s_link" to={path}>
+        <Block imageUrl={image} title={title} />
+      </NavLink>
+    </motion.div>
+  );
+};
 
 const Squests = () => {
+  const blocks = [
+    { image: acc, title: "Road Accident", path: "/Road Accident" },
+    { image: sex_har, title: "Sexual Harassment", path: "/Sexual harassment" },
+    { image: phone, title: "Lost Phone", path: "/Lost phone" },
+    { image: respect, title: "Respect Realm", path: "/respect_realm" },
+    { image: bribe, title: "Bribe", path: "/bribe" },
+    { image: tenant, title: "Tenant", path: "/tenant" },
+  ];
+
   return (
     <>
-      <Logo/>
-
-      <div className="flex mx-auto  w-full min-h-screen">
-        <div className="bg-[#A1C398] lg:w-[700px]  lg:h-[500px] mx-auto rounded-lg p-4 mt-4 md:w-[500px] md:h-[500px]  ">
-          <p className="text-center">Scenario Quests</p>
-          <br></br>
-
-          <p className="text-[30px] md:text-[20px]">
-            Welcome to our captivating legal scenario quest! Dive into 
-            real-life case studies and discover the intricacies of law in an
-            engaging and interactive way. Our platform offers students a
-            hands-on approach to learning, where they can explore, analyze, and
-            solve legal challenges firsthand. Get ready to unlock the secrets
-            of the legal world and embark on an exciting journey of discovery!
-          </p>
+      <div className="min-h-screen">
+        <NavLink className="text-[50px]" to="/">
+          Legal Lift
+        </NavLink>
+        <div className="flex lg:w-[1200px] mx-auto md:ml-[70px]">
+          <div className="bg-[#A1C398] w-[700px] h-[500px] rounded-lg p-4 mr-10">
+            <p className="font-galada mt-[10px] text-[50px] text-center">Scenario Quests</p>
+            <br />
+            <p className="md:text-[28px] mt-[-15px] text-justify font-sansita text-[24px] ">
+              Welcome to our captivating legal scenario quest! Dive into real-life case
+              studies and discover the intricacies of law in an engaging and interactive
+              way. Our platform offers students a hands-on approach to learning, where
+              they can explore, analyze, and solve legal challenges firsthand. Get ready
+              to unlock the secrets of the legal world and embark on an exciting journey
+              of discovery!
+            </p>
+          </div>
+          <img
+            src={team}
+            alt=""
+            className="w-max h-[300px] justify-center align-center my-auto hidden lg:block "
+          />
         </div>
-        <img src={team} alt="" className=" w-max h-[300px] justify-center align-center my-auto mx-auto" />
       </div>
 
-      <div className="mx-auto mb-8 flex flex-col">
-        <div className="flex  p-3 mx-auto">
-          <motion.div
-            className="road_acc"
-            initial={{ x: -250 }}
-            animate={{ x: -10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/Road Accident">
-              <Block imageUrl={acc} title="road_acc" />
-            </NavLink>
-          </motion.div>
-
-          <motion.div
-            className="sexual_harras"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/Sexual harresment">
-              <Block imageUrl={sex_har} title="Sexual harassment" />
-            </NavLink>
-          </motion.div>
-
-          <motion.div
-            className="lost_phone"
-            initial={{ x: 250 }}
-            animate={{ x: 10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/Lost phone">
-              <Block imageUrl={phone} title="Lost phone" />
-            </NavLink>
-          </motion.div>
-        </div>
-        <div className="flex p-3 mt-8 mx-auto">
-          <motion.div
-            className="respect_realm"
-            initial={{ x: -250 }}
-            animate={{ x: -10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/respect_realm">
-              <Block imageUrl={respect} title="Respect Realm" />
-            </NavLink>
-          </motion.div>
-
-          <motion.div
-            className="bribe"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/bribe">
-              <Block imageUrl={bribe} title="Bribe" />
-            </NavLink>
-          </motion.div>
-
-          <motion.div
-            className="tenant"
-            initial={{ x: 250 }}
-            animate={{ x: 10 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <NavLink className="s_link" to="/tenant">
-              <Block imageUrl={tenant} title="Tenant" />
-            </NavLink>
-          </motion.div>
-        </div>
+      <div className="grid lg:grid-cols-3 lg:gap-3 min-h-screen md:grid-cols-2 gap-4 ">
+        {blocks.map((block, index) => (
+          <AnimatedBlock
+            key={index}
+            image={block.image}
+            title={block.title}
+            path={block.path}
+            delay={index * 0.05}
+          />
+        ))}
       </div>
     </>
   );
