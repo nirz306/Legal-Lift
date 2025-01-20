@@ -41,16 +41,14 @@ const Kidztube = () => {
   return (
     <>
      <div id="top"></div>
-      <NavLink className="text-[50px]" to="/">
-        Legal Lift
-      </NavLink>
+      <NavLink className="relative top-8 mx-auto my-6 text-5xl font-[Galada] text-black no-underline cursor-pointer sm:ml-16" to="/">Legal Lift</NavLink>
       <div className="flex mr-[100px]">
-        <div className="bg-[#A1C398] ml-[100px] mr-[50px] mt-[25px] rounded-lg p-4">
+        <div className="bg-[#A1C398] ml-[100px] mr-[50px] mt-[35px] rounded-lg p-4">
           
-            <p className="font-galada mt-[10px] text-[50px] text-center">Kidztube</p>
+            <p className="tit mt-[10px] text-[40px] text-center">Kidztube</p>
             <br></br>
             
-              <p className="text-[30px] mt-[-15px] text-justify font-sansita">
+            <p className="tit text-[25px] mt-[-15px] text-justify">
                 Step into a world of wonder at KidzTube! We've handpicked
                 videos that spark curiosity and inspire learning. Here, your
                 children can explore a world of educational videos that are

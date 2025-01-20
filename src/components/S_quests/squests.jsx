@@ -38,15 +38,13 @@ const Squests = () => {
   return (
     <>
     <div id=""></div>
-      <NavLink className="text-[50px] " to="/">
-        Legal Lift
-      </NavLink>
+      <NavLink className="relative top-8 mx-auto my-6 text-5xl font-[Galada] text-black no-underline cursor-pointer sm:ml-16" to="/">Legal Lift</NavLink>
       <div className="flex mr-[100px]">
-        <div className="bg-[#A1C398] ml-[100px] mr-[50px]  mt-[25px] rounded-lg p-4">
-          <p className="font-galada mt-[10px] text-[50px] text-center">Scenario Quests</p>
+        <div className="bg-[#A1C398] ml-[100px] mr-[50px]  mt-[40px] rounded-lg p-4">
+          <p className="tit mt-[10px] text-[40px] text-center">Scenario Quests</p>
           <br></br>
 
-          <p className="text-[30px] mt-[-15px] text-justify font-sansita">
+          <p className="tit text-[25px] mt-[-15px] text-justify">
             "Welcome to our captivating legal scenario quest! Dive into
             real-life case studies and discover the intricacies of law in an
             engaging and interactive way. Our platform offers students a

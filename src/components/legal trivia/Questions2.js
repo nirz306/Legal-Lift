@@ -15,7 +15,7 @@ const Questions = [
       "C": "Dr Bhimrao Ambedkar",
       "D": "Sardar Vallabhbhai Patel",
       "ans": "C",
-      "desp":"Dr. Bhimrao Ambedkar is called the "Father of the Indian Constitution" because he led the group that made the rules for India."
+      "desp":"Dr. Bhimrao Ambedkar is called the 'Father of the Indian Constitution' because he led the group that made the rules for India."
     },
     {
       "ques": "Which of the following is a fundamental right guaranteed by the Indian Constitution?",
@@ -32,7 +32,7 @@ const Questions = [
       "B": "Judicial",
       "C": "Legislative",
       "D": "Administrative",
-      "ans": "C"
+      "ans": "C",
       "desp":"The Legislative branch, like India's Parliament, is responsible for making laws for the country."  
     },
     {
@@ -41,7 +41,7 @@ const Questions = [
       "B": "18",
       "C": "21",
       "D": "25",
-      "ans": "B"
+      "ans": "B",
       "desp":"In many democratic countries, people can vote starting at age 18, when they are considered adults."  
     },
     {
@@ -50,7 +50,7 @@ const Questions = [
       "B": "To declare bankruptcy",
       "C": "To file for divorce",
       "D": "To create a business partnership",
-      "ans": "A"
+      "ans": "A",
       "desp":"A will is a legal document that explains how a person wants their belongings and money to be divided after they pass away."  
     },
     {
@@ -59,7 +59,7 @@ const Questions = [
       "B": "16",
       "C": "18",
       "D": "21",
-      "ans": "A"
+      "ans": "A",
       "desp":"In many places, a person is usually considered legally responsible for their actions in criminal court starting at age 12."  
     },
     {
@@ -68,7 +68,7 @@ const Questions = [
       "B": "Article 21",
       "C": "Article 14",
       "D": "Article 16",
-      "ans": "A"
+      "ans": "A",
       "desp":"Article 19 of the Indian Constitution gives people the Right to Freedom of Speech, allowing them to express their ideas openly."  
     }
   ];
