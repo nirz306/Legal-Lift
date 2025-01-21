@@ -19,22 +19,22 @@ const Navbar = () => {
   };
 
   return (
-    <div className="md:flex md:mt-4 hidden">
-      <Link className="link text-[26px]" to="/">
+    <div className="md:flex md:mt-4 hidden font-body">
+      <Link className="link text-[30px]" to="/">
         Home
       </Link>
-      <Link className="link text-[26px] ml-[30px]" to="/blogs">
+      <Link className="link text-[30px] ml-[30px]" to="/blogs">
         Blogs
       </Link>
       {isLoggedIn ? (
         <button
-          className="link text-[26px] ml-[30px] mr-[30px]"
+          className="link text-[30px] ml-[30px] mr-[30px]"
           onClick={handleLogout}
         >
           Logout
         </button>
       ) : (
-        <Link className="link text-[26px] ml-[30px] mr-[30px]" to="/login">
+        <Link className="link text-[30px] ml-[30px] mr-[30px]" to="/login">
           Login
         </Link>
       )}

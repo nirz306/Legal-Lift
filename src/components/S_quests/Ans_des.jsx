@@ -5,9 +5,9 @@ import React from 'react';
   return (
     <div className='w-[700px]'>
       {ans === user_ans ? (
-        <div className='mx-auto w-max text-3xl'>Your Answer is correct</div>
+        <div className='mx-auto w-max text-[30px] font-bold'>Your Answer is correct</div>
       ) : (
-        <div className='mx-auto w-max text-3xl'>Your Answer is wrong!</div>
+        <div className='mx-auto w-max text-3xl font-bold'>Your Answer is wrong!</div>
       )}
       
       <p>{description}</p>

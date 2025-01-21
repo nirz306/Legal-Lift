@@ -10,7 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        galada: ['"Galada"', 'cursive'],
+        heading: ["Galada", 'cursive'],
+        body:["Crimson Text", 'serif']
+
       },
       screens:{
         'sm': '600px',

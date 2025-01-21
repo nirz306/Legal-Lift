@@ -14,15 +14,15 @@ const Road_acc = () => {
 
   return (
     <>
-      <NavLink className="logo" to="/">
-        Legal Lift
-      </NavLink>
+     <NavLink className="text-[50px] font-heading" to="/">
+               Legal Lift
+             </NavLink>
       <div className="flex flex-col items-center justify-center  space-y-8">
         <div className="player">
           <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
         </div>
 
-        <div className="w-[1057px]">
+        <div className="w-[1057px] font-body">
           {showQuiz && (
             <Questionaire
               question="IF YOU WERE IN A POSITION SIMILAR TO THAT OF THE CHILD, WHAT ACTION WOULD YOU TAKE UPON WITNESSING A ROAD ACCIDENT? SELECT THE MOST LIKELY OPTION YOU WOULD PERFORM."
@@ -32,7 +32,7 @@ const Road_acc = () => {
                 "Utilize a phone to contact emergency services.",
                 "Give priority to your own safety in hazardous situations.",
               ]}
-              ans="b"
+              ans="Offer basic first aid assistance if possible"
               desp="The correct action, if a child is in a situation where immediate help is needed and they possess the knowledge to do so, is to offer basic first aid assistance. Providing basic first aid can help stabilize the situation until professional help arrives. This response assumes the child has some basic first aid training and is able to safely provide assistance without putting themselves in danger."
             />
           )}

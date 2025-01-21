@@ -65,12 +65,12 @@ const Home = () => {
                 <img className="w-auto h-[500px] text-center " src={three} alt="  " />
             
              <div className="flex flex-col mr-10 max-[1000px]:w-[600px] max-[1000px]:mx-auto p-10">
-               <p className="text-[30px] font-bold text-center min-[1000px]:text-[25px] min-[1332px]:text-[45px] min-[1203px]:text-[35px] mx-auto max-[488px]:text-[20px]">
+               <p className="text-[30px] font-bold text-center min-[1000px]:text-[25px] min-[1332px]:text-[45px] min-[1203px]:text-[35px] mx-auto max-[488px]:text-[20px] font-heading ">
                  Discover the world of {title}<Cursor/>
                </p>
              
               
-               <p className="text-[20px] mx-auto min-[1000px]:text-[25px] min-[1000px]:w-[350px] min-[1203px]:text-[30px] min-[1203px]:w-[600px]">
+               <p className="text-left text-[20px] mx-auto min-[1000px]:text-[25px] min-[1000px]:w-[350px] min-[1203px]:text-[30px] min-[1203px]:w-[600px] font-body ">
                  Unraveling the secrets of law is like discovering the hidden keys to a fair society, a journey where every revelation empowers us towards greater understanding and equality for all. </p>
            </div>
          </div>
@@ -96,8 +96,8 @@ const Home = () => {
             <Cards color="#A1C398" desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions" title="Scenario Quests" image={sq} />
           </Link>
 
-          <Link className="link" to="/blogs">
-            <Cards color="#FA7070" desp="Dive into our blog for easy-to-understand articles on law! All about justice, rights, and the legal world!" title="Blogs" image={blogss} />
+          <Link className="" to="/blogs">
+          <Cards color="#FA7070" desp="Dive into our blog for easy-to-understand articles on law! All about justice, rights, and the legal world!" title="Blogs" image={blogss} />
           </Link>
           
         </motion.div>
@@ -107,7 +107,7 @@ const Home = () => {
         <div className="imag relative mt-[-165px]">
           <img className="couple relative  max-[1000px]:hidden" src={couple} alt="" />
         </div>
-        <div className="quote text-[40px] w-full mb-[100px] text-center mr-4 ml-4 ">
+        <div className="quote text-[40px] w-full mb-[100px] text-center mr-4 ml-4 font-body">
           "Education is the foundation, and law is the framework, together they build a society where justice and progress thrive."
         </div>
       </div>
