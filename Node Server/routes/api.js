@@ -24,7 +24,8 @@ const quizSchema = new mongoose.Schema({
     B: String,
     C: String,
     D: String,
-    ans: String
+    ans: String,
+    description:String
   });
 const AnswerSchema = new mongoose.Schema({
     ans : [String]
