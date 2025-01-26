@@ -34,7 +34,8 @@ const Login=() => {
    // After a successful login
 if (response.data.token) {
   localStorage.setItem('token', response.data.token); // Store token
-  localStorage.setItem('username', response.data.user.name); // Store username
+  localStorage.setItem('user', JSON.stringify(response.data.user)); // Store the full user object as JSON
+  console.log("User info stored:", response.data.user);
   navigate('/'); // Redirect to the home page or dashboard
 }
   

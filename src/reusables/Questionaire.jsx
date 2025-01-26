@@ -35,16 +35,16 @@ const Questionaire = ({ question, options, ans, desp }) => {
               <div className="imag relative h-[285px] ">
                 <img className="couple relative max-[1000px]:hidden " src={couple2} alt="" />
               </div>
-              <div className="options flex flex-col items-center gap-4 h-[285px] max-[1000px]:ml-[200px]">
+              <div className="options flex flex-col text-left items-center gap-4 h-[285px] max-[1000px]:ml-[200px]">
                 {options.map((option, index) => (
                   <button
                     key={index}
-                    className={`w-[400px] h-[60px] rounded shadow transition ${
+                    className={`w-[400px] h-[60px] rounded text-left pl-2 shadow transition ${
                       selectedIndex === index
                         ? correct
                           ? "bg-green-500 text-white"
                           : "bg-black text-white"
-                        : "bg-legal-yellow hover:bg-legal-green hover:text-black"
+                        : "bg-legal-yellow hover:bg-legal-green hover:text-black hover:shadow-lg "
                     }`}
                     onClick={(event) => handleClick(event, index)}
                     disabled={showDes} // Disable buttons after selection

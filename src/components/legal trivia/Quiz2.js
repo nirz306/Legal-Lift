@@ -15,6 +15,7 @@ const Quiz = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
+  const [ansDescription,setAnsDescription] = useState([]);
 
   const handleNextQuestion = () => {
     setIsCorrect(null);
@@ -45,6 +46,8 @@ const Quiz = () => {
           },
           withCredentials: true 
         });
+
+
         
         console.log("Questions fetched: ", response.data);
         setQuestions(response.data);
@@ -82,19 +85,47 @@ const Quiz = () => {
   };
 
   const sendResult = () => {
-    axios
-      .post("http://localhost:3000/api/answers", { ans: userAnswers })
-      .then((response) => {
-        console.log("Answers data saved sucessfully", response.data);
-        navigate("/");
-      })
-      .catch((error) => {
-        console.error("Error svaing the answers");
-        setErrorMsg("Failed to save Answers");
-      })
-      .catch((err) => {
-        setErrorMsg(err.message);
-      });
+    const token = localStorage.getItem("token");
+    const userString = localStorage.getItem("user"); // Retrieve the user object as a JSON string
+
+    // console.log("Token: ",token);
+    // console.log("User: ",userString);
+  
+    if (!userString) {
+      setErrorMsg("User information not found. Please log in again.");
+      return;
+    }
+  
+    try {
+      const user = JSON.parse(userString); // Parse the JSON string into an object
+      console.log("Parsed user info:", user); // Debugging: Log the parsed user info
+  
+      const resultData = {
+        userId: user._id, // Use the user's _id from the parsed object
+        score: score, // The score the user achieved in the quiz
+      };
+  
+      console.log("Sending result data:", resultData); // Debugging: Log the data being sent
+  
+      axios
+        .post("http://localhost:3000/user/score", resultData, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // Send the JWT token for authentication
+          },
+        })
+        .then((response) => {
+          console.log("Quiz score updated successfully", response.data);
+          navigate("/"); // Redirect to the home page or any other page
+        })
+        .catch((error) => {
+          console.error("Error updating quiz score:", error);
+          setErrorMsg("Failed to update quiz score. Please try again.");
+        });
+    } catch (error) {
+      console.error("Error parsing user info from localStorage:", error);
+      setErrorMsg("Invalid user information. Please log in again.");
+    }
   };
 
   if (loading) {
@@ -105,7 +136,7 @@ const Quiz = () => {
     // flex items-center justify-center min-h-screen
     <div>
       <Logo className="mt-2" />
-      <div className="flex justify-center items-center  ">
+      <div className="flex justify-center items-center font-body ">
         {errorMsg ? (
           <div className="mb-10">
             <div className="EndScreen">
@@ -126,13 +157,13 @@ const Quiz = () => {
         ) : (
           <>
             {result ? (
-              <div className="flex flex-col">
+              <div className="flex flex-col font-body ">
               
                 <div className="justify-center items-center bg-[#F8F8DC] w-max mx-auto p-5 rounded-lg">
                   <div className="flex flex-col">
-                    <h1 className="text-center">Congratulations</h1>
+                    <h1 className="text-center font-heading text-2xl">Congratulations</h1>
                     <img src={reward} alt="reward" />
-                    <h2 className="text-center items-center mx-auto">
+                    <h2 className="text-center items-center mx-auto text-xl">
                       You have scored {score} out of {questions.length} !!
                     </h2>
                   </div>
@@ -160,6 +191,7 @@ const Quiz = () => {
                   c={questions[currentQuestionIndex].C}
                   d={questions[currentQuestionIndex].D}
                   onAnswer={handleAnswer}
+                  description = {questions[currentQuestionIndex].description}
                 />
               </div>
             )}

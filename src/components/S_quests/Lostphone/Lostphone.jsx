@@ -54,7 +54,7 @@ const Lostphone = () => {
                   </NavLink>
 
       <div className="flex flex-col items-center">
-        <div className="min-h-screen flex justify-center items-center">
+        <div className=" flex justify-center items-center ">
           <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
         </div>
 

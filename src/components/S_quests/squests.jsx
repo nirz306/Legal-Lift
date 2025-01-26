@@ -54,24 +54,32 @@ const Squests = () => {
         <NavLink className="text-[50px] font-heading" to="/">
           Legal Lift
         </NavLink>
-        <div className="flex lg:w-[1200px] mx-auto md:ml-[70px]">
-          <div className="bg-[#A1C398] w-[700px] h-[500px] rounded-lg p-4 mr-10">
-            <p className="mt-[10px] text-[50px] text-center font-heading">Scenario Quests</p>
-            <br />
-            <p className="md:text-[28px] mt-[-15px] text-justify font-body text-[24px] ">
-              Welcome to our captivating legal scenario quest! Dive into real-life case
-              studies and discover the intricacies of law in an engaging and interactive
-              way. Our platform offers students a hands-on approach to learning, where
-              they can explore, analyze, and solve legal challenges firsthand. Get ready
-              to unlock the secrets of the legal world and embark on an exciting journey
-              of discovery!
+
+        <div className="flex mr-[100px]">
+          {/* Colored Component */}
+          <div className="bg-[#A1C398] ml-[100px] mr-[50px]  rounded-lg p-4 md:w-[700px] md:h-max w-max h-[500px]">
+            <p className="mt-[10px] text-[50px] text-center font-heading">
+              Scenario Quests
+            </p>
+            <br></br>
+            <p className="md:text-[30px] mt-[-15px] text-justify font-body sm:text-[27px] text-[23px]">
+              Welcome to our captivating legal scenario quest! Dive int
+              real-life case studies and discover the intricacies of law in an
+              engaging and interactive way. Our platform offers students a
+              hands-on approach to learning, where they can explore, analyze,
+              and solve legal challenges firsthand. Get ready to unlock the
+              secrets of the legal world and embark on an exciting journey of
+              discovery!
             </p>
           </div>
-          <img
-            src={team}
-            alt=""
-            className="w-max h-[300px] justify-center align-center my-auto hidden lg:block "
-          />
+ 
+          <div className="justify-center items-center my-auto ">
+            <img
+              src={team}
+              alt=""
+              className="w-max h-[300px] justify-center align-center  hidden lg:block "
+            />
+          </div>
         </div>
       </div>
 
