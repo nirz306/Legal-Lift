@@ -5,20 +5,19 @@ import { NavLink } from 'react-router-dom';
 const Online_shop = () => {
   return (
     <>
-<NavLink className="relative top-8 mx-auto my-6 text-5xl font-[Galada] text-black no-underline cursor-pointer sm:ml-16" to="/">Legal Lift</NavLink>
-      <div className="text-center text-4xl font-lato italic my-8 text-gray-700">
-        Online shopping consumer right dispute
-      </div>
-      <div className="flex justify-center items-center min-h-screen bg-gray-100">
-        <div className="mt-[-155px] w-full max-w-xl border-4 border-gray-300 rounded-lg overflow-hidden">
-          <ReactPlayer 
-            url={VIDEO_PATH} 
-            controls={true} 
-            width="100%" 
-            height="auto" 
-          />
+<div className=" min-h-screen flex flex-col ">
+      <NavLink className="relative mx-auto my-6 text-5xl font-[Galada] text-black no-underline cursor-pointer sm:ml-16" to="/">Legal Lift</NavLink>
+        <div className="text-center text-4xl font-heading w-max mx-auto text-legal-pastel-red my-[20px]">
+        Your Money, Your Rights - Navigating Online Shopping Issues        </div>
+          <div className="w-full max-w-xl border-4 border-legal-green rounded-lg overflow-hidden align-center justify-center mx-auto ">
+            <ReactPlayer 
+              url={VIDEO_PATH} 
+              controls={true} 
+              width="100%" 
+              height="auto" 
+            />
+          </div>
         </div>
-      </div>
     </>
    
   )

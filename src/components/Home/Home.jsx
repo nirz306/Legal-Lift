@@ -52,7 +52,8 @@ const Home = () => {
   );
 
   return (
-    <>
+    <>  
+    <div className="min-h-screen ">
       <div className="flex justify-between">
         <Logo />
         <div className="justify-end">
@@ -61,7 +62,7 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center text-center relative p-10">
-         <div className="bg-legal-pastel-red w-[430px] sm:w-auto h-auto  rounded-[15px] flex mb-11 items-center justify-center flex-wrap text-center">             
+         <div className="bg-legal-pastel-red w-[430px] sm:w-auto h-auto  rounded-[15px] flex mb-11 items-center justify-center flex-wrap text-center ">             
                 <img className="w-auto h-[500px] text-center " src={three} alt="  " />
             
              <div className="flex flex-col mr-10 max-[1000px]:w-[600px] max-[1000px]:mx-auto p-10">
@@ -74,6 +75,7 @@ const Home = () => {
                  Unraveling the secrets of law is like discovering the hidden keys to a fair society, a journey where every revelation empowers us towards greater understanding and equality for all. </p>
            </div>
          </div>
+       </div>
        </div>
 
       <div className="features flex flex-col items-center mt-[20px] justify-between p-[40px]">

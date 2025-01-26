@@ -29,6 +29,7 @@ const quizSchema = new mongoose.Schema({
     D: String,
     ans: String
   });
+  
 const AnswerSchema = new mongoose.Schema({
     ans : [String]
 });

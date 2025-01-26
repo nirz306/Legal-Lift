@@ -81,12 +81,13 @@ async function handleUserLogin(req, res) {
         };
 
         console.log("token:", token);
+
         res.status(200).cookie("token", token, options).json({
             success: true,
             message: "User logged in successfully",
             token,
             user: {
-                id: user._id,
+                _id: user._id,
                 name: user.name,
                 email: user.email
             }
@@ -97,8 +98,37 @@ async function handleUserLogin(req, res) {
     }
 }
 
+async function handleUserScore(req,res){
+
+    const { userId, score } = req.body; // Extract userId and score from the request body
+
+    // Validate the input
+    if (!userId || !score) {
+      return res.status(400).json({ message: "UserId and score are required" });
+    }
+  
+    try {
+      // Find the user by ID and update their quiz score
+      const user = await User.findByIdAndUpdate(
+        userId,
+        { $set: { quiz: score } }, // Update the quiz field with the new score
+        { new: true } // Return the updated user object
+      );
+  
+       if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+  
+       res.status(200).json({ message: "Quiz score updated successfully", user });
+    } catch (error) {
+      console.error("Error updating quiz score:", error);
+      res.status(500).json({ message: "Failed to update quiz score" });
+    }
+  }
+
 module.exports = {
   
     handleUserSignup,
     handleUserLogin,
+    handleUserScore,
 };

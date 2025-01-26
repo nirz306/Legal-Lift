@@ -15,103 +15,109 @@ import { delay, motion } from "framer-motion";
 import { useAnimation, color } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+const AnimatedBlock = ({ image, title, path, delay }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 0.6, delay }}
+      className="flex justify-center"
+    >
+      <NavLink className="s_link" to={path}>
+        <Block imageUrl={image} title={title} />
+      </NavLink>
+    </motion.div>
+  );
+};
+
 const Kidztube = () => {
-  const [ref1, inView1] = useInView({ triggerOnce: false });
-    const [ref2, inView2] = useInView({ triggerOnce: false });
-    const controls1 = useAnimation();
-    const controls2 = useAnimation();
+  // const [ref1, inView1] = useInView({ triggerOnce: false });
+  //   const [ref2, inView2] = useInView({ triggerOnce: false });
+  //   const controls1 = useAnimation();
+  //   const controls2 = useAnimation();
 
-    useEffect(() => {
-        if (inView1) {
-            controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
-        } else {
-            controls1.start({ opacity: 0, y: 70 });
-        }
-    }, [controls1, inView1]);
+  //   useEffect(() => {
+  //       if (inView1) {
+  //           controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+  //       } else {
+  //           controls1.start({ opacity: 0, y: 70 });
+  //       }
+  //   }, [controls1, inView1]);
 
-    useEffect(() => {
-        if (inView2) {
-            controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
-        } else {
-            controls2.start({ opacity: 0, y: 70 });
-        }
-    }, [controls2, inView2]);
+  //   useEffect(() => {
+  //       if (inView2) {
+  //           controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+  //       } else {
+  //           controls2.start({ opacity: 0, y: 70 });
+  //       }
+  //   }, [controls2, inView2]);
 
-  const [move, setMove] = useState(false);
+  // const [move, setMove] = useState(false);
+
+  const blocks = [
+    { image: rasicm, title: "Rasicm", path: "/rasicm" },
+    { image: c_rights, title: "Consumer Rights", path: "/consumer_right" },
+    { image: stranger, title: "Stranger Safety", path: "/stranger_safety" },
+    { image: detention, title: "Detention", path: "/detention" },
+    { image: o_safety, title: "Online Safety", path: "/online_safety" },
+    { image: o_shop, title: "Tenant", path: "/online_shop" },
+  ];
   return (
     <>
      <div id="top"></div>
+
+     <div className="min-h-screen">
+
       <NavLink className="text-[50px] font-heading" to="/">
         Legal Lift
       </NavLink>
+
       <div className="flex mr-[100px]">
-        <div className="bg-[#A1C398] ml-[100px] mr-[50px] mt-[25px] rounded-lg p-4">
-          
-            <p className="font-heading mt-[10px] text-[50px] text-center ">Kidztube</p>
-            <br></br>
-            
-              <p className="text-[30px] mt-[-15px] text-justify font-body">
-                Step into a world of wonder at KidzTube! We've handpicked
-                videos that spark curiosity and inspire learning. Here, your
-                children can explore a world of educational videos that are
-                both fun and informative. Dive into a treasure trove of videos
-                designed to ignite young minds and foster a love for knowledge.
-              </p>
-        </div>    
-          
-          <div className="team"></div>
-          <img  src={team} alt="" className="cover"/>
+  {/* Colored Component */}
+  <div className="bg-[#A1C398] ml-[100px] mr-[50px] mt-[25px] rounded-lg p-4 w-[700px] h-[500px]">
+    <p className="font-heading mt-[10px] text-[50px] text-center">Kidztube</p>
+    <br></br>
+    <p className="text-[30px] mt-[-15px] text-justify font-body">
+      Step into a world of wonder at KidzTube! We've handpicked
+      videos that spark curiosity and inspire learning. Here, your
+      children can explore a world of educational videos that are
+      both fun and informative. Dive into a treasure trove of videos
+      designed to ignite young minds and foster a love for knowledge.
+    </p>
+  </div>
+
+  {/* Image */}
+  <div>
+    <img src={team} alt="" className="h-[500px] w-[500px]" />
+  </div>
+</div>
       </div>
        
-        <div className="components " >
-          <motion.div className="row1" ref={ref1}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={controls1}>
-            <div className="rasicm">
-                <NavLink className="link" to="/rasicm">
-                <Block imageUrl={rasicm} title="rasicm" />
-              </NavLink>
-            </div>
 
-            <div className="consumer_rights">
-              <NavLink className="link" to="/consumer_rights">
-                <Block imageUrl={c_rights} title="consumer_right" />
-              </NavLink>
-            </div>
+<div className="grid lg:grid-cols-3 lg:gap-3 min-h-screen md:grid-cols-2 gap-4 ">
+        {blocks.map((block, index) => (
+          <AnimatedBlock
+            key={index}
+            image={block.image}
+            title={block.title}
+            path={block.path}
+            delay={index * 0.05}
+          />
+        ))}
+      </div>
 
-            <div
-              className="stranger_safety"
-             
-            >
-              <NavLink className="link" to="/stranger_safety">
-                <Block imageUrl={stranger} title="stranger_safety" />
-              </NavLink>
-            </div>
-
-          </motion.div>
-          <motion.div className="row2" ref={ref2}
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={controls2}>
-            <div className="detention">
-              <NavLink className="link" to="/detention">
-                <Block imageUrl={detention} title="detention" />
-              </NavLink>
-            </div>
-
-            <div className="online_safety">
-              <NavLink className="link" to="/online_safety">
-                <Block imageUrl={o_safety} title="online_safety" />
-              </NavLink>
-            </div>
-
-            <div className="online_shop">
-              <NavLink className="link" to="/online_shop">
-                <Block imageUrl={o_shop} title="online_shop" />
-              </NavLink>
-            </div>
-          </motion.div>
-        </div>
-     
     </>
   );
 };

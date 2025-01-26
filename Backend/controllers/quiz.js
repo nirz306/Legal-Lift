@@ -7,6 +7,7 @@ const AnswerSchema = require("../models/quizAns");
 const db = "mongodb+srv://legallift892:TdKgee5QmkawPhT4@cluster0.stuzomi.mongodb.net/LegalLift?retryWrites=true&w=majority&appName=Cluster0";
 const Answers = mongoose.model('answers',AnswerSchema,'answers');
 const client = new MongoClient(db);
+ 
 
 
 async function GetConnection()
@@ -44,6 +45,7 @@ async function handleGetAllAnswers(req,res){
     }
 }
 
+ 
 
 module.exports={
     handleGetAllAnswers,

@@ -22,7 +22,7 @@ const Road_acc = () => {
           <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
         </div>
 
-        <div className="w-[1057px] font-body">
+        <div className="w-[1057px] font-body mb-3">
           {showQuiz && (
             <Questionaire
               question="IF YOU WERE IN A POSITION SIMILAR TO THAT OF THE CHILD, WHAT ACTION WOULD YOU TAKE UPON WITNESSING A ROAD ACCIDENT? SELECT THE MOST LIKELY OPTION YOU WOULD PERFORM."
