@@ -136,26 +136,7 @@ import Cards from "./Cards";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Home = () => {
-
-  // useEffect(() => {
-  //   const script1 = document.createElement("script");
-  //   script1.src = "https://cdn.botpress.cloud/webchat/v1/inject.js";
-  //   script1.async = true;
-  //   document.body.appendChild(script1);
-
-  //   const script2 = document.createElement("script");
-  //   script2.src =
-  //     "https://mediafiles.botpress.cloud/2c13d088-c7f8-48a0-8612-8e07d9dfff42/webchat/config.js";
-  //   script2.defer = true;
-  //   document.body.appendChild(script2);
-
-  //   return () => {
-  //     document.body.removeChild(script1);
-  //     document.body.removeChild(script2);
-  //   };
-  // }, []);
-
-  const [ref1, inView1] = useInView({ triggerOnce: false });
+   const [ref1, inView1] = useInView({ triggerOnce: false });
   const [ref2, inView2] = useInView({ triggerOnce: false });
   const controls1 = useAnimation();
   const controls2 = useAnimation();
@@ -265,17 +246,6 @@ const Home = () => {
           </Link>
         </motion.div>
       </div>
-
-      {/* <div className="footer bg-[#FEFDED] w-full flex flex-col lg:flex-row items-center p-6 gap-4">
-        <div className="chatbot flex-1"></div>
-        <div className="imag hidden lg:block">
-          <img className="couple" src={couple} alt="" />
-        </div>
-        <div className="quote text-center lg:text-left text-lg lg:text-2xl font-semibold font-body  text-black ">
-          Education is the foundation, and law is the framework, together they
-          build a society where justice and progress thrive.
-        </div>
-      </div> */}
 
 <div className="footer bg-[#FEFDED] w-full flex">
         <div className="imag relative mt-[-165px]">         
