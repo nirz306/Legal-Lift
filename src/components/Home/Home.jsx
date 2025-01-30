@@ -130,6 +130,7 @@ import sq from "../assets/sq.png";
 import blogss from "../assets/blogg.png";
 import lt from "../assets/lt.png";
 import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Logo from "../../helpers/Logo";
 import Cards from "./Cards";
@@ -148,7 +149,21 @@ const Home = () => {
       controls1.start({ opacity: 0, y: 70 });
     }
   }, [controls1, inView1]);
+  useEffect(() => {
+    if (inView1) {
+      controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+    } else {
+      controls1.start({ opacity: 0, y: 70 });
+    }
+  }, [controls1, inView1]);
 
+  useEffect(() => {
+    if (inView2) {
+      controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
+    } else {
+      controls2.start({ opacity: 0, y: 70 });
+    }
+  }, [controls2, inView2]);
   useEffect(() => {
     if (inView2) {
       controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
@@ -163,12 +178,19 @@ const Home = () => {
     typeSpeed: 120,
     deleteSpeed: 80,
   });
+  const [title] = useTypewriter({
+    words: ["Law", "Education", "Legal Awareness"],
+    loop: {},
+    typeSpeed: 120,
+    deleteSpeed: 80,
+  });
 
   return (
     <>
       <div className="min-h-screen "> 
       <div className="flex justify-between items-center px-4 py-2">
         <Logo />
+        <Navbar />
         <Navbar />
       </div>
 
@@ -219,6 +241,13 @@ const Home = () => {
               title="Legal Trivia"
               image={lt}
             />
+          <Link className="w-full md:w-[45%]" to="/rule">
+            <Cards
+              color="#A1C398"
+              desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions"
+              title="Legal Trivia"
+              image={lt}
+            />
           </Link>
         </motion.div>
 
@@ -235,7 +264,27 @@ const Home = () => {
               title="Scenario Quests"
               image={sq}
             />
+        <motion.div
+          className="row2 flex flex-col md:flex-row items-center justify-between gap-6"
+          ref={ref2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={controls2}
+        >
+          <Link className="w-full md:w-[45%]" smooth to="/squests#top">
+            <Cards
+              color="#A1C398"
+              desp="Experience real-life scenarios through engaging visual content, followed by thought-provoking questions"
+              title="Scenario Quests"
+              image={sq}
+            />
           </Link>
+          <Link className="w-full md:w-[45%]" to="/blogs">
+            <Cards
+              color="#FA7070"
+              desp="Dive into our blog for easy-to-understand articles on law! All about justice, rights, and the legal world!"
+              title="Blogs"
+              image={blogss}
+            />
           <Link className="w-full md:w-[45%]" to="/blogs">
             <Cards
               color="#FA7070"
