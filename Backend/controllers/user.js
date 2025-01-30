@@ -55,26 +55,73 @@ if (!name || !email || !password) {
   }
 }
  
+// async function handleUserLogin(req, res) {
+//     try {
+//         const { email, password } = req.body;
+
+//         const user = await User.findOne({ email });
+//         if (!user) {
+//             return res.status(400).json({ error: "Invalid Email or Password" });
+//         }
+
+//         const isPasswordValid = await bcrypt.compare(password, user.password);
+//         if (!isPasswordValid) {
+//             return res.status(400).json({ error: "Invalid Email or Password" });
+//         }
+
+//         const token = jwt.sign(
+//             { id: user._id },
+//             process.env.JWT_SECRET,
+//             { expiresIn: "1d" }
+//         );
+
+//         const options = {
+//             expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 3 days
+//             httpOnly: true,
+//         };
+
+//         console.log("token:", token);
+
+//         res.status(200).cookie("token", token, options).json({
+//             success: true,
+//             message: "User logged in successfully",
+//             token,
+//             user: {
+//                 _id: user._id,
+//                 name: user.name,
+//                 email: user.email
+//             }
+//         });
+//     } catch (error) {
+//         console.error('Error during login:', error);
+//         res.status(500).json({ error: "Internal server error" });
+//     }
+// }
+
 async function handleUserLogin(req, res) {
     try {
         const { email, password } = req.body;
 
+        // Check if user exists
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ error: "Invalid Email or Password" });
+            return res.status(404).json({ error: "User not found. Please check your email or sign up." });
         }
 
+        // Validate password
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(400).json({ error: "Invalid Email or Password" });
+            return res.status(401).json({ error: "Incorrect password. Please try again." });
         }
 
+        // Generate JWT token
         const token = jwt.sign(
             { id: user._id },
             process.env.JWT_SECRET,
-            { expiresIn: "7d" }
+            { expiresIn: "1d" }
         );
 
+        // Set cookie options
         const options = {
             expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 3 days
             httpOnly: true,
@@ -82,6 +129,7 @@ async function handleUserLogin(req, res) {
 
         console.log("token:", token);
 
+        // Send response
         res.status(200).cookie("token", token, options).json({
             success: true,
             message: "User logged in successfully",
@@ -97,7 +145,6 @@ async function handleUserLogin(req, res) {
         res.status(500).json({ error: "Internal server error" });
     }
 }
-
 async function handleUserScore(req,res){
 
     const { userId, score } = req.body; // Extract userId and score from the request body

@@ -69,7 +69,7 @@ export default function App() {
       element: <Road_acc />,
     },
     {
-      path: "/Sexual harresment",
+      path: "/sexualharrasment",
       element: <Sexualharras />,
     },
     {

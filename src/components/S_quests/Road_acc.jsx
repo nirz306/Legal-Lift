@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import VIDEO_PATH from '../assets/r_a.mp4';
 import Questionaire from '../../reusables/Questionaire';
 import { NavLink } from 'react-router-dom';
+import VIDEO_PATH from '../assets/r_a.mp4';
 
 const Road_acc = () => {
   const [showQuiz, setShowQuiz] = useState(false);
@@ -22,7 +22,7 @@ const Road_acc = () => {
           <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
         </div>
 
-        <div className="w-[1057px] font-body mb-3">
+        <div className="md:w-[1057px] font-body mb-3 w-[480px] ">
           {showQuiz && (
             <Questionaire
               question="IF YOU WERE IN A POSITION SIMILAR TO THAT OF THE CHILD, WHAT ACTION WOULD YOU TAKE UPON WITNESSING A ROAD ACCIDENT? SELECT THE MOST LIKELY OPTION YOU WOULD PERFORM."
@@ -43,3 +43,6 @@ const Road_acc = () => {
 };
 
 export default Road_acc;
+
+ 
+

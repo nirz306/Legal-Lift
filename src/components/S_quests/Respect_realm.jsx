@@ -20,7 +20,7 @@ const Respect_realm = () => {
           <ReactPlayer url={VIDEO_PATH} controls={true} onEnded={myCallback} />
         </div>
 
-        <div className="w-[1057px] font-body mb-10 ">
+        <div className="md:w-[1057px]  font-body mb-10 ">
         {showQuiz && (
           <Questionaire
             question="Which of the following is the correct step Anita should take in this situation?"

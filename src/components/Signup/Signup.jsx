@@ -60,38 +60,40 @@ const Signup = () => {
     <>
       <Logo />
       <div className="flex items-center justify-center h-max relative">
-        <div className="flex justify-between lg:bg-[#A1C398] my-auto h-max gap-5 rounded-lg mx-auto">
+        <div className="flex justify-between md:bg-[#A1C398] my-auto h-max gap-5 rounded-lg mx-auto">
           <div>
             <img
-              className="h-[500px] w-[500px] hidden sm:block"
+              className="h-[500px] w-[500px] hidden md:block"
               src={gif}
               alt="Signup GIF"
             ></img>
           </div>
           <div className="my-auto lg:mr-12 h-max w-[420px] bg-[#f6f4db] text-white rounded-[12px] p-8">
             <form onSubmit={handleSubmission}>
-              <h1 className="text-[51px] text-center text-black">Sign Up</h1>
+
+              <h1 className="text-[51px] text-center text-black font-heading">Sign Up</h1>
+              
               <div className="mt-[-30px]">
-                <div className="relative w-full h-[50px] my-[30px]">
+                <div className="relative w-full h-[50px] my-[30px] font-body">
                   <input
                     type="text"
                     placeholder="Enter Name"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     required
-                    className="w-full h-full bg-transparent border-2 border-solid rounded-[40px] text-[16px] text-black px-[20px] pr-[45px] placeholder-black font-[Crimson Text] font-normal"
-                    style={{ borderColor: "rgba(0, 0, 0, 0.2)" }}
+                    className="w-full h-full bg-transparent border-2 text-xl border-solid rounded-[40px] text-[25px] text-black px-[20px] pr-[45px] placeholder-black focus:outline-none font-body"
+                  style={{ borderColor: "rgba(0, 0, 0, 0.2)" }}
                   />
                 </div>
 
-                <div className="relative w-full h-[50px] my-[30px]">
+                <div className="relative w-full h-[50px] my-[30px] font-body">
                   <input
                     type="email"
                     placeholder="Enter email address"
                     value={email}
           onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full h-full bg-transparent border-2 border-solid rounded-[40px] text-[16px] text-black px-[20px] pr-[45px] placeholder-black font-[Crimson Text] font-normal"
+                    className="w-full h-full bg-transparent border-2 text-xl border-solid rounded-[40px] text-[25px] text-black px-[20px] pr-[45px] placeholder-black focus:outline-none font-body"
                     style={{ borderColor: "rgba(0, 0, 0, 0.2)" }}
                   />
                 </div>
@@ -103,26 +105,27 @@ const Signup = () => {
                     value={password}
           onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="w-full h-full bg-transparent border-2 border-solid rounded-[40px] text-[16px] text-black px-[20px] pr-[45px] placeholder-black font-[Crimson Text] font-normal"
+                    className="w-full h-full bg-transparent border-2 text-xl border-solid rounded-[40px] text-[25px] text-black px-[20px] pr-[45px] placeholder-black focus:outline-none font-body"
                     style={{ borderColor: "rgba(0, 0, 0, 0.2)" }}
                   />
                 </div>
 
-                <b className="mb-[20px] font-bold text-[0.875rem] text-[#c02802]">
+                <b className="mb-[20px] font-bold  font-body text-[0.875rem] text-[#c02802]">
                   {errorMessage}
                 </b>
+
                 <button
                   type="submit"
                   disabled={submitButtonDisabled}
                   className={`w-full h-[45px] ${
-                    submitButtonDisabled ? "bg-gray-400" : "bg-[#A1C398]"
-                  } border-none outline-none rounded-[40px] cursor-pointer text-[16px] text-[#333] font-[Crimson Text] font-bold mt-[-2px]`}
+                    submitButtonDisabled ? "bg-gray-400" : "bg-[#A1C398] hover:bg-[#839f7b] font-body"
+                  } border-none outline-none rounded-[40px] cursor-pointer text-[25px] text-[#333] font-body mt-[-2px]`}
                 >
                   Sign Up
                 </button>
               </div>
-              <div className="mt-[5px] text-center font-[Crimson Text] text-black">
-                <p className="text-[17px]">
+              <div className="mt-[5px] text-center font-body  text-black">
+                <p className="text-[20px]">
                   Already have an account?{" "}
                   <span>
                     <NavLink

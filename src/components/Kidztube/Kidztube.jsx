@@ -68,7 +68,7 @@ const Kidztube = () => {
 
   const blocks = [
     { image: rasicm, title: "Rasicm", path: "/rasicm" },
-    { image: c_rights, title: "Consumer Rights", path: "/consumer_right" },
+    { image: c_rights, title: "Consumer Rights", path: "/consumer_rights" },
     { image: stranger, title: "Stranger Safety", path: "/stranger_safety" },
     { image: detention, title: "Detention", path: "/detention" },
     { image: o_safety, title: "Online Safety", path: "/online_safety" },

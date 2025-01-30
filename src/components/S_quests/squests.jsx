@@ -41,7 +41,7 @@ const AnimatedBlock = ({ image, title, path, delay }) => {
 const Squests = () => {
   const blocks = [
     { image: acc, title: "Road Accident", path: "/Road Accident" },
-    { image: sex_har, title: "Sexual Harassment", path: "/Sexual harassment" },
+    { image: sex_har, title: "Sexual Harassment", path: "/sexualharrasment" },
     { image: phone, title: "Lost Phone", path: "/Lost phone" },
     { image: respect, title: "Respect Realm", path: "/respect_realm" },
     { image: bribe, title: "Bribe", path: "/bribe" },
