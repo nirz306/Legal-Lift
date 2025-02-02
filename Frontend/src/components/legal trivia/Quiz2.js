@@ -39,7 +39,7 @@ const Quiz = () => {
       return;
       }
 
-        const response = await axios.get("http://localhost:3000/api/Questions", {
+        const response = await axios.get("https://legal-lift-backend.vercel.app/api/Questions", {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}` // Send the JWT token in the Authorization header
@@ -108,7 +108,7 @@ const Quiz = () => {
       console.log("Sending result data:", resultData); // Debugging: Log the data being sent
   
       axios
-        .post("http://localhost:3000/user/score", resultData, {
+        .post("https://legal-lift-backend.vercel.app/user/score", resultData, {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`, // Send the JWT token for authentication

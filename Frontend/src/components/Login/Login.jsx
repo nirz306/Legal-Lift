@@ -24,7 +24,7 @@
 //     e.preventDefault();
   
 //     try {
-//       const response = await axios.post('http://localhost:3000/user/login', {
+//       const response = await axios.post('https://legal-lift-backend.vercel.app/user/login', {
 //         email,
 //         password,
 //       },{
@@ -143,7 +143,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/login",
+        "https://legal-lift-backend.vercel.app/user/login",
         {
           email,
           password,
