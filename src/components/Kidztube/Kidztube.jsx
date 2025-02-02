@@ -43,29 +43,7 @@ const AnimatedBlock = ({ image, title, path, delay }) => {
 };
 
 const Kidztube = () => {
-  // const [ref1, inView1] = useInView({ triggerOnce: false });
-  //   const [ref2, inView2] = useInView({ triggerOnce: false });
-  //   const controls1 = useAnimation();
-  //   const controls2 = useAnimation();
-
-  //   useEffect(() => {
-  //       if (inView1) {
-  //           controls1.start({ opacity: 1, y: 0, transition: { duration: 1 } });
-  //       } else {
-  //           controls1.start({ opacity: 0, y: 70 });
-  //       }
-  //   }, [controls1, inView1]);
-
-  //   useEffect(() => {
-  //       if (inView2) {
-  //           controls2.start({ opacity: 1, y: 0, transition: { duration: 1 } });
-  //       } else {
-  //           controls2.start({ opacity: 0, y: 70 });
-  //       }
-  //   }, [controls2, inView2]);
-
-  // const [move, setMove] = useState(false);
-
+  
   const blocks = [
     { image: rasicm, title: "Rasicm", path: "/rasicm" },
     { image: c_rights, title: "Consumer Rights", path: "/consumer_rights" },
@@ -86,10 +64,10 @@ const Kidztube = () => {
 
       <div className="flex mr-[100px]">
   {/* Colored Component */}
-  <div className="bg-[#A1C398] ml-[100px] mr-[50px] mt-[25px] rounded-lg p-4 w-[700px] h-[500px]">
+  <div className="bg-[#A1C398] ml-[100px] md:mr-[50px] mt-[25px] rounded-lg p-4 md:w-[700px] md:h-[500px] ">
     <p className="font-heading mt-[10px] text-[50px] text-center">Kidztube</p>
     <br></br>
-    <p className="text-[30px] mt-[-15px] text-justify font-body">
+    <p className="md:text-[30px] mt-[-15px] text-justify font-body text-[20px]">
       Step into a world of wonder at KidzTube! We've handpicked
       videos that spark curiosity and inspire learning. Here, your
       children can explore a world of educational videos that are
@@ -100,7 +78,7 @@ const Kidztube = () => {
 
   {/* Image */}
   <div>
-    <img src={team} alt="" className="h-[500px] w-[500px]" />
+    <img src={team} alt="" className="h-[500px] w-[500px] hidden lg:block" />
   </div>
 </div>
       </div>
