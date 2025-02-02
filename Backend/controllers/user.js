@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken');
 const User = require("../models/user");
 const bcrypt = require('bcrypt');
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 const cookieParser = require('cookie-parser');
 const saltRounds = 10;
  

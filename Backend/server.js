@@ -21,11 +21,13 @@ app.get('/server-time', (req, res) => {
 console.log("Current server time:", new Date().toISOString());
 // CORS configuration
 const corsOptions = {
-    origin: 'http://localhost:3001', // Client-side URL
-    credentials: true // Allow cookies to be sent
-};
+    origin: ['http://localhost:3001', 'https://your-frontend-url.vercel.app'], 
+    credentials: true
+  };
+  app.use(cors(corsOptions));
+  
 
-app.use(cors(corsOptions)); // Use CORS with options
+
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(cookieParser()); // Parse cookies
