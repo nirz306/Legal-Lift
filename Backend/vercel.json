@@ -7,13 +7,10 @@
       }
     ],
     "routes": [
-      {
-        "src": "/user/signup",
-        "dest": "/server.js"
-      },
+      
       {
         "src": "/(.*)",
-        "dest": "/server.js"
+        "dest": "/"
       }
     ]
   }

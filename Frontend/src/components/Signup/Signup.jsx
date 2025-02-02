@@ -18,7 +18,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://legal-lift-backend.vercel.app/user/signup",
+        `${import.meta.env.BACKEND_BASEURL}/user/signup`,
         {
           email,
           password,

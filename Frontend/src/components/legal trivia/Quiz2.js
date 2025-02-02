@@ -39,7 +39,7 @@ const Quiz = () => {
       return;
       }
 
-        const response = await axios.get("https://legal-lift-backend.vercel.app/api/Questions", {
+        const response = await axios.get(`${import.meta.env.BACKEND_BASEURL}/api/Questions`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}` // Send the JWT token in the Authorization header
